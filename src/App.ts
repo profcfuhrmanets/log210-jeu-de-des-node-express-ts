@@ -3,7 +3,8 @@ import * as express from 'express';
 import * as logger from 'morgan';
 import * as bodyParser from 'body-parser';
 
-import JeuRouter from './routes/JeuRouter';
+import { jeuRoutes } from './routes/JeuRouter';
+//import jeuRoutes from './routes/JeuRouter';
 
 // Creates and configures an ExpressJS web server.
 class App {
@@ -36,8 +37,15 @@ class App {
         message: 'Bonjour monde!'
       });
     });
+
+    // faire le lien entre un chemin et un contrôleur
+    router.get('/api/v1/demarrerJeu/:nom', jeuRoutes.demarrerJeu.bind(jeuRoutes));  // Pour bind, voir https://stackoverflow.com/a/15605064/1168342
+    router.get('/api/v1/jouer/:nom', jeuRoutes.jouer.bind(jeuRoutes));
+
     this.express.use('/', router);
-    this.express.use('/api/v1/jouer', JeuRouter);
+
+// //    this.express.use(['/api/v1/demarrerJeu','/api/v1/jouer'], JeuRouter);  // tous les URI pour le routeur
+//     this.express.use('/api/v1/jeu', JeuRouter);  // tous les URI pour le routeur
   }
 
 }
