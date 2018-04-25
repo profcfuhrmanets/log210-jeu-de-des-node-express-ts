@@ -38,14 +38,9 @@ class App {
       });
     });
 
-    // faire le lien entre un chemin et un contrôleur
-    router.get('/api/v1/demarrerJeu/:nom', jeuRoutes.demarrerJeu.bind(jeuRoutes));  // Pour bind, voir https://stackoverflow.com/a/15605064/1168342
-    router.get('/api/v1/jouer/:nom', jeuRoutes.jouer.bind(jeuRoutes));
+    this.express.use('/', router);  // routage de base
 
-    this.express.use('/', router);
-
-// //    this.express.use(['/api/v1/demarrerJeu','/api/v1/jouer'], JeuRouter);  // tous les URI pour le routeur
-//     this.express.use('/api/v1/jeu', JeuRouter);  // tous les URI pour le routeur
+    this.express.use('/api/v1/jeu', jeuRoutes.router);  // tous les URI pour le scénario jeu (DSS) commencent ainsi
   }
 
 }

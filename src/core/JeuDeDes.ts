@@ -19,12 +19,17 @@ export class JeuDeDes {
     public demarrerJeu(nom: string) {
 
         if (this.joueurMap.get(nom) !== undefined) {
-            // TODO throw exception
+            // joueur existe déjà
+            throw new Error("Joueur '" + nom + "' existe déjà.");
         }
 
         // 
         let joueur = new Joueur(nom);
         this.joueurMap.set(nom, joueur);
+
+        this.joueurMap.forEach((value: Joueur, key: string) => {
+            console.log(key, value);
+        });
 
         return joueur;
     }
@@ -32,7 +37,10 @@ export class JeuDeDes {
 
 
     public jouer(nom: string) {
-        // TODO: verifier que Joueur avec nom existe dans la liste des objets
+        if (this.joueurMap.get(nom) === undefined) {
+            // joueur n'existe pas
+            throw new Error("Joueur '" + nom + "' n'existe pas.");
+        }
 
         let d1 = new Dé();
         let d2 = new Dé();
