@@ -1,0 +1,7 @@
+@startuml
+skinparam style strictuml
+title RDCU pour jouer
+participant ":JeuDeDes" as c
+note left of c : par Contrôleur 
+->c : terminerJeu(nom)
+@enduml
