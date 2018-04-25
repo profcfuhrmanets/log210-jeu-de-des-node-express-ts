@@ -1,4 +1,4 @@
-export class Dé {
+export class De {
     // classe inspirée de la classe conceptuelle (du MDD)
     valeur : number;
     constructor() {
@@ -6,7 +6,7 @@ export class Dé {
     }
 
     // opérations systèmes
-    private brasser() {
+    public brasser() {
         this.valeur = Math.floor(Math.random() * 6 + 1);
     }
 

@@ -32,8 +32,8 @@ export class JeuRouter {
       let code = 500; // internal server error
       if (error.message.indexOf("existe déjà")) {
         code = 400; // bad request }
-        res.status(code).json({ error: error.toString() });
       }
+      res.status(code).json({ error: error.toString() });
 
     }
   }
@@ -60,22 +60,54 @@ export class JeuRouter {
       let code = 500; // internal server error
       if (error.message.indexOf("n'existe pas")) {
         code = 404; // not found }
-        res.status(code).json({ error: error.toString() });
       }
+      res.status(code).json({ error: error.toString() });
 
     }
   }
-    /**
+
+  /**
+   * terminer 
+   */
+  public terminerJeu(req: Request, res: Response, next: NextFunction) {
+
+    // obtenir nom de la requête
+    let nom = req.params.nom;
+
+    try {
+      // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
+      let résultat = this.jeu.terminerJeu(nom);
+      res.status(200)
+        .send({
+          message: 'Success',
+          status: res.status,
+          résultat
+        });
+
+    } catch (error) {
+      let code = 500; // internal server error
+      if (error.message.indexOf("n'existe pas")) {
+        code = 404; // not found }
+      }
+      res.status(code).json({ error: error.toString() });
+
+    }
+  }
+
+
+
+  /**
      * Take each handler, and attach to one of the Express.Router's
      * endpoints.
      */
-    init() {
-      this.router.get('/demarrerJeu/:nom', this.demarrerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
-      this.router.get('/jouer/:nom', this.jouer.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
-    }
-
+  init() {
+    this.router.get('/demarrerJeu/:nom', this.demarrerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
+    this.router.get('/jouer/:nom', this.jouer.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
+    this.router.get('/terminerJeu/:nom', this.terminerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
   }
 
-  // exporter its configured Express.Router
-  export const jeuRoutes = new JeuRouter();
-  jeuRoutes.init();
+}
+
+// exporter its configured Express.Router
+export const jeuRoutes = new JeuRouter();
+jeuRoutes.init();
