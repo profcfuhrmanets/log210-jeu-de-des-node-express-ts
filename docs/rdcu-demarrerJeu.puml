@@ -1,0 +1,12 @@
+@startuml
+skinparam style strictuml
+title RDCU pour démarrerJeu
+participant ":JeuDeDes" as c
+note left of c : par Créateur\net Contrôleur 
+->c : demarrerJeu(nom)
+note right of c : JeuDeDes crée Joueur\npar Créateur
+participant "j:Joueur" as j
+create j
+c-->j : j = create(nom)
+c -> c : ajouterJoueur(j)
+@enduml
