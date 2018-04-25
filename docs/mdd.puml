@@ -1,0 +1,17 @@
+@startuml
+skinparam style strictuml
+hide empty members
+skinparam linetype ortho
+title Modèle du domaine pour\nle Jeu de dés du Ch. 1 de Larman
+class Joueur {
+  nom : String
+}
+class Dé {
+  valeur : int
+}
+class JeuDeDés
+
+JeuDeDés "1" -- "2" Dé : inclut > 
+Joueur "1" -- "1" JeuDeDés : joue > 
+Joueur "1" - "2" Dé : lance > 
+@enduml
