@@ -5,13 +5,13 @@ export class JeuDeDes {
     // classe contrôleur GRASP
 
     // map des Joueurs
-    joueurMap: Map<string, Joueur>;
+    joueurs: Map<string, Joueur>;
     d1 : De;
     d2 : De;
 
     constructor() {
         console.log("Initialiser JeuDeDes");
-        this.joueurMap = new Map<string, Joueur>();
+        this.joueurs = new Map<string, Joueur>();
         this.d1 = new De();
         this.d2 = new De();        
     }
@@ -22,16 +22,16 @@ export class JeuDeDes {
 
     public demarrerJeu(nom: string) {
 
-        if (this.joueurMap.get(nom) !== undefined) {
+        if (this.joueurs.get(nom) !== undefined) {
             // joueur existe déjà
             throw new Error("Joueur '" + nom + "' existe déjà.");
         }
 
         // 
         let joueur = new Joueur(nom);
-        this.joueurMap.set(nom, joueur);
+        this.joueurs.set(nom, joueur);
 
-        this.joueurMap.forEach((value: Joueur, key: string) => {
+        this.joueurs.forEach((value: Joueur, key: string) => {
             console.log(key, value);
         });
 
@@ -41,7 +41,7 @@ export class JeuDeDes {
 
 
     public jouer(nom: string) {
-        let joueur = this.joueurMap.get(nom);
+        let joueur = this.joueurs.get(nom);
         if (joueur === undefined) {
             // joueur n'existe pas
             throw new Error("Joueur '" + nom + "' n'existe pas.");
@@ -66,11 +66,11 @@ export class JeuDeDes {
     }
 
     public terminerJeu(nom: string) {
-        if (this.joueurMap.get(nom) === undefined) {
+        if (this.joueurs.get(nom) === undefined) {
             // joueur n'existe pas
             throw new Error("Joueur '" + nom + "' n'existe pas.");
         }
-        this.joueurMap.delete(nom);
+        this.joueurs.delete(nom);
         let résultat = {
             nom: nom,
             message: "Merci d'avoir joué."

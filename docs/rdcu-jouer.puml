@@ -2,13 +2,14 @@
 skinparam style strictuml
 title RDCU pour jouer
 participant ":JeuDeDes" as c
+participant "joueurs:\nMap<Joueur>" as jm
 participant "d1:De" as d1
 participant "d2:De" as d2
 participant "j:Joueur" as j
 note left of c : selon Contrôleur 
 ->c : jouer(nom)
 note right of c : selon Transformer ID en objets 
-c->c : j = getJoueur(nom)
+c->jm : j = get(nom)
 note right of c : selon Expert 
 c->d1 : brasser()
 c->d1 : v1 = getValeur()

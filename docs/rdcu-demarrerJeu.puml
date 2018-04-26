@@ -7,6 +7,7 @@ note left of c : par Créateur\net Contrôleur
 note right of c : JeuDeDes crée Joueur\npar Créateur
 participant "j:Joueur" as j
 create j
+participant "joueurs:\nMap<Joueur>" as jm
 c-->j : j = create(nom)
-c -> c : ajouterJoueur(j)
+c -> jm : add(j)
 @enduml

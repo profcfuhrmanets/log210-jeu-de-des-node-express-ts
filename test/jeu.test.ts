@@ -37,7 +37,7 @@ describe('GET /api/v1/jeu/demarrerJeu/:id', () => {
 
 describe('GET /api/v1/jeu/jouer/:id', () => {
 
-  // plusieurs appels à jouer (pour valider la somme)
+  // plusieurs appels à jouer (pour valider la somme aléatoire)
   for(let i=0; i < 20; i++) {
     it('responds with successful call for initialized player ' + testNom1, () => {
       return chai.request(app).get('/api/v1/jeu/jouer/' + testNom1)
@@ -55,7 +55,7 @@ describe('GET /api/v1/jeu/jouer/:id', () => {
 
   it('Call responds with bad request when player is not intialized ' + testNom2, () => {
     return chai.request(app).get('/api/v1/jeu/jouer/' + testNom2)
-      .then(
+      .then(        // https://github.com/chaijs/chai-http/issues/75#issuecomment-292338762
         () => expect.fail(null, null, 'Should not succeed.'),
         ({ response }) => {
           expect(response).to.have.status(404);
