@@ -1,0 +1,38 @@
+@startdot
+digraph G {
+	graph [/* labelloc=top,label="Software System - System Context",fontname="Helvetica",fontsize=12 */];
+	edge [fontname="Helvetica",fontsize=9,labelfontname="Helvetica",labelfontsize=9];
+	node [fontname="Helvetica",fontsize=9, shape=box, style=filled, fillcolor="white"];
+
+   	c0 [label="", shape=none]
+    subgraph cluster_0 {
+        style=filled;
+		label = "Couche présentation"; labeljust=l; fontname="Helvetica-Oblique";fontsize=9;
+        color = springgreen;
+	    c1 [label="Page web\n(navigateur)"]
+    	c1 -> c2 [label="HTTP GET /api/v1/demarrerJeu/Cris", fontname="Courier-Bold"];
+        c11 [label="" , shape=none, fillcolor=invis]
+        c13 [label="" , shape=none, fillcolor=invis]
+	    c2 [label=":Router\n(Express)"]
+    	c11 -> c13 [label="", style=invis];
+	}
+    subgraph cluster_1 {
+        style=filled; color = lightcoral;
+		label = "Couche domaine"; labeljust=l; fontname="Helvetica-Oblique";fontsize=9;
+	    c4 [label="", shape=none, fillcolor=invis]
+	    c5 [label="", shape=none, fillcolor=invis]
+    	c3 [label=":JeuDeDes"]
+	    c6 [label="", shape=none, fillcolor=invis]
+    }
+
+	c0 -> c1 [label="Utilisateur\nappuie sur\nun bouton", style=dashed];
+    c2 -> c3 [label=< 
+        <TABLE BORDER="0" ALIGN="LEFT">
+        <TR><TD><FONT FACE="Helvetica" POINT-SIZE="10"><B>demarrerJeu(nom)</B></FONT></TD>
+        <TD VALIGN="MIDDLE" BGCOLOR="yellow"><FONT FACE="Helvetica-Oblique" POINT-SIZE="9">op&eacute;ration syst&egrave;me (du DSS)</FONT></TD></TR>
+        </TABLE>
+    >
+,]
+    c3 -> c4 [label="..."]
+}
+@enddot

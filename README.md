@@ -31,6 +31,13 @@ L'éditeur [Visual Studio Code](https://code.visualstudio.com/) est très utile 
 1. Run the development server - `npm start`
 1. Test - `npm test`
 
+## Couplage souhaitable entre la couche Présentatiuon et la couche Domaine
+
+Dans un bon design (selon Larman), on évite que la couche Présentation ait la responsabilité de gérer les évènements système (opérations système). Larman présente dans son livre un exemple avec un JFrame (en Java Swing) à la figure F16.24. On l'adapte ici au contexte d'un service Web:
+
+![Diagramme de cas d'utilisation](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/figure-f16.24-web.puml?cacheinc=1)
+
+
 ## Artefacts d'analyse et de conception
 
 ### Cas d'utilisation
