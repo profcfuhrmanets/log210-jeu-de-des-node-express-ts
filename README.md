@@ -35,7 +35,7 @@ L'éditeur [Visual Studio Code](https://code.visualstudio.com/) est très utile 
 
 Dans un bon design (selon Larman), on évite que la couche Présentation ait la responsabilité de gérer les évènements système (opérations système). Larman présente dans son livre un exemple avec un JFrame (en Java Swing) à la figure F16.24. On l'adapte ici au contexte d'un service Web:
 
-![Diagramme de cas d'utilisation](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/figure-f16.24-web.puml?cacheinc=2)
+![Diagramme de cas d'utilisation](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/figure-f16.24-web.puml?cacheinc=3)
 
 
 ## Artefacts d'analyse et de conception
@@ -55,21 +55,21 @@ Dans un bon design (selon Larman), on évite que la couche Présentation ait la 
 
 ### Diagramme de cas d’utilisation
 
-![Diagramme de cas d'utilisation](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/dcu.puml?cacheinc=2)
+![Diagramme de cas d'utilisation](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/dcu.puml?cacheinc=3)
 
 ### Modèle du domaine
 
-![Diagramme de classe du Modèle du domaine](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/mdd.puml?cacheinc=2)
+![Diagramme de classe du Modèle du domaine](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/mdd.puml?cacheinc=3)
 
 ### Diagramme de séquence système (DSS)
 
-![Diagramme de séquence système](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/dss-jouer.puml?cacheinc=2)
+![Diagramme de séquence système](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/dss-jouer.puml?cacheinc=3)
 
 ### Réalisations de cas d'utilisation (RDCU)
 
-![Diagramme de séquence, demarrerJeu](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/rdcu-demarrerJeu.puml?cacheinc=2)
+![Diagramme de séquence, demarrerJeu](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/rdcu-demarrerJeu.puml?cacheinc=3)
 
-![Diagramme de séquence, demarrerJeu](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/rdcu-jouer.puml?cacheinc=2)
+![Diagramme de séquence, demarrerJeu](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/rdcu-jouer.puml?cacheinc=3)
 
-![Diagramme de séquence, demarrerJeu](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/rdcu-terminerJeu.puml?cacheinc=2)
+![Diagramme de séquence, demarrerJeu](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/rdcu-terminerJeu.puml?cacheinc=3)
 

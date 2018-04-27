@@ -4,10 +4,10 @@ title RDCU pour terminerJeu
 participant ":JeuDeDes" as c
 participant "joueurs:\nMap<Joueur>" as jm
 'participant "j:Joueur" as j
-note left of c : par Contrôleur 
 ->c : terminerJeu(nom)
-note right of c : selon Transformer ID en objets 
+note right : par Contrôleur 
 c->jm : delete(nom)
+note right : selon Transformer ID en objets 
 'c-->j
 'destroy j
 @enduml
