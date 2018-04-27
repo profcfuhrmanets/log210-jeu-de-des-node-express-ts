@@ -1,5 +1,6 @@
 @startuml
 skinparam style strictuml
+skinparam defaultfontname Verdana
 title RDCU pour terminerJeu
 participant ":JeuDeDes" as c
 participant "joueurs:\nMap<Joueur>" as jm

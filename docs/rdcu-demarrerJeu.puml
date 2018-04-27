@@ -1,5 +1,6 @@
 @startuml
 skinparam style strictuml
+skinparam defaultfontname Verdana
 title RDCU pour démarrerJeu
 participant ":JeuDeDes" as c
 ->c : demarrerJeu(nom)
