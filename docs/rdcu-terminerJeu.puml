@@ -3,11 +3,11 @@ skinparam style strictuml
 title RDCU pour terminerJeu
 participant ":JeuDeDes" as c
 participant "joueurs:\nMap<Joueur>" as jm
-participant "j:Joueur" as j
+'participant "j:Joueur" as j
 note left of c : par Contrôleur 
 ->c : terminerJeu(nom)
 note right of c : selon Transformer ID en objets 
-c->jm : j = delete(nom)
+c->jm : delete(nom)
 'c-->j
-destroy j
+'destroy j
 @enduml
