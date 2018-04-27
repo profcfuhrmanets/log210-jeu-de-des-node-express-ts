@@ -3,6 +3,7 @@ left to right direction
 skinparam style strictuml
 skinparam packageStyle rect
 skinparam backgroundcolor transparent
+skinparam defaultfontname Verdana
 actor Joueur as J
 rectangle "Système" {
   (Jouer aux dés) as JP #powderblue
