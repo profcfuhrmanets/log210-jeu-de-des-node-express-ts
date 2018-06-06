@@ -1,13 +1,13 @@
 # Squelette pour un API simple dans Node, Express et TypeScript
 
-Ce squelette est proposé pour débuter les projets en LOG210. Il possède les qualités suivantes:
+Ce squelette est proposé pour commencer les projets en LOG210. Il possède les qualités suivantes:
 
  - il est simple pour les débutants en LOG210
    - il n'y a pas de framework pour le front-end ni pour la persistance, mais ça n'empêche pas d'ajouter ces dimensions.
    - il est seulement [REST niveau 1](https://restfulapi.net/richardson-maturity-model/#level-one), mais ça n'empêche pas de modifier l'API pour qu'il soit [REST niveau 3](https://restfulapi.net/richardson-maturity-model/#level-three). 
  - il est orienté objet (avec TypeScript)
  - il contient des tests pour l'API (avec Mocha)
- - il est documenté selon la méthodologie du cours (Larman)
+ - il fait une séparation entre les couches présentation et domaine, selon la méthodologie de conception du cours LOG210 (Larman)
  - il fonctionne sur Windows 10 (et probablement d'autres systèmes d'exploitation avec Node)
 
 ## D'où vient l'idée de base pour ce squelette?
@@ -33,7 +33,7 @@ L'éditeur [Visual Studio Code](https://code.visualstudio.com/) est très utile 
 
 ## Couplage souhaitable entre la couche Présentation et la couche Domaine
 
-Dans un bon design (selon Larman), on évite que la couche Présentation ait la responsabilité de gérer les évènements système (opérations système). Larman présente dans son livre un exemple avec un JFrame (en Java Swing) à la figure F16.24. On l'adapte ici au contexte d'un service Web:
+Dans un bon design (selon Larman), on évite que la couche Présentation ait la responsabilité de gérer les évènements système (opérations système). Larman présente dans son livre un exemple avec un JFrame (en Java Swing) à la figure F16.24. On l'adapte ici au contexte d'un service Web dans le framework Express (Node.js):
 
 ![Diagramme de séparation des couches avec une opération système envoyée au contrôleur GRASP](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/figure-f16.24-web.puml?cacheinc=5)
 
