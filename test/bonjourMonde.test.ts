@@ -1,4 +1,3 @@
-import * as mocha from 'mocha';
 import * as chai from 'chai';
 import chaiHttp = require('chai-http');
 
@@ -9,18 +8,14 @@ const expect = chai.expect;
 
 describe('baseRoute', () => {
 
-  it('should be json', () => {
-    return chai.request(app).get('/')
-    .then(res => {
-      expect(res.type).to.eql('application/json');
-    });
+  it('should be json', async () => {
+    const res = await chai.request(app).get('/');
+    expect(res.type).to.eql('application/json');
   });
 
-  it('should have a message prop', () => {
-    return chai.request(app).get('/')
-    .then(res => {
-      expect(res.body.message).to.eql('Bonjour monde!');
-    });
+  it('should have a message prop', async () => {
+    const res = await chai.request(app).get('/');
+    expect(res.body.message).to.eql('Bonjour monde!');
   });
 
 });
