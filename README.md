@@ -1,6 +1,6 @@
 # Squelette pour un API simple dans Node, Express et TypeScript
 
-![Build status](https://travis-ci.org/profcfuhrmanets/log210-jeu-de-des-node-express-ts.svg?branch=master)
+[![Build Status](https://travis-ci.org/profcfuhrmanets/log210-jeu-de-des-node-express-ts.svg?branch=master)](https://travis-ci.org/profcfuhrmanets/log210-jeu-de-des-node-express-ts)
 
 Ce squelette est proposé pour commencer les projets en LOG210. Il possède les qualités suivantes:
 
