@@ -28,12 +28,11 @@ L'éditeur [Visual Studio Code](https://code.visualstudio.com/) est très utile 
 
 ## Voulez-vous utiliser ce squelette?
 
-1. Fork/Clone
-1. Install dependencies - `npm install`
-1. Compile - `npm run build`
-1. Compile assets - `gulp assets`
-1. Run the development server - `npm start`
-1. Test - `npm test`
+1. (Créer une fork et) Cloner
+2. Installer les dépendences node - `npm install`
+3. Compiler - `npm run build`
+4. Lancer serveur de développement - `npm start`
+5. Lancer les tests (pas besoin de lancer le serveur d'abord) - `npm test`
 
 ## Couplage souhaitable entre la couche Présentation et la couche Domaine
 
