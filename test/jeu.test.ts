@@ -76,7 +76,7 @@ describe('GET /api/v1/jeu/terminerJeu/:id', () => {
   }); 
 
   it('Call responds with bad request when player does not exist ' + testNom1, () => {
-    return chai.request(app).get('/api/v1/jeu/jouer/' + testNom1)
+    return chai.request(app).get('/api/v1/jeu/terminerJeu/' + testNom1)
       .then(
         response => {
           expect(response).to.have.status(404);
