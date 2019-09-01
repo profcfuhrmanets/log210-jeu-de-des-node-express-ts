@@ -3,5 +3,7 @@ node_js:
   - "stable"
 script:
   - npm test
-after_success:
-  - npm run travis-deploy-once "npm run report-coverage"
+  - npm run coverage
+  - npm run coverage:coveralls
+after_script:
+  - cat ./build/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
