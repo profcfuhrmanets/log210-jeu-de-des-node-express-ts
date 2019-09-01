@@ -10,11 +10,6 @@
         "coverage": "nyc npm run test",
         "coverage:coveralls": "nyc --reporter=lcov --reporter=text-lcov npm run test | coveralls"
     },
-    "nyc": {
-        "extends": "@istanbuljs/nyc-config-typescript",
-        "all": true,
-        "check-coverage": true
-    },
     "keywords": [],
     "author": "",
     "license": "ISC",
