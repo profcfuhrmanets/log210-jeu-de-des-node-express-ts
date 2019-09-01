@@ -9,6 +9,7 @@
   ],
   "exclude": [
     "gulpfile.js",
+    "src/index.ts",
     "dist/**",
     "coverage/**",
     "node_modules/**",
