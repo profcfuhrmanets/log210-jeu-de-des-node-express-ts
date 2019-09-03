@@ -17,6 +17,7 @@ class App {
     this.express = express();
     this.middleware();
     this.routes();
+    this.express.set('view engine', 'pug');
   }
 
   // Configure Express middleware.
@@ -33,9 +34,10 @@ class App {
     let router = express.Router();
     // placeholder route handler
     router.get('/', (req, res, next) => {
-      res.json({
-        message: 'Bonjour monde!'
-      });
+      // res.json({
+      //   message: 'Bonjour monde!'
+      // });
+      res.render('index', { title: 'Hey', message: 'Bonjour monde!' })
     });
 
     this.express.use('/', router);  // routage de base
