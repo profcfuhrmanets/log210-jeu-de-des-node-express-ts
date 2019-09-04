@@ -15,7 +15,6 @@ describe('baseRoute', () => {
 
   it('should have the message in body', async () => {
     const res = await chai.request(app).get('/').query({name: 'body'});
-    console.log("Result:", res);
     expect(res.text).to.eql('<html><head><title>Hey</title></head><body><h1>Bonjour monde!</h1></body></html>');
   });
 
