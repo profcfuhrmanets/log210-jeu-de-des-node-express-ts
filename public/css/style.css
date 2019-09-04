@@ -3,14 +3,14 @@ body {
     background: #eee;
   }
   
-  a, h1, h2 {
+  /* a, h1, h2 {
     color: #377BA8;
-  }
+  } */
   
-  h1, h2 {
+  /* h1, h2 {
     font-family: 'Georgia', serif;
     margin: 0;
-  }
+  } */
   
   h1 {
     border-bottom: 2px solid #eee;
@@ -59,11 +59,11 @@ body {
     background: #fafafa;
   }
   
-  .flash {
+  /* .flash {
     background: #CEE5F5;
     padding: 0.5em;
     border: 1px solid #AACBE2;
-  }
+  } */
   
   .error {
     background: #F0D6D6;
