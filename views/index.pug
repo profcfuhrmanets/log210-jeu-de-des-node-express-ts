@@ -23,9 +23,12 @@ html
         each joueur in joueurs
           li.joueur
             strong(id=joueur.nom) #{joueur.nom}
+            = ' '
             | tentatives: #{joueur.nb_lancers}, réussites: #{ joueur.nb_lancers_gagnes }
-            button.lancer(id=joueur.nom) Lancer les dés
-            button.terminer(id=joueur.nom) Lancer les dés
+            = ' '
+            button.lancer(id=joueur.nom) Lancer les dés 
+            = ' '
+            button.terminer(id=joueur.nom) Terminer
         else
           li
             em Pas de joueurs encore.

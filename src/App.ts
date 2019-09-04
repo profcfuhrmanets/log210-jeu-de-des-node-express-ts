@@ -38,7 +38,7 @@ class App {
 
     // placeholder route handler
     router.get('/', (req, res, next) => {
-      res.render('index', { title: 'Jeu de dés', flashedMessages: [], joueurs:[] });
+      res.render('index', { title: 'Jeu de dés', flashedMessages: [], joueurs:[{nom:'Fred', nb_lancers: 1, nb_lancers_gagnes: 0 }] });
     });
 
     this.express.use('/', router);  // routage de base
