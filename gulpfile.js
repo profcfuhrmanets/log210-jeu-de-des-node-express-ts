@@ -12,9 +12,9 @@ gulp.task('scripts', () => {
   return tsResult.js.pipe(gulp.dest('dist'));
 });
 
-gulp.task('watch', gulp.series('scripts', () => {
-  gulp.watch('src/**/*.ts', ['scripts']);
-}));
+gulp.task('watch', function watchSrc() {
+  return gulp.watch('src/**/*.ts', gulp.series('scripts'));
+});
 
 gulp.task('jsonAssets', function jsonAssets() {
   return gulp.src(JSON_FILES)
