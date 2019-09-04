@@ -18,6 +18,9 @@ class App {
     this.middleware();
     this.routes();
     this.express.set('view engine', 'pug');
+    console.log('Setting static to: "' + __dirname + '/public' + '"');
+    this.express.use(express.static(__dirname + '/public')); // https://expressjs.com/en/starter/static-files.html
+
   }
 
   // Configure Express middleware.
@@ -32,12 +35,10 @@ class App {
     /* This function will change when we start to add more
      * API endpoints */
     let router = express.Router();
+
     // placeholder route handler
     router.get('/', (req, res, next) => {
-      // res.json({
-      //   message: 'Bonjour monde!'
-      // });
-      res.render('index', { title: 'Hey', message: 'Bonjour monde!' })
+      res.render('index', { title: 'Jeu de dés', message: 'Bonjour monde!', flashedMessages: ['It is working (first message)','second message'], joueurs:[] });
     });
 
     this.express.use('/', router);  // routage de base
