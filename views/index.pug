@@ -3,6 +3,7 @@ html
     title= title
     link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css')
     link(rel='stylesheet' href='/css/style.css')
+    script()
   body
 
     div.container
@@ -24,7 +25,7 @@ html
           li.joueur
             strong(id=joueur.nom) #{joueur.nom}
             = ' '
-            | tentatives: #{joueur.nb_lancers}, réussites: #{ joueur.nb_lancers_gagnes }
+            | tentatives: #{joueur.nbLancers}, réussites: #{ joueur.nbLancersGagnes }
             = ' '
             button.lancer(id=joueur.nom) Lancer les dés 
             = ' '
@@ -32,3 +33,7 @@ html
         else
           li
             em Pas de joueurs encore.
+
+  <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/lib/main.js"></script>

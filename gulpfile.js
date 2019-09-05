@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const ts = require('gulp-typescript');
 const JSON_FILES = ['src/*.json', 'src/**/*.json'];
 const CSS_FILES = ['public/css/*.css'];
+const JS_FILES = ['public/lib/*.js'];
 
 // pull in the project TypeScript config
 const tsProject = ts.createProject('tsconfig.json');
@@ -21,12 +22,17 @@ gulp.task('jsonAssets', function jsonAssets() {
   .pipe(gulp.dest('dist'));
 });
 
+gulp.task('jsAssets', function jsAssets() {
+  return gulp.src(JS_FILES, {base: './public'})
+  .pipe(gulp.dest('dist/public'));
+});
+
 gulp.task('cssAssets', function cssAssets() {
   return gulp.src(CSS_FILES, {base: './public'})
   .pipe(gulp.dest('dist/public'));
 });
 
-gulp.task('assets', gulp.parallel('jsonAssets', 'cssAssets') );
+gulp.task('assets', gulp.parallel('jsonAssets', 'jsAssets', 'cssAssets') );
 
 gulp.task('default', gulp.parallel('watch', 'assets'));
 

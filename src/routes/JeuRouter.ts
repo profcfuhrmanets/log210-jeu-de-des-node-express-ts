@@ -1,4 +1,6 @@
 import { Router, Request, Response, NextFunction } from 'express';
+import * as flash from 'node-twinkle';
+
 import { JeuDeDes } from '../core/JeuDeDes';
 // TODO: rethink the name for this "router" function, since it's not really an Express router (no longer being "use()"ed inside Express)
 export class JeuRouter {
@@ -22,16 +24,20 @@ export class JeuRouter {
     try {
       // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
       let joueur = this.jeu.demarrerJeu(nom);
-      res.status(200)
+      req.flash('Nouveau jeu pour ' + nom);
+      res.status(201)
         .send({
           message: 'Success',
           status: res.status,
           nom: joueur.getNom()
         });
     } catch (error) {
-      let code = 500; // internal server error
+      var code;
       if (error.message.indexOf("existe déjà")) {
+        req.flash(error.message);
         code = 400; // bad request }
+      } else {
+        code = 500; // internal server error
       }
       res.status(code).json({ error: error.toString() });
 
@@ -49,6 +55,8 @@ export class JeuRouter {
     try {
       // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
       let résultat = this.jeu.jouer(nom);
+      console.log("Résultat: ", résultat);
+      req.flash('Résultat pour ' + nom + ': ' + résultat.v1 + ' + ' + résultat.v2 + ' = ' + résultat.somme);
       res.status(200)
         .send({
           message: 'Success',
@@ -57,9 +65,12 @@ export class JeuRouter {
         });
 
     } catch (error) {
-      let code = 500; // internal server error
+      var code;
       if (error.message.indexOf("n'existe pas")) {
+        req.flash(error.message);
         code = 404; // not found }
+      } else {
+        code = 500; // internal server error
       }
       res.status(code).json({ error: error.toString() });
 
@@ -77,6 +88,7 @@ export class JeuRouter {
     try {
       // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
       let résultat = this.jeu.terminerJeu(nom);
+      req.flash('Jeu terminé pour ' + nom);      
       res.status(200)
         .send({
           message: 'Success',
@@ -85,9 +97,12 @@ export class JeuRouter {
         });
 
     } catch (error) {
-      let code = 500; // internal server error
+      var code;
       if (error.message.indexOf("n'existe pas")) {
         code = 404; // not found }
+        req.flash(error.message);
+      } else {
+        code = 500; // internal server error
       }
       res.status(code).json({ error: error.toString() });
 
