@@ -3,5 +3,5 @@ node_js:
   - "stable"
 script:
   - npm test
-after_script:
+after_success:
   - npm run coverage:coveralls

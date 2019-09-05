@@ -8,14 +8,14 @@ const expect = chai.expect;
 
 describe('baseRoute', () => {
 
-  it('should be json', async () => {
+  it('should be html', async () => {
     const res = await chai.request(app).get('/');
-    expect(res.type).to.eql('application/json');
+    expect(res).to.be.html;
   });
 
-  it('should have a message prop', async () => {
-    const res = await chai.request(app).get('/');
-    expect(res.body.message).to.eql('Bonjour monde!');
-  });
+  // it('should have the message in body', async () => {
+  //   const res = await chai.request(app).get('/');
+  //   expect(res.text).to.eql('<html><head><title>Hey</title></head><body><h1>Bonjour monde!</h1></body></html>');
+  // });
 
 });

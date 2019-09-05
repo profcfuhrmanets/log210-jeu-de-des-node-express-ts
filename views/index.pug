@@ -1,0 +1,39 @@
+html
+  head
+    title= title
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/css/style.css')
+    script()
+  body
+
+    div.container
+      h1 JeuDeDés-Node-Express-TS-TDD-LOG210
+
+      each message in flashedMessages
+        div.flash.alert.alert-success.col-sm-4(role='success') #{message}
+
+      form#formNouveauJoueur.form-group(action='javascript:void(0);')
+        dl
+          dt Nom du nouveau joueur
+          dd
+            input.form-control.col-sm-4(name='nom' type='text')
+        button.demarrer Démarrer
+
+      h3 Joueurs
+      ul.entries
+        each joueur in joueurs
+          li.joueur
+            strong(id=joueur.nom) #{joueur.nom}
+            = ' '
+            | tentatives: #{joueur.nbLancers}, réussites: #{ joueur.nbLancersGagnes }
+            = ' '
+            button.lancer(id=joueur.nom) Lancer les dés 
+            = ' '
+            button.terminer(id=joueur.nom) Terminer
+        else
+          li
+            em Pas de joueurs encore.
+
+  <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/lib/main.js"></script>
