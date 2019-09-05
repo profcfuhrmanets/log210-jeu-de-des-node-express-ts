@@ -24,7 +24,8 @@ export class JeuRouter {
     try {
       // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
       let joueur = this.jeu.demarrerJeu(nom);
-      req.flash('Nouveau jeu pour ' + nom);
+      //Object.assign(Request.prototype, {flash(m:String): any {return flash.flash(m)}});
+      (req as any).flash('Nouveau jeu pour ' + nom);  // error in ts: Property 'flash' does not exist on type 'Request'.
       res.status(201)
         .send({
           message: 'Success',
@@ -34,7 +35,7 @@ export class JeuRouter {
     } catch (error) {
       var code;
       if (error.message.indexOf("existe déjà")) {
-        req.flash(error.message);
+        (req as any).flash(error.message);
         code = 400; // bad request }
       } else {
         code = 500; // internal server error
@@ -55,8 +56,7 @@ export class JeuRouter {
     try {
       // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
       let résultat = this.jeu.jouer(nom);
-      console.log("Résultat: ", résultat);
-      req.flash('Résultat pour ' + nom + ': ' + résultat.v1 + ' + ' + résultat.v2 + ' = ' + résultat.somme);
+      (req as any).flash('Résultat pour ' + nom + ': ' + résultat.v1 + ' + ' + résultat.v2 + ' = ' + résultat.somme);
       res.status(200)
         .send({
           message: 'Success',
@@ -67,7 +67,7 @@ export class JeuRouter {
     } catch (error) {
       var code;
       if (error.message.indexOf("n'existe pas")) {
-        req.flash(error.message);
+        (req as any).flash(error.message);
         code = 404; // not found }
       } else {
         code = 500; // internal server error
@@ -88,7 +88,7 @@ export class JeuRouter {
     try {
       // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
       let résultat = this.jeu.terminerJeu(nom);
-      req.flash('Jeu terminé pour ' + nom);      
+      (req as any).flash('Jeu terminé pour ' + nom);      
       res.status(200)
         .send({
           message: 'Success',
@@ -100,7 +100,7 @@ export class JeuRouter {
       var code;
       if (error.message.indexOf("n'existe pas")) {
         code = 404; // not found }
-        req.flash(error.message);
+        (req as any).flash(error.message);
       } else {
         code = 500; // internal server error
       }

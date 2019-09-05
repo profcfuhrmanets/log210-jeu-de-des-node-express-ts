@@ -27,7 +27,7 @@ describe('GET /api/v1/jeu/demarrerJeu/:id', () => {
   it('responds with successful first call for player ' + testNom1, () => {
     return chai.request(app).get('/api/v1/jeu/demarrerJeu/' + testNom1)
       .then(response => {
-        expect(response.status).to.equal(200);
+        expect(response.status).to.equal(201);
         expect(response).to.be.json;
         expect(response.body.nom).to.equal(testNom1);
       });

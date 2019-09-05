@@ -20,7 +20,6 @@ class App {
     this.middleware();
     this.routes();
     this.expressApp.set('view engine', 'pug');
-    console.log('Setting static to: "' + __dirname + '/public' + '"');
     this.expressApp.use(express.static(__dirname + '/public')); // https://expressjs.com/en/starter/static-files.html
 
   }
@@ -45,9 +44,7 @@ class App {
 
     // placeholder route handler
     router.get('/', (req, res, next) => {
-      // console.log('joueurs: ', Array.from(jeuRoutes.jeu.joueurs.values()));
       let messages = res.locals.has_flashed_messages() ? res.locals.get_flashed_messages() : [];
-      console.log('Messages:', messages);
       res.render('index', { title: 'Jeu de dés', flashedMessages: messages, joueurs: Array.from(jeuRoutes.jeu.joueurs.values())});
     });
 

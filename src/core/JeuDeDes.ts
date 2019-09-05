@@ -31,10 +31,6 @@ export class JeuDeDes {
         let joueur = new Joueur(nom);
         this.joueurs.set(nom, joueur);
 
-        this.joueurs.forEach((value: Joueur, key: string) => {
-            console.log(key, value);
-        });
-
         return joueur;
     }
 
