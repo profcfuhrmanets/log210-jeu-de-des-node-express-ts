@@ -47,7 +47,7 @@ export class JeuDeDes {
             throw new Error("Joueur '" + nom + "' n'existe pas.");
         }
         this.d1.brasser();
-        this.d1.brasser();
+        this.d2.brasser();
         let v1 = this.d1.getValeur();
         let v2 = this.d2.getValeur();
         let somme = v1 + v2;
