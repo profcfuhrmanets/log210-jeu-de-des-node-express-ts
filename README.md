@@ -45,6 +45,23 @@ L'éditeur [Visual Studio Code](https://code.visualstudio.com/) est très utile 
    </details>
 1. Lancer les tests (pas besoin de lancer le serveur d'abord) - `npm test`
 
+## Développement piloté par les tests (TDD)
+
+![États du TDD](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-python-flask/master/docs/tdd.puml&fmt=svg)
+
+Le développement piloté par les tests (Test-Driven Development, TDD) est une façon de développer des logiciels en commençant par les tests. Il y a plusieurs avantages de cette façon de faire et ce squelette supporte la méthodologie.
+
+Le TDD suit un cycle particulier, comme vous pouvez voir à l'image plus haut:
+
+1. Écrire un nouveau test
+2. Exécuter le test (qui échouera)
+3. Écrire juste assez de code pour faire passer le test
+4. Refactoriser le code (et les tests) au besoin et recommencer
+
+> Il y a des tests pour tous les appels de l'API du serveur web, mais on devrait
+également faire des tests pour les autres classes (p.ex. au niveau test unitaire 
+des classes du domaine).
+
 ## Couplage souhaitable entre la couche Présentation et la couche Domaine
 
 Dans un bon design (selon Larman), on évite que la couche Présentation ait la responsabilité de gérer les évènements système (opérations système). Larman présente dans son livre un exemple avec un JFrame (en Java Swing) à la figure F16.24. On l'adapte ici au contexte d'un service Web dans le framework Express (Node.js):
