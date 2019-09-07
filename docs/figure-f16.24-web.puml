@@ -4,7 +4,7 @@ digraph G {
 	edge [fontname="Helvetica",fontsize=9,labelfontname="Helvetica",labelfontsize=9];
 	node [fontname="Helvetica",fontsize=9, shape=box, style=filled, fillcolor="white"];
 
-   	c0 [label="Utilsateur", shape=none]
+   	c0 [label="Utilsateur", shape=oval]
     subgraph cluster_0 {
         style=filled;
 		label = "Couche présentation"; labeljust=l; fontname="Helvetica-Oblique";fontsize=9;
