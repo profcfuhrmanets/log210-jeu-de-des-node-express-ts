@@ -47,6 +47,9 @@ L'éditeur [Visual Studio Code](https://code.visualstudio.com/) est très utile 
 
 ## Développement piloté par les tests (TDD)
 
+   <details>
+     <summary>Plus de détails</summary><p>
+
 ![États du TDD](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-python-flask/master/docs/tdd.puml&fmt=svg)
 
 Le développement piloté par les tests (Test-Driven Development, TDD) est une façon de développer des logiciels en commençant par les tests. Il y a plusieurs avantages de cette façon de faire et ce squelette supporte la méthodologie.
@@ -61,6 +64,9 @@ Le TDD suit un cycle particulier, comme vous pouvez voir à l'image plus haut:
 > Il y a des tests pour tous les appels de l'API du serveur web, mais on devrait
 également faire des tests pour les autres classes (p.ex. au niveau test unitaire 
 des classes du domaine).
+
+  </p>
+  </details>
 
 ## Couplage souhaitable entre la couche Présentation et la couche Domaine
 
