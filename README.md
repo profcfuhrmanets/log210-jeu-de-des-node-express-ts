@@ -30,10 +30,20 @@ L'éditeur [Visual Studio Code](https://code.visualstudio.com/) est très utile 
 ## Voulez-vous utiliser ce squelette?
 
 1. (Créer une fork et) Cloner
-2. Installer les dépendences node - `npm install`
-3. Compiler - `npm run build`
-4. Lancer serveur de développement - `npm start`
-5. Lancer les tests (pas besoin de lancer le serveur d'abord) - `npm test`
+1. Installer les dépendences node - `npm install`
+1. Compiler - `npm run build`
+1. Lancer serveur de développement - `npm start`
+1. Accéder à la page template de l'application - `http://localhost:3000`
+   <details>
+     <summary>Regarder exemple de la fonctionnalité</summary>
+ 
+     <p>
+ 
+     ![GIF animé de la fonctionnalité de l'application Jeu de Dés](https://user-images.githubusercontent.com/7606540/64476621-da3be480-d15e-11e9-8063-f34552e4d91e.gif)
+
+    </p>
+   </details>
+1. Lancer les tests (pas besoin de lancer le serveur d'abord) - `npm test`
 
 ## Couplage souhaitable entre la couche Présentation et la couche Domaine
 
