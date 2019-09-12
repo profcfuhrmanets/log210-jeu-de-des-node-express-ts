@@ -30,6 +30,7 @@ L'éditeur [Visual Studio Code](https://code.visualstudio.com/) est très utile 
 ## Voulez-vous utiliser ce squelette?
 
 1. (Créer une fork et) Cloner
+1. Installer [node](https://nodejs.org/en/download/)
 1. Installer les dépendences node - `npm install`
 1. Compiler - `npm run build`
 1. Lancer serveur de développement - `npm start`
