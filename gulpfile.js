@@ -32,7 +32,7 @@ gulp.task('cssAssets', function cssAssets() {
   .pipe(gulp.dest('dist/public'));
 });
 
-gulp.task('assets', gulp.parallel('jsonAssets', 'jsAssets', 'cssAssets') );
+gulp.task('build', gulp.parallel('jsonAssets', 'jsAssets', 'cssAssets', 'scripts') );
 
-gulp.task('default', gulp.parallel('watch', 'assets'));
+gulp.task('default', gulp.parallel('watch', 'build'));
 
