@@ -5,9 +5,9 @@ export class JeuDeDes {
     // classe contrôleur GRASP
 
     // map des Joueurs
-    joueurs: Map<string, Joueur>;
-    d1 : De;
-    d2 : De;
+    private joueurs: Map<string, Joueur>;
+    private d1 : De;
+    private d2 : De;
 
     constructor() {
         console.log("Initialiser JeuDeDes");
@@ -20,6 +20,10 @@ export class JeuDeDes {
      *  opérations systèmes
      */
 
+    public getJoueurs() {
+        return Array.from(this.joueurs.values());
+    }
+    
     public demarrerJeu(nom: string) {
 
         if (this.joueurs.get(nom) !== undefined) {
