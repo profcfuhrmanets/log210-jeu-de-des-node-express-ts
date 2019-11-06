@@ -45,7 +45,7 @@ class App {
     // placeholder route handler
     router.get('/', (req, res, next) => {
       let messages = res.locals.has_flashed_messages() ? res.locals.get_flashed_messages() : [];
-      res.render('index', { title: 'Jeu de dés', flashedMessages: messages, joueurs: Array.from(jeuRoutes.jeu.joueurs.values())});
+      res.render('index', { title: 'Jeu de dés', flashedMessages: messages, joueurs: jeuRoutes.jeu.getJoueurs()});
     });
 
     this.expressApp.use('/', router);  // routage de base
