@@ -62,16 +62,14 @@ Le TDD suit un cycle particulier, comme vous pouvez voir à l'image plus haut:
 3. Écrire juste assez de code pour faire passer le test
 4. Refactoriser le code (et les tests) au besoin et recommencer
 
-> Il y a des tests pour tous les appels de l'API du serveur web, mais on devrait
-également faire des tests pour les autres classes (p.ex. au niveau test unitaire 
-des classes du domaine).
+> Il y a des tests pour tous les appels de l'API du serveur web, mais on devrait également faire des tests pour les autres classes (p.ex. au niveau test unitaire des classes du domaine).
 
   </p>
   </details>
 
 ## Couplage souhaitable entre la couche Présentation et la couche Domaine
 
-Dans un bon design (selon Larman), on évite que la couche Présentation ait la responsabilité de gérer les évènements système (opérations système). Larman présente dans son livre un exemple avec un JFrame (en Java Swing) à la figure F16.24. On l'adapte ici au contexte d'un service Web dans le framework Express (Node.js):
+Dans un design favorisant la maintenabilité, on évite que la couche Présentation ait la responsabilité de gérer les évènements système (opérations système). Larman présente dans son livre un exemple avec un JFrame (en Java Swing) à la figure F16.24. On l'adapte ici au contexte d'un service Web dans le framework Express (Node.js):
 
 ![Diagramme de séparation des couches avec une opération système envoyée au contrôleur GRASP](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/figure-f16.24-web.puml?cacheinc=6)
 
@@ -81,11 +79,11 @@ Dans la figure ci-dessus, l'objet `:JeuDeDes` (qui est un objet en dehors de la 
 
 ### Cas d'utilisation
 
-#### Jouer aux dés.
+#### Jouer aux dés
 
-1. Le Joueur demande à démarrer le jeu en s'identifiant. 
-1. Le Joueur demande à lancer les dés. 
-1. Le Système affiche le nom du joueur et le résultat du lancer des dés, ainsi que le nombre de lancers et le nombre de fois que le Joueur a gagné. Pour un lancer, si le total est égal à sept, le Joueur a gagné. Dans tous les autres cas, il a perdu. 
+1. Le Joueur demande à démarrer le jeu en s'identifiant.
+1. Le Joueur demande à lancer les dés.
+1. Le Système affiche le nom du joueur et le résultat de la partie, ainsi que le nombre de parties et le nombre de fois que le Joueur a gagné. Pour un lancer, si le total est égal à sept, le Joueur a gagné. Dans tous les autres cas, il a perdu.
 
 *Le Joueur répète l’étape 3 jusqu’à ce qu’il ait fini.*
 
@@ -98,17 +96,41 @@ Dans la figure ci-dessus, l'objet `:JeuDeDes` (qui est un objet en dehors de la 
 
 ### Modèle du domaine
 
-![Diagramme de classe du Modèle du domaine](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/mdd.puml?cacheinc=5)
+![Diagramme de classe du Modèle du domaine](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/mdd.puml?cacheinc=6)
 
 ### Diagramme de séquence système (DSS)
 
-![Diagramme de séquence système](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/dss-jouer.puml?cacheinc=5)
+![Diagramme de séquence système](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/dss-jouer.puml?cacheinc=6)
+
+### Contrats d'opération
+
+#### Opération: `démarrerJeu(nom:String)`
+
+##### Postconditions
+
+- Une instance j de Joueur a été créée
+- j.nom est devenu nom
+- j a été associé à JeuDeDes
+
+#### Opération: `jouer(nom:String)`
+
+##### Postconditions
+
+- d1.valeur est devenue un nombre entier aléatoire entre 1 et 6
+- d2.valeur est devenue un nombre entier aléatoire entre 1 et 6
+- j.nbLancers a été incrémenté sur une base de correspondance avec nom
+- j.nbLancersGagnés a été incrémenté si la totale de d1.valeur et d2.valeur est égale à 7
+
+#### Opération: `terminerJeu(nom:String)`
+
+##### Postconditions
+
+- L’instance j de Joueur a été supprimée sur une base de correspondance avec nom
 
 ### Réalisations de cas d'utilisation (RDCU)
 
-![Diagramme de séquence, demarrerJeu](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/rdcu-demarrerJeu.puml?cacheinc=5)
+![Diagramme de séquence, demarrerJeu](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/rdcu-demarrerJeu.puml?cacheinc=6)
 
-![Diagramme de séquence, demarrerJeu](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/rdcu-jouer.puml?cacheinc=5)
+![Diagramme de séquence, jouer](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/rdcu-jouer.puml?cacheinc=6)
 
-![Diagramme de séquence, demarrerJeu](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/rdcu-terminerJeu.puml?cacheinc=5)
-
+![Diagramme de séquence, terminerJeu](http://www.plantuml.com/plantuml/proxy?fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/rdcu-terminerJeu.puml?cacheinc=6)
