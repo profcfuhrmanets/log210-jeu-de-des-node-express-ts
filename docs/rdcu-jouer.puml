@@ -3,13 +3,13 @@ skinparam style strictuml
 skinparam defaultfontname Verdana
 title RDCU pour jouer
 participant ":JeuDeDes" as c
-participant "joueurs:\nMap<Joueur>" as jm
+participant "joueurs:\nMap<String,Joueur>" as jm
 participant "d1:De" as d1
 participant "d2:De" as d2
 participant "j:Joueur" as j
 ->c : jouer(nom)
 note right : selon Contrôleur 
-c->jm : j = get(nom)
+c->jm : j = chercher(nom)
 note right : selon Transformer ID en objets 
 c->d1 : brasser()
 note right : selon Expert 
@@ -19,14 +19,14 @@ c->d2 : brasser()
 note right : selon Expert 
 c->d2 : v2 = getValeur()
 note right : selon Expert 
-c->j : lancer()
+c->j : incNbParties()
 note right : selon Expert 
-alt v1 + v2 == 7
-  c->j : gagner()
+opt v1 + v2 == 7
+  c->j : incNbPartiesGagnees()
   note right : selon Expert 
-end alt
-c->j : l = getLancers()
+end opt
+c->j : p = getNbParties()
 note right : selon Expert 
-c->j : g = getLancersGagnes()
+c->j : g = getNbPartiesGagnees()
 note right : selon Expert 
 @enduml
