@@ -1,0 +1,25 @@
+@startuml
+skinparam style strictuml
+skinparam backgroundcolor transparent
+'skinparam handwritten true
+skinparam sequenceMessageAlign center
+actor ":Joueur" as j
+box "Couche présentation" #springgreen
+participant ":Button" as b <<NavigateurWeb>> 
+participant ":Routeur" as r <<NodeExpress>>
+end box
+box "Couche domaine" #lightcoral
+participant ":JeuDeDés" as c <<ContrôleurGRASP>>
+participant "..." as s
+end box
+j -> b : cliquer
+b -> r : REST niveau 1\nHTTP GET /api/v1/demarrerJeu/Cris
+skinparam NoteTextAlignment center
+note over r, c
+L'<color blue>**opération système**</color> est envoyée
+à un //objet du domaine// (le contrôleur GRASP)
+end note
+r -[#blue,bold]> c : <color blue>**démarrerJeu(nom:String)**</color>
+c -> s : ...
+note over c, s : Selon la RDCU...
+@enduml
