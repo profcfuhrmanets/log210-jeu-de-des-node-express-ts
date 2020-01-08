@@ -17,6 +17,7 @@ $(function () {
             $.get("/api/v1/jeu/demarrerJeu/" + nomDuFormulaire,
                 function (data, status) {
                     //alert("Data: " + data + "\nStatus: " + status);
+                }).always(function() { // traiter l'erreur
                     window.location.reload(true);
                 });
         } else {
