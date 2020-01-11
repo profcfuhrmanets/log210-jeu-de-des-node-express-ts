@@ -8,7 +8,7 @@ box "Couche présentation" #bbffbb
 participant ":Button" as b <<NavigateurWeb>> 
 participant ":Routeur" as r <<NodeExpress>>
 end box
-box "Couche domaine" #ffbbbb
+box "Couche domaine" #bbbbff
 participant ":JeuDeDés" as c <<ContrôleurGRASP>>
 participant "..." as s
 end box
