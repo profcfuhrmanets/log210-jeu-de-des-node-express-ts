@@ -4,11 +4,11 @@ skinparam backgroundcolor transparent
 'skinparam handwritten true
 skinparam sequenceMessageAlign center
 actor ":Joueur" as j
-box "Couche présentation" #springgreen
+box "Couche présentation" #bbffbb
 participant ":Button" as b <<NavigateurWeb>> 
 participant ":Routeur" as r <<NodeExpress>>
 end box
-box "Couche domaine" #lightcoral
+box "Couche domaine" #ffbbbb
 participant ":JeuDeDés" as c <<ContrôleurGRASP>>
 participant "..." as s
 end box
