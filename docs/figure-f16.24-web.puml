@@ -17,7 +17,7 @@ digraph G {
     	c11 -> c13 [label="", style=invis];
 	}
     subgraph cluster_1 {
-        style=filled; color = "#ffbbbb";
+        style=filled; color = "#bbbbff";
 		label = "Couche domaine"; labeljust=l; fontname="Helvetica-Oblique";fontsize=9;
 	    c4 [label="", shape=point, fillcolor=invis, color=invis]
 	    c5 [label="", shape=none, fillcolor=invis]
