@@ -1,11 +1,12 @@
 @startuml
 skinparam style strictuml
 skinparam backgroundcolor transparent
+skinparam SequenceBoxBorderColor transparent
 skinparam participantpadding 10
 'skinparam handwritten true
 skinparam sequenceMessageAlign center
 actor ":Joueur" as j
-box "Couche présentation\n(Navigateur + une partie du Serveur)" #ddffdd|ffffff
+box "Couche présentation\n(Navigateur + une partie du Serveur)" #ddffdd
 participant ":Button" as b <<NavigateurWeb>> 
 participant ":JeuRouteur" as r <<NodeExpress>>
 end box
