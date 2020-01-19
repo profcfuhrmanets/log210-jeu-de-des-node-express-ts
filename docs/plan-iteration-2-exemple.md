@@ -141,3 +141,6 @@ Nous devons trouver un autre moyen de faire les commits (peut-être avec des bra
 
 <a name="commentEstimer">Comment estimer la taille :</a>
     <https://docs.google.com/a/etsmtl.net/document/d/1bDy0chpWQbK9bZ82zdsBweuAgNYni3T2k79xihr6CuU/edit?usp=sharing>
+
+
+#[Retour au Readme](../README.md)

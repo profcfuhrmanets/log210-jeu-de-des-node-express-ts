@@ -140,5 +140,8 @@ Voici la même figure, mais sous forme de diagramme de séquence avec l'acteur. 
 ![Diagramme de séquence, terminerJeu](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/rdcu-terminerJeu.puml)
 
 
-Documents nécessaires pour la rédaction de vos plan d'itération et rapports.
-(test)(http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/)
+# Gabarit
+
+- [plan-iteration-2-exemple.md](docs/plan-iteration-2-exemple.md)
+- [S20201-LOG210-Iteration-Rapport-gabarit.md](docs/S20201-LOG210-Iteration-Rapport-gabarit.md)
+
