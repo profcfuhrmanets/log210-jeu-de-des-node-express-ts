@@ -37,17 +37,16 @@
 | CUXX - Nom du cas d'utilisation                        | Pondération | Note |
 |--------------------------------------------------------|:-----------:|:----:|
 | Les DSS respectent le déroulement du cas d'utilisation | 10          |      |
-| La notation UML des DSS est respectée                  | 3           |      |
 | Les contrats sont cohérents avec le DSS                | 2           |      |
-| Qualité des post-conditions                            | 5           |      |
-| Complétude des contrats                                | 5           |      |
-| Les RDCU sont cohérents avec le DSS et les contrats    | 6           |      |
-| Les justifications GRASP sont pertinentes et complètes | 6           |      |
-| La notation UML des RDCU est respectée                 | 3           |      |
-| **Total**                                              | 40          |      |
+| Qualité des post-conditions                            | 4           |      |
+| Complétude des contrats                                | 4           |      |
+| Les RDCU sont cohérents avec le DSS et les contrats    | 5           |      |
+| Les justifications GRASP sont pertinentes et complètes | 5           |      |
+| **Total**                                              | 30          |      |
 
 | Déductions                                  | Pondération | Note |
 |---------------------------------------------|:-----------:|:----:|
+| Respect de la notation UML                  | -5          |      |
 | Qualité du français (-0,25 point par faute) | -5          |      |
 | Présentation du rapport                     | -3          |      |
 | **Total**                                   | -8          |      |
