@@ -15,9 +15,9 @@
 # Grille de correction
 
 > Quelques consignes à respecter pour la présentation du rapport :
-> - Tout vos diagrammes doivent être fait avec <https://plantuml.com/fr/>
-> - Vous devez intégrer les images dans le rapport (n'utilisez pas des liens vers des fichiers).
-> - Mettez à jour la grille de correction pour correspondre à vos cas d'utilistion
+> - Tous vos diagrammes doivent être faits avec <https://plantuml.com/fr/>
+> - Vous devez intégrer les images dans le rapport (n'utilisez pas des liens vers des fichiers)
+> - Mettez à jour la grille de correction pour correspondre à vos cas d'utilisation
 > - Mettez à jour la table des matières
 > - Retirez les instructions du rapport avant la remise
 > - Vous devez exporter ce fichier en format PDF et l'ajouter dans votre repository pour faciliter la correction des chargés de laboratoire
@@ -52,7 +52,7 @@
 | Présentation du rapport                     | -3          |      |
 | **Total**                                   | -8          |      |
 
-### Grand total : XX%
+### Total global : XX%
 
 # Introduction
 
@@ -60,10 +60,10 @@
 
 # Modèle du domaine
 
-> Le MDD est cumulatif et vous devez ajouter des classes et associations à chaque itération. Vous devez donc utiliser un code de couleur pour chaque itération ce qui nous permettra de voir quelles classes et associations ont été ajoutées à quelle itération. Voir les stéréotypes personnalisés dans <https://plantuml.com/fr/class-diagram>
+> Le MDD est cumulatif : vous devez ajouter des classes et associations à chaque itération. Utilisez un code de couleur pour chaque itération afin de faire ressortir les changements. Voir les stéréotypes personnalisés : <https://plantuml.com/fr/class-diagram>
 
 > Vous devez représenter les codes de catégories (classes et associations) dans votre MDD, à partir du document suivant : [https://drive.google.com/file/d/1FOxOf6FUNjyoU4YouLRsSANbfe0ADgeD/view?usp=sharing](https://drive.google.com/file/d/1FOxOf6FUNjyoU4YouLRsSANbfe0ADgeD/view?usp=sharing)\
-> **Note :** Vous devez utiliser votre courriel <xxx@etsmtl.net> pour accéder au lien
+> **Note :** vous devez utiliser votre courriel <xxx@etsmtl.net> pour accéder au lien
 
 > Intégrez votre MDD ici
 
@@ -78,7 +78,7 @@
 |Élément 1|Responsabilité 1|
 
 ## Code de couleur
-> Précisez le code de couleur pour les itérations
+> Précisez le code de couleur pour chaque itération
 
 |Itération|Couleur   |
 |:-------:|:--------:|
@@ -86,7 +86,7 @@
 
 # CUXX - Nom du cas d'utilisation
 
-> Copiez cette section pour chaque cas d'utilisation à présenter. Si des opérations se répètent, ajoutez un hyperlien vers le contrat précédent.
+> Copiez cette section pour chaque cas d'utilisation à présenter. Si des opérations se répètent, ajoutez un hyperlien vers le contrat précédent
 
 > Intégrez votre DSS ici
 
