@@ -17,7 +17,7 @@ Ce squelette est proposé pour commencer les projets en LOG210. Il possède les 
 
 ## D'où vient l'idée de base pour ce squelette?
 
-Le code original a été expliqué dans ce [blog post](http://mherman.org/blog/2016/11/05/developing-a-restful-api-with-node-and-typescript/#.WB3zyeErJE4).
+Le code d'origine a été expliqué dans ce [texte de blogue](http://mherman.org/blog/2016/11/05/developing-a-restful-api-with-node-and-typescript/#.WB3zyeErJE4).
 
 Dans le cadre du cours [LOG210 de l'ÉTS](https://www.etsmtl.ca/Programmes-Etudes/1er-cycle/Fiche-de-cours?Sigle=log210), nous utilisons la méthodologie documentée par [Craig Larman dans son livre *Applying UML and Patterns*](http://www.craiglarman.com/wiki/index.php?title=Book_Applying_UML_and_Patterns). Ce livre documente beaucoup de principes avec des exemples en Java, qui n'est plus à la mode comme à l'époque où le livre a été écrit. 
 
@@ -25,13 +25,13 @@ Pourtant, il est encore possible de suivre cette méthodologie avec des technolo
 
 Ce squelette montre ces aspects importants, dans le contexte du *Jeu de dés*, qui est l'exemple utilisé dans le chapitre 1 du livre du cours. Nous avons modifié l'exemple pour le rendre un peu plus complexe (plusieurs opérations système). Les diagrammes (faits avec [PlantUML](https://stackoverflow.com/questions/32203610/how-to-integrate-uml-diagrams-into-gitlab-or-github)) sont présentés plus bas dans la partie Artefacts.
 
-L'éditeur [Visual Studio Code](https://code.visualstudio.com/) est très utile mais n'est pas nécessaire avec ce squelette.
+L'éditeur [Visual Studio Code](https://code.visualstudio.com/) est très utile, mais n'est pas nécessaire avec ce squelette.
 
 ## Voulez-vous utiliser ce squelette?
 
 1. (Créer une fork et) Cloner
 1. Installer [node](https://nodejs.org/en/download/)
-1. Installer les dépendences node - `npm install`
+1. Installer les dépendances node - `npm install`
 1. Compiler - `npm run build`
 1. Lancer serveur de développement - `npm start`
 1. Accéder à la page template de l'application - `http://localhost:3000`
@@ -60,9 +60,9 @@ Le TDD suit un cycle particulier, comme vous pouvez voir à l'image plus haut:
 1. Écrire un nouveau test
 2. Exécuter le test (qui échouera)
 3. Écrire juste assez de code pour faire passer le test
-4. Refactoriser le code (et les tests) au besoin et recommencer
+4. Refactoriser le code (et les tests) au besoin, et recommencer
 
-> Il y a des tests pour tous les appels de l'API du serveur web, mais on devrait également faire des tests pour les autres classes (p.ex. au niveau test unitaire des classes du domaine).
+> Il y a des tests pour tous les appels de l'API du serveur web, mais on devrait également faire des tests pour les autres classes (par exemple, des tests unitaires des classes du domaine).
 
   </p>
   </details>
