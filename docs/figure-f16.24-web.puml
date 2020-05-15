@@ -8,7 +8,7 @@ digraph G {
     subgraph cluster_0 {
         style=filled;
 		label = "Couche présentation"; labeljust=l; fontname="Helvetica-Oblique";fontsize=9;
-        color = "#bbffbb";
+        color = "#ddffdd";
 	    c1 [label="Page web\n(navigateur)", shape=note]
     	c1 -> c2 [label=" HTTP GET /api/v1/demarrerJeu/Cris", fontname="Courier-Bold"];
         c11 [label="" , shape=none, fillcolor=invis]
@@ -17,7 +17,7 @@ digraph G {
     	c11 -> c13 [label="", style=invis];
 	}
     subgraph cluster_1 {
-        style=filled; color = "#bbbbff";
+        style=filled; color = "#ddddff";
 		label = "Couche domaine"; labeljust=l; fontname="Helvetica-Oblique";fontsize=9;
 	    c4 [label="", shape=point, fillcolor=invis, color=invis]
 	    c5 [label="", shape=none, fillcolor=invis]
