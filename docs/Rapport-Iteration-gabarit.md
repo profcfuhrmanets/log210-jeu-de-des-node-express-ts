@@ -1,22 +1,25 @@
-# Rapport itération X
+# Rapport itération X - équipe Y
 
 ## LOG210-année-session-groupe (ex. LOG210-2020-été-g01)
 
-|                      |                           |
-|----------------------|---------------------------|
-|Noms                  |Nom, Prénom, Code universel|
-|Équipe                |YY                         |
-|Chargés de laboratoire|                           |
+### Coéquipiers
+
+- Nom, Prénom, Code universel
+- Nom, Prénom, Code universel
+
+### Chargés de laboratoire
+
+- Nom, Prénom
+- Nom, Prénom
 
 # Grille de correction
 
-<details><summary>Cliquer ici pour lire les consignes obligatoires</summary>
+<details><summary>Cliquez ici pour lire les consignes obligatoires</summary>
 <p>
 
 - Tous vos diagrammes doivent être faits avec <https://plantuml.com/fr/>
 - Les diagrammes doivent être visibles dans ce rapport
-- Mettez à jour la grille de correction pour correspondre à vos cas d'utilisation de l'itération
-- Mettez à jour la table des matières
+- Mettez à jour la grille de correction pour correspondre à la portée de l'itération
 - Supprimer les textes explicatifs du gabarit (sauf ces consignes-ci)
 - Vous devez exporter ce fichier en format PDF et l'ajouter dans votre dépôt
 </p>
