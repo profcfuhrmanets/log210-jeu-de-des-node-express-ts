@@ -50,7 +50,7 @@
 
 | Déductions                                  | Pondération | Note |
 |---------------------------------------------|:-----------:|:----:|
-| La notation UML n'est pas respectée                  | -5          |      |
+| La notation UML n'est pas respectée (DSS/RDCU)                 | -5          |      |
 | Mauvaise qualité du français: <br>quelques fautes (-1), <br>beaucoup de fautes (-3), <br>énormément de fautes (-5) | -5          |      |
 | Mauvaise présentation du rapport                     | -3          |      |
 | **Total**                                   | -13          |      |
