@@ -42,7 +42,7 @@
 |--------------------------------------------------------|:-----------:|:----:|
 | Les DSS respectent le déroulement du cas d'utilisation | 10          |      |
 | Les contrats sont cohérents avec le DSS                | 2           |      |
-| Qualité des post-conditions                            | 4           |      |
+| Qualité des post-conditions:<br>bonne forme, <br>vocabulaire provenant du MDD                          | 4           |      |
 | Complétude des contrats                                | 4           |      |
 | Les RDCU sont cohérents avec le DSS et les contrats    | 5           |      |
 | Les justifications GRASP sont pertinentes et complètes | 5           |      |
