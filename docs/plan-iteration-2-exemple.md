@@ -34,7 +34,7 @@
 
 ## Objectifs clés
 
-> Afficher les objectifs clés pour l'itération, généralement un à cinq. En voici des exemples *(exemples)*
+> Afficher les objectifs clés pour l'itération, généralement un à cinq. *(exemples)*
 
 -   Résoudre les problèmes de la dernière itération soulevés par le
     chargé de laboratoire.
@@ -62,6 +62,8 @@ Les éléments de travail suivants seront abordés dans cette itération:
 
 > Afficher tous les problèmes à résoudre lors de l'itération. Mettre à jour le statut lorsque de nouvelles questions sont présentées au cours des réunions *(exemple)*
 
+> Si vous n'avez pas de problèmes, écrivez-le. Sinon, c'est comme si vous n'aviez pas fait la section
+
 | Problème                                                                                             | Statut | Notes |
 | ---------------------------------------------------------------------------------------------------- | ------ | ----- |
 | L'Équipe ne comprend pas bien les "router handlers" dans Express                                     |        |       |
@@ -70,7 +72,7 @@ Les éléments de travail suivants seront abordés dans cette itération:
 
 ## Critères d'évaluation
 
-> Une brève description de la façon d'évaluer si les objectifs de haut niveau ont été atteints. Vos critères d'évaluation doivent correspondre à vos objectifs et être objectifs et quantifiables. En voici des exemples. *(exemple)*
+> Une brève description de la façon d'évaluer si les objectifs (définis plus haut) de haut niveau ont été atteints. Vos critères d'évaluation doivent être objectifs (aucun membre de l'équipe ne peut avoir une opinion divergente) et quantifiables (sauf pour ceux évalués par le chargé de laboratoire). En voici des exemples. *(exemple)*
 
 - 97% des cas de test passent. 
 
@@ -79,7 +81,8 @@ Les éléments de travail suivants seront abordés dans cette itération:
 ## Évaluation
 
 > Utiliser cette section pour la saisie et la communication des résultats et les actions des évaluations, qui sont généralement faites à la fin de chaque itération. Si vous ne le faites pas, l'équipe ne peut pas être en mesure d'améliorer la façon dont ils développent des logiciels. *(exemple)*
-> Note: cette section n'est pas complétée avant l'évaluation faite par le chargé de lab lors de la démo en lab.
+
+> **Note:** cette section n'est pas complétée avant l'évaluation faite par le chargé de lab lors de la démo en lab.
 
 |                    |                                                                                                                            |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------- |
