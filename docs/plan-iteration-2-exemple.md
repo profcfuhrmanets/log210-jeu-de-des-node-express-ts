@@ -1,25 +1,40 @@
-# [Plan d'itération](#commentPlanifier "Comment planifier?") - 2
+# [Plan d'itération](#commentPlanifier "Comment planifier?")
 
-<!-- Note: Texte en commentaires est inclus pour donner des directives aux auteurs -->
+## Grille de correction
+
+> Supprimer les textes explicatifs du gabarit
+
+| Critère d'évaluation                                        | Pondération | Note  |
+| ----------------------------------------------------------- | :---------: | :---: |
+| Étapes jalons                                               | 5           |       |
+| Objectifs clés                                              | 5           |       |
+| Affectation des éléments de travail                         | 5           |       |
+| Problèmes                                                   | 5           |       |
+| Critères d'évaluation                                       | 5           |       |
+| Évaluation de l'itération précédente (sauf à l'itération 1) | 5           |       |
+| **Total**                                                   | 30          |       |
+
+| Déductions                                                  | Pondération | Note  |
+| ----------------------------------------------------------- | :---------: | :---: |
+| Mauvaise qualité du français: <br>quelques fautes (-1), <br>beaucoup de fautes (-3), <br>énormément de fautes (-5) | -5 | |
+| Mauvaise présentation du rapport                            | -3          |       |
+| **Total**                                                   | -8          |       |
+
+### Total global : XX%
 
 ## Étapes jalons
 
-<!-- Dates clés montrant les délais, comme date de début et de fin; étapes
-intermédiaires; points de synchronisation avec d'autres équipes;
-démonstrations; et ainsi de suite pour l'itération. -->
+> Dates clés montrant les délais, comme date de début et de fin; étapes intermédiaires; points de synchronisation avec d'autres équipes; démonstrations; et ainsi de suite pour l'itération.
 
 | Étape jalon          | Date |
 | -------------------- | ---: |
 | Début de l'itération |      |
-| Devoir 1             |      |
+| Étape 1              |      |
 | Fin de l'itération   |      |
 
 ## Objectifs clés
 
-<!-- Afficher les objectifs clés pour l'itération, généralement un à cinq.
-En voici des exemples. -->
-
-*(exemples)*
+> Afficher les objectifs clés pour l'itération, généralement un à cinq. En voici des exemples *(exemples)*
 
 -   Résoudre les problèmes de la dernière itération soulevés par le
     chargé de laboratoire.
@@ -28,12 +43,9 @@ En voici des exemples. -->
 
 ## Affectations d'éléments de travail
 
-<!-- Cette section fait référence aux éléments de travail à compléter dans
-cette itération. -->
+> Cette section fait référence aux éléments de travail à compléter dans cette itération. *(exemple)*
 
 Les éléments de travail suivants seront abordés dans cette itération:
-
- *(exemple)*
  
 | Nom / Description                | Priorité | [Taille estimée (points)](#commentEstimer "Comment estimer?") | Assigné à (nom) | Documents de référence |
 | -------------------------------- | -------: | --------------------------: | --------------- | ---------------------- |
@@ -48,22 +60,17 @@ Les éléments de travail suivants seront abordés dans cette itération:
 
 ## Problèmes
 
-<!-- Afficher tous les problèmes à résoudre lors de l'itération. Mettre à
-jour le statut lorsque de nouvelles questions sont présentées au cours
-des réunions -->
- *(exemple)*
+> Afficher tous les problèmes à résoudre lors de l'itération. Mettre à jour le statut lorsque de nouvelles questions sont présentées au cours des réunions *(exemple)*
 
-| Problème                                                                                             | Notes |
-| ---------------------------------------------------------------------------------------------------- | ----- |
-| L'Équipe ne comprend pas bien les "router handlers" dans Express                                     |       |
-| <del>Jacques-Éric n'a pas pu installer VSCode sur sa machine</del>                                   |       |
-| Hélène part pour un match de Volleyball lors de la 3e semaine et ne sera pas disponible pour la démo |       |
+| Problème                                                                                             | Statut | Notes |
+| ---------------------------------------------------------------------------------------------------- | ------ | ----- |
+| L'Équipe ne comprend pas bien les "router handlers" dans Express                                     |        |       |
+| <del>Jacques-Éric n'a pas pu installer VSCode sur sa machine</del>                                   |        |       |
+| Hélène part pour un match de Volleyball lors de la 3e semaine et ne sera pas disponible pour la démo |        |       |
 
 ## Critères d'évaluation
 
-<!-- Une brève description de la façon d'évaluer si les objectifs de haut
-niveau ont été atteints. En voici des exemples. -->
- *(exemple)*
+> Une brève description de la façon d'évaluer si les objectifs de haut niveau ont été atteints. Vos critères d'évaluation doivent correspondre à vos objectifs et être objectifs et quantifiables. En voici des exemples. *(exemple)*
 
 - 97% des cas de test passent. 
 
@@ -71,27 +78,19 @@ niveau ont été atteints. En voici des exemples. -->
 
 ## Évaluation
 
-<!-- Utiliser cette section pour la saisie et la communication des
-résultats et les actions des évaluations, qui sont généralement faites à
-la fin de chaque itération. Si vous ne le faites pas, l'équipe ne peut
-pas être en mesure d'améliorer la façon dont ils développent des
-logiciels. -->
+> Utiliser cette section pour la saisie et la communication des résultats et les actions des évaluations, qui sont généralement faites à la fin de chaque itération. Si vous ne le faites pas, l'équipe ne peut pas être en mesure d'améliorer la façon dont ils développent des logiciels. *(exemple)*
 > Note: cette section n'est pas complétée avant l'évaluation faite par le chargé de lab lors de la démo en lab.
-
-*(exemple)*
 
 |                    |                                                                                                                            |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| Cible d'évaluation | Itération <!-- *Cela pourrait être toute l'itération ou simplement un composant spécifique* -->                            |
-| Date d'évaluation  |   10 février 2019 |
-| Participants       | **Coéquipiers** : Jérémie, Jacques-Éric, Pierre (Hélène avait une absence justifiée), **Chargé de laboratoire** : Jonathan Mayhem |
-| État du projet     | Vert <!-- *Rouge, Orange, ou Vert.* --> |
+| Cible d'évaluation | Itération XX                                                                                                               |
+| Date d'évaluation  | 10 février 2019                                                                                                            |
+| Participants       | **Coéquipiers** : XX, **Chargé de laboratoire** : XX                                                                       |
+| État du projet     | <!-- *Rouge, Orange, ou Vert.* -->                                                                                         |
 
 ###  Évaluation par rapport aux objectifs
 
-<!-- Documentez si vous avez abordé les objectifs précisés dans le plan
-d'itération. -->
-*(on reprend les objectifs)*
+> Documentez si vous avez abordé les objectifs précisés dans le plan d'itération. *(on reprend les objectifs)*
 
 -   Résoudre les problèmes de la dernière itération soulevés par le
     chargé de laboratoire.
@@ -102,10 +101,7 @@ d'itération. -->
 
 ### Éléments de travail: prévus vs réalisés
 
-<!-- Résumez si tous les éléments de travail prévus dans l'itération ont
-été abordés, et des éléments de travail qui ont été reportés ou
-ajoutés. -->
-*(exemple)*
+> Résumez si tous les éléments de travail prévus dans l'itération ont été abordés, et des éléments de travail qui ont été reportés ou ajoutés. *(exemple)*
 
 Tous les éléments ont été complétés, mais il faut étoffer les tests du CU07:
 
@@ -113,23 +109,13 @@ Tous les éléments ont été complétés, mais il faut étoffer les tests du CU
 
 ### Évaluation par rapport aux résultats selon les critères d'évaluation 
 
-<!-- Documentez si vous avez satisfait les critères d'évaluation précisés
-dans le plan d'itération. Cela pourrait inclure des informations telles
-que « Démo pour le département X a été bien accueilli, avec quelques
-préoccupations soulevées autour de la convivialité », ou « 495 cas de
-tests ont été automatisés avec un taux de réussite de 98%. 9 cas de test
-ont été reportés parce que les éléments de travail correspondants ont
-été reportés. » -->
-*(exemple)*
+> Documentez si vous avez satisfait les critères d'évaluation précisés dans le plan d'itération. Cela pourrait inclure des informations telles que « Démo pour le département X a été bien accueilli, avec quelques préoccupations soulevées autour de la convivialité », ou « 495 cas de tests ont été automatisés avec un taux de réussite de 98%. 9 cas de test ont été reportés parce que les éléments de travail correspondants ont été reportés. » *(exemple)*
 
 La solution a répondu à tous les critères, mais attention: il faut rajouter des cas de tests.
 
 ## Autres préoccupations et écarts
 
-<!-- Documentez d'autres domaines qui ont été évalués, tels que la
-finance, ou type de programme, ainsi que la rétroaction des intervenants
-qui n'a pas été saisie ailleurs. -->
-*(exemple)*
+> Documentez d'autres domaines qui ont été évalués, tels que la finance, ou type de programme, ainsi que la rétroaction des intervenants qui n'a pas été saisie ailleurs *(exemple)*
 
 Nous devons trouver un autre moyen de faire les commits (peut-être avec des branches et PR), car il y avait trop de merges difficiles de la documentation.
 
