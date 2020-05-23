@@ -28,9 +28,9 @@
 
 | Étape jalon          | Date |
 | -------------------- | ---: |
-| Début de l'itération |      |
-| Étape 1              |      |
-| Fin de l'itération   |      |
+| Début de l'itération | 2019/05/2     |
+| Démo (séance 5)      | 2019/05/16     |
+| Fin de l'itération   | 2019/05/16     |
 
 ## Objectifs clés
 
@@ -132,4 +132,4 @@ Nous devons trouver un autre moyen de faire les commits (peut-être avec des bra
     <https://docs.google.com/a/etsmtl.net/document/d/1bDy0chpWQbK9bZ82zdsBweuAgNYni3T2k79xihr6CuU/edit?usp=sharing>
 
 
-#[Retour au Readme](../README.md)
+# [Retour au Readme](../README.md)
