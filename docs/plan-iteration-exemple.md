@@ -1,4 +1,4 @@
-# [Plan d'itération](#commentPlanifier "Comment planifier?")
+# Plan d'itération
 
 ## Grille de correction
 
@@ -67,7 +67,7 @@ Les éléments de travail suivants seront abordés dans cette itération:
 | Problème                                                                                             | Statut | Notes |
 | ---------------------------------------------------------------------------------------------------- | ------ | ----- |
 | L'Équipe ne comprend pas bien les "router handlers" dans Express                                     |        |       |
-| <del>Jacques-Éric n'a pas pu installer VSCode sur sa machine</del>                                   |        |       |
+| Jacques-Éric n'a pas pu installer VSCode sur sa machine                                              | Fermé  |       |
 | Hélène part pour un match de Volleyball lors de la 3e semaine et ne sera pas disponible pour la démo |        |       |
 
 ## Critères d'évaluation
@@ -130,6 +130,3 @@ Nous devons trouver un autre moyen de faire les commits (peut-être avec des bra
 
 <a name="commentEstimer">Comment estimer la taille :</a>
     <https://docs.google.com/a/etsmtl.net/document/d/1bDy0chpWQbK9bZ82zdsBweuAgNYni3T2k79xihr6CuU/edit?usp=sharing>
-
-
-# [Retour au Readme](../README.md)
