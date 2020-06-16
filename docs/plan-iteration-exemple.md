@@ -11,7 +11,7 @@
 | Affectation des éléments de travail                         | 5           |       |
 | Problèmes                                                   | 5           |       |
 | Critères d'évaluation                                       | 5           |       |
-| Évaluation de l'itération précédente (sauf à l'itération 1) | 5           |       |
+| Évaluation de l'itération                                   | 5           |       |
 | **Total**                                                   | 30          |       |
 
 | Déductions                                                  | Pondération | Note  |
