@@ -34,12 +34,11 @@
 
 ## Objectifs clés
 
-> Afficher les objectifs clés pour l'itération, généralement un à cinq. *(exemples)*
+> Afficher les objectifs clés pour l'itération, généralement un à cinq. *(exemples)*  
+> **⚠️Faites attention de respecter les points minima d'avancement par itération indiqués dans l'énoncé, sinon vous pouvez avoir une pénalité si vous n'avancez pas assez. Vérifiez avec un chargé de laboratoire avant de commencer l'itération!**
 
--   Résoudre les problèmes de la dernière itération soulevés par le
-    chargé de laboratoire.
-
--   Présenter une démonstration technique.
+- Résoudre les problèmes de la dernière itération soulevés par le chargé de laboratoire.
+- Présenter une démonstration technique des CU06 et CU07 (avec tests)
 
 ## Affectations d'éléments de travail
 
