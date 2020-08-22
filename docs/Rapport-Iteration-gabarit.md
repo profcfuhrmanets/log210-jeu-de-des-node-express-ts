@@ -25,6 +25,8 @@
 </p>
 </details>
 
+> ⚠️ **Un travail qui contient trop d’erreurs fréquentes peut être refusé par le chargé de laboratoire. L'équipe peut reprendre le travail avec une pénalité de 25%. Vérifiez attentivement la grille de correction et les notes de cours**
+
 | Modèle du domaine                                       | Pondération | Note |
 |---------------------------------------------------------|:-----------:|:----:|
 | Tous les cas d'utilisation sont représentés             | 1           |      |
