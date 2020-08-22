@@ -12,7 +12,8 @@
 | Problèmes                                                   | 5           |       |
 | Critères d'évaluation                                       | 5           |       |
 | Évaluation de l'itération                                   | 5           |       |
-| **Total**                                                   | 30          |       |
+| Évaluation du travail d'équipe                              | 5           |       |
+| **Total**                                                   | 35          |       |
 
 | Déductions                                                  | Pondération | Note  |
 | ----------------------------------------------------------- | :---------: | :---: |
@@ -26,11 +27,11 @@
 
 > Dates clés montrant les délais, comme date de début et de fin; étapes intermédiaires; points de synchronisation avec d'autres équipes; démonstrations; et ainsi de suite pour l'itération.
 
-| Étape jalon          | Date |
-| -------------------- | ---: |
-| Début de l'itération | 2019/05/2     |
-| Démo (séance 5)      | 2019/05/16     |
-| Fin de l'itération   | 2019/05/16     |
+| Étape jalon          | Date       |
+| :------------------- | :--------- |
+| Début de l'itération | 2019/05/02 |
+| Démo (séance 5)      | 2019/05/16 |
+| Fin de l'itération   | 2019/05/16 |
 
 ## Objectifs clés
 
@@ -77,7 +78,7 @@ Les éléments de travail suivants seront abordés dans cette itération:
 
 - Démonstration des fonctionnalités CU06 et CU07 pas à pas avec le chargé de laboratoire a reçu une réponse favorable. 
 
-## Évaluation
+## Évaluation de l'itération
 
 > Utiliser cette section pour la saisie et la communication des résultats et les actions des évaluations, qui sont généralement faites à la fin de chaque itération. Si vous ne le faites pas, l'équipe ne peut pas être en mesure d'améliorer la façon dont ils développent des logiciels. *(exemple)*
 
@@ -120,6 +121,33 @@ La solution a répondu à tous les critères, mais attention: il faut rajouter d
 > Documentez d'autres domaines qui ont été évalués, tels que la finance, ou type de programme, ainsi que la rétroaction des intervenants qui n'a pas été saisie ailleurs *(exemple)*
 
 Nous devons trouver un autre moyen de faire les commits (peut-être avec des branches et PR), car il y avait trop de merges difficiles de la documentation.
+
+## Évaluation du travail d'équipe
+
+> Évaluez la contribution de chaque membre de l’équipe au projet durant l’itération. Pour vous aider, utilisez git inspector avec le script fourni. Toutefois, tenez aussi compte des éléments qui ne peuvent être évalués par l’outil (apprentissage, connaissances préalables, etc.)
+
+### Réultats du script
+
+#### Implémentation
+
+> Insérez les résultats du script
+
+#### Analyse et conception
+
+> Insérez les résultats du script
+
+#### Tests
+
+> Insérez les résultats du script
+
+### Retour sur l'itération
+
+#### Êtes-vous satisfaits de la contribution de chaque membre de l’équipe? Expliquez.
+#### Si non, qu’est-ce qui empêche les membres de l’équipe d’atteindre une contribution satisfaisante de chacun?
+#### Quelles solutions pouvez-vous mettre en place pour amener les membres de l’équipe à contribuer de façon satisfaisante?
+#### Êtes-vous satisfaits de la communication dans l’équipe? Expliquez.
+#### Si non, qu'est-ce qui empêche les membres de l'équipe de communiquer efficacement?
+#### Quelles solutions pouvez-vous mettre en place pour améliorer la communication dans l'équipe?
 
 ---
 
