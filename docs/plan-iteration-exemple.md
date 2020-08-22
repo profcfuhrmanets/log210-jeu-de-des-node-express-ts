@@ -142,6 +142,8 @@ Nous devons trouver un autre moyen de faire les commits (peut-être avec des bra
 
 ### Retour sur l'itération
 
+> Discutez avec les membres de l'équipe et répondez aux questions. L'objectif n'est pas de pointer du doigt ou blâmer des membres de l'équipe, mais d'améliorer l'expérience de travail de tout le monde. Traitez les problèmes d'équipe comme n'importe quels autres problèmes et travaillez ensemble pour les résoudre. Les chargés de laboratoire consulteront cette section avant d'intervenir pour régler des problèmes
+
 #### Êtes-vous satisfaits de la contribution de chaque membre de l’équipe? Expliquez.
 #### Si non, qu’est-ce qui empêche les membres de l’équipe d’atteindre une contribution satisfaisante de chacun?
 #### Quelles solutions pouvez-vous mettre en place pour amener les membres de l’équipe à contribuer de façon satisfaisante?
