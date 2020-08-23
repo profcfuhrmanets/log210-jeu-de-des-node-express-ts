@@ -126,19 +126,19 @@ Nous devons trouver un autre moyen de faire les commits (peut-être avec des bra
 
 > Évaluez la contribution de chaque membre de l’équipe au projet durant l’itération. Pour vous aider, utilisez git inspector avec le script fourni. Toutefois, tenez aussi compte des éléments qui ne peuvent être évalués par l’outil (apprentissage, connaissances préalables, etc.)
 
-### Réultats du script
+### Rapports de Git Inspector
 
 #### Implémentation
 
-> Insérez les résultats du script
+> Insérez le tableau des résultats produits par le script
 
 #### Analyse et conception
 
-> Insérez les résultats du script
+> Insérez le tableau des résultats produits par le script
 
 #### Tests
 
-> Insérez les résultats du script
+> Insérez le tableau des résultats produits par le script
 
 ### Retour sur l'itération
 
