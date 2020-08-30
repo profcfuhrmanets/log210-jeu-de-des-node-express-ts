@@ -23,10 +23,10 @@ html
       ul.entries
         each joueur in joueurs
           li.joueur
-            -var nom = joueur.getNom();
+            -var nom = joueur.nom;
             strong(id=nom) #{nom}
             = ' '
-            | tentatives: #{joueur.getLancers()}, réussites: #{joueur.getLancersGagnes()}
+            | tentatives: #{joueur.lancers}, réussites: #{joueur.lancersGagnes}
             = ' '
             button.lancer(id=nom) Lancer les dés 
             = ' '

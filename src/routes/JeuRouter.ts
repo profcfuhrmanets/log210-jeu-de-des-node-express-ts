@@ -33,15 +33,15 @@ export class JeuRouter {
           nom: joueur.nom
         });
     } catch (error) {
-      var code;
-      if (error.message.indexOf("existe déjà")) {
-        (req as any).flash(error.message);
-        code = 400; // bad request }
-      } else {
-        code = 500; // internal server error
-      }
-      res.status(code).json({ error: error.toString() });
+      var code = 500;
 
+      // Afficher les erreurs qui sont définies par l'API
+      if (error.code) {
+        (req as any).flash(error.message);
+        code = error.code;
+      }
+
+      res.status(code).json({ error: error.toString() });
     }
   }
 
@@ -65,15 +65,15 @@ export class JeuRouter {
         });
 
     } catch (error) {
-      var code;
-      if (error.message.indexOf("n'existe pas")) {
-        (req as any).flash(error.message);
-        code = 404; // not found }
-      } else {
-        code = 500; // internal server error
-      }
-      res.status(code).json({ error: error.toString() });
+      var code = 500;
 
+      // Afficher les erreurs qui sont définies par l'API
+      if (error.code) {
+        (req as any).flash(error.message);
+        code = error.code;
+      }
+  
+      res.status(code).json({ error: error.toString() });
     }
   }
 
@@ -97,19 +97,17 @@ export class JeuRouter {
         });
 
     } catch (error) {
-      var code;
-      if (error.message.indexOf("n'existe pas")) {
-        code = 404; // not found }
-        (req as any).flash(error.message);
-      } else {
-        code = 500; // internal server error
-      }
-      res.status(code).json({ error: error.toString() });
+      var code = 500;
 
+      // Afficher les erreurs qui sont définies par l'API
+      if (error.code) {
+        (req as any).flash(error.message);
+        code = error.code;
+      }
+  
+      res.status(code).json({ error: error.toString() });
     }
   }
-
-
 
   /**
      * Take each handler, and attach to one of the Express.Router's
