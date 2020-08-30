@@ -1,0 +1,16 @@
+@startuml
+skinparam style strictuml
+skinparam defaultfontname Verdana
+skinparam sequence {
+    MessageAlign center
+}
+title DSS pour un scénario adapté de <i>Jouer aux dés</i>\n(Ch. 1 de Larman)
+actor ":Joueur" as c
+participant ":Système" as s
+c->s : démarrerJeu(nom : String)
+loop pas terminé
+c->s : jouer(nom : String)
+c<<--s : nom, total du lancer,  résultat (gagné ou perdu),\nnb de parties, nb de parties gagnées
+end loop
+c->s : terminerJeu(nom :String)
+@enduml
