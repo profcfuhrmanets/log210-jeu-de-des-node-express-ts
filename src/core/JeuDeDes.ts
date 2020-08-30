@@ -48,16 +48,16 @@ export class JeuDeDes {
         }
         this.d1.brasser();
         this.d2.brasser();
-        let v1 = this.d1.getValeur();
-        let v2 = this.d2.getValeur();
+        let v1 = this.d1.valeur;
+        let v2 = this.d2.valeur;
         let somme = v1 + v2;
         joueur.lancer();
         if (somme == 7) joueur.gagner();
         let résultat = {
             nom: nom,
             somme: somme,
-            lancers: joueur.getLancers(),
-            reussites: joueur.getLancersGagnes(),
+            lancers: joueur.lancers,
+            reussites: joueur.lancersGagnes,
             v1: v1,
             v2: v2,
             message: "Vous avez " + (somme == 7 ? "gagné!!!" : "perdu.")

@@ -9,15 +9,15 @@ export class Joueur {
         this._nbLancersGagnes = 0;
     }
 
-    public getNom() {
+    get nom() {
         return this._nom;
     }
 
-    public getLancers() {
+    get lancers() {
         return this._nbLancers;
     }
 
-    public getLancersGagnes() {
+    get lancersGagnes() {
         return this._nbLancersGagnes;
     }
 

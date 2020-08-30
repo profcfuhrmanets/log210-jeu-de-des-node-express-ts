@@ -30,7 +30,7 @@ export class JeuRouter {
         .send({
           message: 'Success',
           status: res.status,
-          nom: joueur.getNom()
+          nom: joueur.nom
         });
     } catch (error) {
       var code;
