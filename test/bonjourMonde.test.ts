@@ -1,10 +1,8 @@
-import * as chai from 'chai';
-import chaiHttp = require('chai-http');
-
+import * as supertest from "supertest";
+import 'jest-extended';
 import app from '../src/App';
 
-chai.use(chaiHttp);
-const expect = chai.expect;
+const request = supertest(app);
 
 let testNom1 = 'Jean-Marc';
 let testNom2 = 'Pierre';
@@ -12,20 +10,17 @@ let testNom2 = 'Pierre';
 describe('baseRoute', () => {
 
   it('should be html', async () => {
-    const res = await chai.request(app).get('/');
-    expect(res).to.be.html;
+    const response = await request.get('/');
+    
+    expect(response.status).toBe(200);
   });
 
 });
 
 describe('GET /bo/gu/s/URL/', () => {
+    it('Call responds with bad request when bogus URL is sent.', async () => {
+        const response = await request.get('/bo/gu/s/URL/' + testNom2);
 
-    it('Call responds with bad request when bogus URL is sent.', () => {
-      return chai.request(app).get('/bo/gu/s/URL/' + testNom2)
-        .then(
-          response => {
-            expect(response.status).to.equal(404);
-          }
-        )
+        expect(response.status).toBe(404);
     });
-  });
+});
