@@ -2,6 +2,8 @@ import { Router, Request, Response, NextFunction } from 'express';
 import * as flash from 'node-twinkle';
 
 import { JeuDeDes } from '../core/JeuDeDes';
+import { InvalidParameterError } from '../core/errors/InvalidParameterError';
+
 // TODO: rethink the name for this "router" function, since it's not really an Express router (no longer being "use()"ed inside Express)
 export class JeuRouter {
   router: Router;
@@ -20,12 +22,23 @@ export class JeuRouter {
    * démarrer le jeu
    */
   public demarrerJeu(req: Request, res: Response, next: NextFunction) {
-    let nom = req.params.nom;
+    let nom = req.body.nom;
     try {
+      // POST ne garantit pas que tous les paramètres de l'opération système sont présents
+      if (nom === undefined) {
+        throw new InvalidParameterError('Le paramètre nom est absent');
+      }
+
+      nom = nom.trim();
+
+      if (nom.length == 0) {
+        throw new InvalidParameterError('Le nom ne peut pas être vide');
+      }
+
       // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
       let joueur = this.jeu.demarrerJeu(nom);
-      //Object.assign(Request.prototype, {flash(m:String): any {return flash.flash(m)}});
-      (req as any).flash('Nouveau jeu pour ' + nom);  // error in ts: Property 'flash' does not exist on type 'Request'.
+      
+      (req as any).flash('Nouveau jeu pour ' + nom);
       res.status(201)
         .send({
           message: 'Success',
@@ -114,9 +127,9 @@ export class JeuRouter {
      * endpoints.
      */
   init() {
-    this.router.get('/demarrerJeu/:nom', this.demarrerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
-    this.router.get('/jouer/:nom', this.jouer.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
-    this.router.get('/terminerJeu/:nom', this.terminerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
+    this.router.post('/demarrerJeu', this.demarrerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
+    this.router.get('/jouer/:nom', this.jouer.bind(this));
+    this.router.get('/terminerJeu/:nom', this.terminerJeu.bind(this));
   }
 
 }

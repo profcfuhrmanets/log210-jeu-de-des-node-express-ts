@@ -1,20 +1,19 @@
 $(function () {
     $("button.lancer").click(function () {
         $.get("/api/v1/jeu/jouer/" + $(this).attr('id'), function (data, status) {
-            //alert("Data: " + data + "\nStatus: " + status);
             window.location.reload(true);
         });
     });
     $("button.terminer").click(function () {
         $.get("/api/v1/jeu/terminerJeu/" + $(this).attr('id'), function (data, status) {
-            //alert("Data: " + data + "\nStatus: " + status);
             window.location.reload(true);
         });
     });
     $("button.demarrer").click(function () {
-        nomDuFormulaire = document.getElementById("formNouveauJoueur").elements["nom"].value;
+        nomDuFormulaire = formNouveauJoueur.elements["nom"].value.trim();
         if (nomDuFormulaire !== '') {
-            $.get("/api/v1/jeu/demarrerJeu/" + nomDuFormulaire,
+            $.post("/api/v1/jeu/demarrerJeu",
+                {nom: nomDuFormulaire},
                 function (data, status) {
                     //alert("Data: " + data + "\nStatus: " + status);
                 }).always(function() { // traiter l'erreur

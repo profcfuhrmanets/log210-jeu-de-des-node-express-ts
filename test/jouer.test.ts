@@ -8,7 +8,7 @@ let testNom1 = 'Jean-Marc';
 let testNom2 = 'Pierre';
 
 beforeAll(async () => {
-    await request.get('/api/v1/jeu/demarrerJeu/' + testNom1);
+    await request.post('/api/v1/jeu/demarrerJeu').send({nom: testNom1});
 });
 
 describe('GET /api/v1/jeu/jouer/:id', () => {
