@@ -106,35 +106,37 @@ Voici la même figure, mais sous forme de diagramme de séquence avec l'acteur. 
 
 ![Diagramme de séquence système](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/modeles/dss-jouer.puml)
 
-### Contrats d'opération
+### Contrats d'opération et Réalisations de cas d'utilisation (RDCU)
 
 #### Opération: `démarrerJeu(nom:String)`
 
-##### Postconditions
+**Postconditions**
 
 - Une instance j de Joueur a été créée
 - j.nom est devenu nom
 - j a été associé à JeuDeDes
 
+**RDCU**
+
+![Diagramme de séquence, demarrerJeu](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/modeles/rdcu-demarrerJeu.puml)
+
 #### Opération: `jouer(nom:String)`
 
-##### Postconditions
+**Postconditions**
 
 - d1.valeur est devenue un nombre entier aléatoire entre 1 et 6
 - d2.valeur est devenue un nombre entier aléatoire entre 1 et 6
 - j.nbLancers a été incrémenté sur une base de correspondance avec nom
 - j.nbLancersGagnés a été incrémenté si la totale de d1.valeur et d2.valeur est égale à 7
 
-#### Opération: `terminerJeu(nom:String)`
-
-##### Postconditions
-
-- L’instance j de Joueur a été supprimée sur une base de correspondance avec nom
-
-### Réalisations de cas d'utilisation (RDCU)
-
-![Diagramme de séquence, demarrerJeu](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/modeles/rdcu-demarrerJeu.puml)
+**RDCU**
 
 ![Diagramme de séquence, jouer](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/modeles/rdcu-jouer.puml)
+
+#### Opération: `terminerJeu(nom:String)`
+
+**Postconditions**
+
+- L’instance j de Joueur a été supprimée sur une base de correspondance avec nom
 
 ![Diagramme de séquence, terminerJeu](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/modeles/rdcu-terminerJeu.puml)
