@@ -26,7 +26,7 @@
 
 > ⚠️ **Un travail qui contient trop d’erreurs fréquentes peut être refusé par le chargé de laboratoire. L'équipe peut reprendre le travail avec une pénalité de 25%. Vérifiez attentivement la grille de correction et les notes de cours**
 
-La grille de correction est disponible en format Excel, dans le dossiers `/docs/rapports`
+La grille de correction est disponible en format Excel, dans le dossier `/docs/rapports`
 
 # Introduction
 
