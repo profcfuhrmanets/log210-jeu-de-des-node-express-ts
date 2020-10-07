@@ -110,12 +110,22 @@ export class JeuRouter {
   }
 
 
+/**
+   * allo 
+   */
+  public allo(req: Request, res: Response, next: NextFunction) {
+      (req as any).flash('say allo' );  
+      let messages = res.locals.has_flashed_messages() ? res.locals.get_flashed_messages() : [];
+      res..render('allo', { title: 'allo', flashedMessages: messages});
+  }
 
   /**
      * Take each handler, and attach to one of the Express.Router's
      * endpoints.
      */
   init() {
+
+    this.router.get('/allo', this.allo.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
     this.router.get('/demarrerJeu/:nom', this.demarrerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
     this.router.get('/jouer/:nom', this.jouer.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
     this.router.get('/terminerJeu/:nom', this.terminerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342

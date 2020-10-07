@@ -48,6 +48,8 @@ class App {
       res.render('index', { title: 'Jeu de dés', flashedMessages: messages, joueurs: jeuRoutes.jeu.getJoueurs()});
     });
 
+   
+
     this.expressApp.use('/', router);  // routage de base
 
     this.expressApp.use('/api/v1/jeu', jeuRoutes.router);  // tous les URI pour le scénario jeu (DSS) commencent ainsi

@@ -1,4 +1,14 @@
+// si vous modifié ce fichier, "npm run build" pour que votre server utilise la nouvelle version, sinon le browser conserve l'ancienne version en cache.
 $(function () {
+    $("button.index").click(function () {
+        location.href = "/"
+    });
+
+    $("button.hello").click(function () {
+        console.log("redirect to allo");
+        location.href = "/api/v1/jeu/allo"
+    });
+
     $("button.lancer").click(function () {
         $.get("/api/v1/jeu/jouer/" + $(this).attr('id'), function (data, status) {
             //alert("Data: " + data + "\nStatus: " + status);
@@ -12,11 +22,12 @@ $(function () {
         });
     });
     $("button.demarrer").click(function () {
+        console.log("button demarrer clicked");
         nomDuFormulaire = document.getElementById("formNouveauJoueur").elements["nom"].value;
         if (nomDuFormulaire !== '') {
             $.get("/api/v1/jeu/demarrerJeu/" + nomDuFormulaire,
                 function (data, status) {
-                    //alert("Data: " + data + "\nStatus: " + status);
+                    // alert("Data: " + data + "\nStatus: " + status);
                 }).always(function() { // traiter l'erreur
                     window.location.reload(true);
                 });
