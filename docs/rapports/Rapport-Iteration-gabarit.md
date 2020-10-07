@@ -19,7 +19,6 @@
 
 - Tous vos diagrammes doivent être faits avec <https://plantuml.com/fr/>
 - Les diagrammes doivent être visibles dans ce rapport
-- Mettez à jour la grille de correction pour correspondre à la portée de l'itération
 - Supprimer les textes explicatifs du gabarit (sauf ces consignes-ci)
 - Vous devez exporter ce fichier en format PDF et l'ajouter dans votre dépôt
 </p>
@@ -27,37 +26,7 @@
 
 > ⚠️ **Un travail qui contient trop d’erreurs fréquentes peut être refusé par le chargé de laboratoire. L'équipe peut reprendre le travail avec une pénalité de 25%. Vérifiez attentivement la grille de correction et les notes de cours**
 
-| Modèle du domaine                                       | Pondération | Note |
-|---------------------------------------------------------|:-----------:|:----:|
-| Tous les cas d'utilisation sont représentés             | 1           |      |
-| Toutes les classes conceptuelles nécessaires sont présentes et correctes | 5           |      |
-| Tous les attributs sont présents       | 3           |      |
-| Toutes les associations sont présentes | 3           |      |
-| Toutes les cardinalités sont cohérentes                 | 3           |      |
-| La notation UML n'est pas respectée                           | jusqu'à -5           |      |
-| Classes/associations/attributs hors de portée | jusqu'à -5           |      |
-| **Total**                                               | 15          |      |
-
-> Copiez la section suivante pour correspondre au nombre de cas d'utilisation du rapport
-
-| CUXX - Nom du cas d'utilisation                        | Pondération | Note |
-|--------------------------------------------------------|:-----------:|:----:|
-| Les DSS respectent le déroulement du cas d'utilisation | 10          |      |
-| Les contrats sont cohérents avec le DSS                | 2           |      |
-| Qualité des post-conditions:<br>bonne forme, <br>vocabulaire provenant du MDD                          | 4           |      |
-| Complétude des contrats                                | 4           |      |
-| Les RDCU sont cohérents avec le DSS et les contrats    | 5           |      |
-| Les justifications GRASP sont pertinentes et complètes | 5           |      |
-| **Total**                                              | 30          |      |
-
-| Déductions                                  | Pondération | Note |
-|---------------------------------------------|:-----------:|:----:|
-| La notation UML n'est pas respectée (DSS/RDCU)                 | -5          |      |
-| Mauvaise qualité du français: <br>quelques fautes (-1), <br>beaucoup de fautes (-3), <br>énormément de fautes (-5) | -5          |      |
-| Mauvaise présentation du rapport                     | -3          |      |
-| **Total**                                   | -13          |      |
-
-### Total global : XX%
+Le travail sera noté selon la [grille de correction des rapports](https://docs.google.com/spreadsheets/d/1KKGPxac13vHttuC2AQDpRrgLuirMU0kd3qFxc9qhOuk). Pour y accéder, vous devez utiliser votre adresse `etsmtl.net`.
 
 # Introduction
 

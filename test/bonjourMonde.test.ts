@@ -1,21 +1,27 @@
-import * as chai from 'chai';
-import chaiHttp = require('chai-http');
-
+import * as supertest from "supertest";
+import 'jest-extended';
 import app from '../src/App';
 
-chai.use(chaiHttp);
-const expect = chai.expect;
+const request = supertest(app);
+
+let testNom1 = 'Jean-Marc';
+let testNom2 = 'Pierre';
 
 describe('baseRoute', () => {
 
   it('should be html', async () => {
-    const res = await chai.request(app).get('/');
-    expect(res).to.be.html;
+    const response = await request.get('/');
+    
+    expect(response.status).toBe(200);
+    expect(response.type).toBe("text/html");
   });
 
-  // it('should have the message in body', async () => {
-  //   const res = await chai.request(app).get('/');
-  //   expect(res.text).to.eql('<html><head><title>Hey</title></head><body><h1>Bonjour monde!</h1></body></html>');
-  // });
+});
 
+describe('GET /bo/gu/s/URL/', () => {
+    it('Call responds with bad request when bogus URL is sent.', async () => {
+        const response = await request.get('/bo/gu/s/URL/' + testNom2);
+
+        expect(response.status).toBe(404);
+    });
 });

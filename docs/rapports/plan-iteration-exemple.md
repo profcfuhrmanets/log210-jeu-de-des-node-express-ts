@@ -47,16 +47,16 @@
 
 Les éléments de travail suivants seront abordés dans cette itération:
  
-| Nom / Description                | Priorité | [Taille estimée (points)](#commentEstimer "Comment estimer?") | Assigné à (nom) | Documents de référence |
-| -------------------------------- | -------: | --------------------------: | --------------- | ---------------------- |
-| CU06                             | 1        | 4                           | (tous)          | Exigences pour le lab  |
+| Nom / Description                  | Priorité | [Taille estimée (points)](#commentEstimer "Comment estimer?") | Assigné à (nom) | Documents de référence |
+| ---------------------------------- | -------: | --------------------------: | --------------- | ---------------------- |
+| CU06                               | 1        | 4                           | (tous)          | Exigences pour le lab  |
 |   CU06 - conception                |          |                             | Jacques-Éric    |                        |
 |   CU06 - test et implémenation     |          |                             | Hélène          |                        |
 |   CU06 - mise à jour documentation |          |                             | Pierre          |                        |
-| CU07                             | 1        | 2                           | (tous)          | Exigences pour le lab  |
-| CU07 - conception                |          |                             | Jérémie         |                        |
-| CU07 - test et implémenation     |          |                             | Hélène          |                        |
-| CU07 - mise à jour documentation |          |                             | Pierre          |                        |
+| CU07                               | 1        | 2                           | (tous)          | Exigences pour le lab  |
+| CU07 - conception                  |          |                             | Jérémie         |                        |
+| CU07 - test et implémenation       |          |                             | Hélène          |                        |
+| CU07 - mise à jour documentation   |          |                             | Pierre          |                        |
 
 ## Problèmes
 
@@ -124,7 +124,7 @@ Nous devons trouver un autre moyen de faire les commits (peut-être avec des bra
 
 ## Évaluation du travail d'équipe
 
-> Évaluez la contribution de chaque membre de l’équipe au projet durant l’itération. Pour vous aider, utilisez git inspector avec le script fourni. Toutefois, tenez aussi compte des éléments qui ne peuvent être évalués par l’outil (apprentissage, connaissances préalables, etc.)
+> Évaluez la contribution de chaque membre de l’équipe au projet durant l’itération. Pour vous aider, utilisez git inspector avec le script fourni (le lien est dans les notes de cours). Toutefois, tenez aussi compte des éléments qui ne peuvent être évalués par l’outil (apprentissage, connaissances préalables, etc.)
 
 ### Rapports de Git Inspector
 
