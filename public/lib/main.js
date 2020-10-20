@@ -1,3 +1,4 @@
+// si vous modifié ce fichier, "npm run build" pour que votre server utilise la nouvelle version, sinon le browser conserve l'ancienne version en cache.
 window.addEventListener("load", function()
 {
     document.querySelectorAll("button.lancer").forEach(function(element)

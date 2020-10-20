@@ -67,6 +67,70 @@ Le TDD suit un cycle particulier, comme vous pouvez voir à l'image plus haut:
   </p>
   </details>
 
+## Support pour déboguage
+
+   <details>
+     <summary>Plus de détails</summary><p>
+
+Ce squelette offre la possibilité de déboguer le code du serveur à l'aide de points d'arrêt placés à l'intérieur des fichiers TypeScript. 
+
+Voici comment il est possible de déboguer le projet à l'aide de différents environnements de développement.
+
+### Déboguage avec Visual Studio Code
+
+VS Code offre la possibilité d'ajouter des configurations d'exécution à l'aide d'un fichier local. Ce fichier doit être nommé <i>launch.json</i> et être placé dans un dossier nommé <i>.vscode</i> à la racine du projet.
+
+On peut utiliser ce fichier afin de créer des configurations d'exécution de déboguage pour le projet. Un exemple de contenu pour ce fichier pourrait être :
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "command": "npm start",
+            "name": "Debug",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "npm run start:watch",
+            "name": "Debug:Watch",
+            "request": "launch",
+            "type": "node-terminal"
+        }
+    ]
+}
+```
+
+Le lien suivant présente les subtilités de l'utilisation du fichier <i>launch.json</i> de VS Code dans le cadre d'un projet NodeJS : https://code.visualstudio.com/docs/nodejs/nodejs-debugging
+
+Les configurations créées dans ce fichier peuvent ensuite être lancées à partir de l'onglet « Run » de la barre de régions à gauche de VS Code.
+
+Alternativement, il est possible d'attacher le débogueur de VS Code à une nouvelle exécution du projet sans avoir à créer un fichier <i>launch.json</i>. Il suffit de se rendre sur le fichier [package.json](./package.json) et de cliquer sur le bouton « Debug » qui apparaît au-dessus de la section « Script ».
+
+Une fois le débogueur attaché par l'une ou l'autre des méthodes présentées ci-dessus, l'exécution du code cessera lors de la rencontre d'un point d'arrêt sur un fichier TypeScript et il sera possible d'inspecter la valeur des variables visibles.
+
+Pour plus d'informations au sujet de l'utilisation des breakpoints dans VS Code, voir https://code.visualstudio.com/docs/editor/debugging#_breakpoints
+
+### Déboguage avec JetBrains WebStorm
+
+Les mêmes instructions présentées dans cette section peuvent être utilisées pour déboguer le projet à partir d'un autre environnement JetBrains (comme IntelliJ) lorsque les plugins nécessaires sont installés.
+
+Dans WebStorm, il est possible de créer une configuration d'exécution à l'aide de la liste défilante à côté du bouton d'exécution « Run ». Pour ce projet, il est nécessaire de créer une configuration de type « npm » et de lui associer la commande « run » ainsi que le script « start » ou « start:watch ».
+
+Le lien suivant présente les subtilités de cette configuration avec plus de détails : https://www.jetbrains.com/help/webstorm/run-debug-configuration-npm.html
+
+Les configurations ainsi créées peuvent ensuite être lancées en mode déboguage en cliquant sur le bouton « Debug » à droite du bouton « Start ».
+
+Alternativement, il est possible d'attacher le débogueur de WebStorm à une nouvelle exécution du projet sans avoir à créer une nouvelle configuration d'exécution. Il suffit de se rendre sur le fichier [package.json](./package.json) et de cliquer sur le bouton en forme de triangle vert à côté des scripts « start » ou « start:watch » et de sélectionner l'option « Debug ».
+
+Une fois le débogueur attaché par l'une ou l'autre des méthodes présentées ci-dessus, l'exécution du code cessera lors de la rencontre d'un point d'arrêt sur un fichier TypeScript et il sera possible d'inspecter la valeur des variables visibles.
+
+Pour plus d'informations au sujet de l'utilisation des breakpoints dans WebStorm, voir https://www.jetbrains.com/help/webstorm/using-breakpoints.html
+
+  </p>
+  </details>
+
 ## Couplage souhaitable entre la couche Présentation et la couche Domaine
 
 Dans un design favorisant la maintenabilité, on évite que la couche Présentation ait la responsabilité de gérer les évènements système (opérations système). Larman présente dans son livre un exemple avec un JFrame (en Java Swing) à la figure F16.24. On l'adapte ici au contexte d'un service Web dans le framework Express (Node.js):
