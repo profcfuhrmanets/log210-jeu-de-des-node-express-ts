@@ -28,13 +28,7 @@ export class JeuRouter {
       if (nom === undefined) {
         throw new InvalidParameterError('Le paramètre nom est absent');
       }
-
-      nom = nom.trim();
-
-      if (nom.length == 0) {
-        throw new InvalidParameterError('Le nom ne peut pas être vide');
-      }
-
+      
       // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
       let joueur = this.jeu.demarrerJeu(nom);
       
