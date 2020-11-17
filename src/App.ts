@@ -6,7 +6,6 @@ import * as flash from 'node-twinkle';
 import * as ExpressSession from 'express-session';
 
 import { jeuRoutes } from './routes/JeuRouter';
-import { JeuDeDes } from './core/JeuDeDes';
 
 // Creates and configures an ExpressJS web server.
 class App {
