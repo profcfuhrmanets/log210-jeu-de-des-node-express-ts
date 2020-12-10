@@ -37,11 +37,7 @@ class App {
 
   // Configure API endpoints.
   private routes(): void {
-    /* This function will change when we start to add more
-     * API endpoints */
     let router = express.Router();
-
-    // placeholder route handler
     router.get('/', (req, res, next) => {
       let messages = res.locals.has_flashed_messages() ? res.locals.get_flashed_messages() : [];
       res.render('index', { title: 'Jeu de dés', flashedMessages: messages, joueurs: jeuRoutes.jeu.getJoueurs()});
