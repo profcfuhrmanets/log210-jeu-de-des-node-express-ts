@@ -22,5 +22,8 @@ Pour une démo, la remise doit être faite avant le laboratoire.  Pour les autre
 - [Squelette](./README-squelette.md)
 - [Énoncé](./README-enonce.md)
 - [Exigences du client](./README-exigences-client.md#introduction)
-- [Grille de pointage de tout les artéfacts](./README-grille-pointage.md)
+- [Gabarit rapport d'analyse et de conception](./docs/rapports/Rapport-Iteration-gabarit.md)
+### Grille de correction
+- [Grille de pointage de tous les artéfacts](./README-grille-pointage.md)
+- [Grille de correction des plans d'itération](./README-grille-correction-plan-iteration.md)
 - [Grille de correction des artéfacts d'analyse et de conception](./README-grille-correction-rapports.md)
