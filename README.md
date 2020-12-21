@@ -17,6 +17,12 @@ Pour une démo, la remise doit être faite avant le laboratoire.  Pour les autre
 ### LOG210-03
 ![LOG210-03](http://www.plantuml.com/plantuml/svg/ZPEnJiCm48PtFyL934nLRASIOkk0n189n1en78tR6Xmxie-XRyFQrw0lXckbBeqmxU8s-R__lxjSiWY4djPeYLZuq7P0Zpq4sXeLJw-NzDaRHfhYTVFqA0MVyPgr3RuvZ-IqLt33Nm43j4tyDHWeW9X3Xzi04quaxlkhRSIHbE9FKcPINY3hJDQPl1z9zkpTkreIf1cZmAMOSJ4JWXt-LbnKyWvqWAKppgiEj0MZrnjQUwNioCXAy2kOYpdr5JdpYl-JmrXwnDDX3jiG-JPIMiHj06MxgCXpHPoK-boHHuMrBwhNGLMTwXrC5xt1OL3sTreAERa6WnOqxNVHfPsDMo-RHW_ug3jFCFZzpkXUMupbKkapkxFvpS8LAJ_ju24sN8sHgnXYfX5vr6mgTYtBddAXgQc-eb1TyfGB5Ko7vItYaJxc7m00)
 
+# Travail d'équipe
+
+Dans le but de faciliter le travail d'équipe, nous considérons que chaque étudiant est entirement responsable de l'analyse, la conception, l'implémentation, les tests et l'intégration du code dans le gestionnaire de source pour les cas d'utilisations (tâches git) qui lui ont été assignées.
+
+Ce qui signifie que les membres de l'équipe sont là pour s'entraider mais pas pour faire le travail des autres à leur place.  De cette façons, **les autres membres de votre équipe ne seront pas pénalisé si vous ne faite pas votre travail.**
+
 
 ### Documents de référence
 - [Squelette](./README-squelette.md)

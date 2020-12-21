@@ -1,5 +1,7 @@
 # Étude de cas:  système de gestion de l’apprentissage
-[README.md](./README.md)
+- [README.md](./README.md)
+- [Grille de pointage des exigences](./README-grille-pointage.md)
+
 - [Étude de cas:  système de gestion de l’apprentissage](#étude-de-cas--système-de-gestion-de-lapprentissage)
   - [Introduction](#introduction)
   - [Survol des fonctionnalités](#survol-des-fonctionnalités)
@@ -28,7 +30,7 @@
       - [CU05d-Supprimer questionnaire](#cu05d-supprimer-questionnaire)
     - [CU06-Remettre devoir](#cu06-remettre-devoir)
     - [CU07-Passer questionnaire](#cu07-passer-questionnaire)
-    - [Spécifications supplémentaires (FURPS+)](#spécifications-supplémentaires-furps)
+- [Spécifications supplémentaires (FURPS+)](#spécifications-supplémentaires-furps)
       - [Fonctionnalité](#fonctionnalité)
         - [F1 - Journalisation et traitement d’erreurs](#f1---journalisation-et-traitement-derreurs)
         - [F2 - Sécurité](#f2---sécurité)
@@ -40,10 +42,9 @@
         - [P1 – Performance pour le passage de questionnaire](#p1--performance-pour-le-passage-de-questionnaire)
       - [Support](#support)
         - [S1 - Contrainte de développement: environnement de test](#s1---contrainte-de-développement-environnement-de-test)
-        - [S2 - Contrainte de développement: système de suivi de bogues](#s2---contrainte-de-développement-système-de-suivi-de-bogues)
-        - [S3 - Contrainte de développement: environnement d’intégration continue](#s3---contrainte-de-développement-environnement-dintégration-continue)
-        - [S4 - Contrainte de développement: gestion sémantique de version](#s4---contrainte-de-développement-gestion-sémantique-de-version)
-        - [S5 - Contrainte d’implémentation: banque de questions en format GIFT](#s5---contrainte-dimplémentation-banque-de-questions-en-format-gift)
+        - [S2 - Contrainte de développement: environnement d’intégration continue](#s2---contrainte-de-développement-environnement-dintégration-continue)
+        - [S3 - Contrainte de développement: gestion sémantique de version](#s3---contrainte-de-développement-gestion-sémantique-de-version)
+        - [S4 - Contrainte d’implémentation: banque de questions en format GIFT](#s4---contrainte-dimplémentation-banque-de-questions-en-format-gift)
   - [Glossaire](#glossaire)
     - [Modèle de données des questions Moodle](#modèle-de-données-des-questions-moodle)
     - [Idées d’évolution pour les prochaines sessions](#idées-dévolution-pour-les-prochaines-sessions)
@@ -139,7 +140,7 @@ L’Enseignant dans ce cas d’utilisation a un intérêt d’utiliser SGA pour 
 1. L’enseignant répète l’étape 5 jusqu’à ce qu’il n’ait plus de questions à ajouter au cours.
 
 **Extensions (ou scénarios alternatifs):** 
-&nbsp;&nbsp;&nbsp;5a. L’enseignant ajoute un autre type de question (défini par S5)
+&nbsp;&nbsp;&nbsp;5a. L’enseignant ajoute un autre type de question (défini par S4)
 &nbsp;&nbsp;&nbsp;5b. Le nom de la question n’est pas unique.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Le Système signale l'erreur et rejette la saisie.
 
@@ -439,7 +440,11 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé
 
 
 
-### Spécifications supplémentaires (FURPS+)
+# Spécifications supplémentaires (FURPS+)
+<span style="color:blue">
+**Pour les exigences de type URPS, celles-ci doivent être implémentées durant au moins deux itérations pour obtenir vos points.**
+</span>
+
 Rappel de l’acronyme FURPS+:
 **F**unctionality: Fonctionnalité courante dans beaucoup de cas d’utilisation.
 **U**sability: Convivialité? Combien de clics pour réaliser chaque cas d’utilisation? 
@@ -462,7 +467,9 @@ Toutes les erreurs doivent être journalisées en mémoire persistante.
 ##### F2 - Sécurité
 Toute utilisation implique une authentification avec le Système d’authentification (SSO). 
 
-**Note:** vous n’êtes pas obligé de faire un cas d’utilisation “Login”. Demandez aux chargés de laboratoire comment on peut satisfaire cette exigence de manière simple. 
+Vous devez remplacer la mécanique d'autenthentification actuel par une authentification par Middleware de type JWT (Json Web Token)
+
+référence: https://nozzlegear.com/blog/implementing-a-jwt-auth-system-with-typescript-and-node
 
 #### Convivialité
 
@@ -497,22 +504,17 @@ Les décisionnaires de SGA insistent pour des technologies de test, qui, selon e
 
 **Note:** pour réaliser cette exigence, il faudra automatiser les tests de l’ensemble des opérations système de chaque cas d’utilisation et s’assurer que les contrats sont respectés. Les tests devront être séparés en suites pour chaque cas d’utilisation.
 
-##### S2 - Contrainte de développement: système de suivi de bogues
-Les décisionnaires de SGA insistent pour utiliser un système de suivi de bogues, p. ex. les “issues” dans GitHub. Vous devez avoir rempli les exigences pendant au moins deux itérations.
-
-**Note:** pour réaliser cette exigence il faudra que chaque bogue ait un titre descriptif, les étapes de reproduction et une référence (p.ex. “fix #12”) dans les commits lorsque c’est résolu. Lire https://guides.github.com/features/issues/#notifications pour plus d’informations.
-
-##### S3 - Contrainte de développement: environnement d’intégration continue 
+##### S2 - Contrainte de développement: environnement d’intégration continue 
 Les décisionnaires de SGA insistent pour des technologies d’intégration continue avec GitHub.
 
 **Note:** pour réaliser cette exigence il faudra utiliser travis-ci.org et GitHub avec les badges, comme dans les squelettes.
 
-##### S4 - Contrainte de développement: gestion sémantique de version 
+##### S3 - Contrainte de développement: gestion sémantique de version 
 Les décisionnaires de SGA insistent pour une gestion sémantique de version pour le logiciel. Vous devez avoir rempli les exigences pendant au moins deux itérations.
 
 **Note:** pour réaliser cette exigence il faudra comprendre https://linuxfr.org/news/gestion-semantique-de-version et https://docs.npmjs.com/about-semantic-versioning
 
-##### S5 - Contrainte d’implémentation: banque de questions en format GIFT  
+##### S4 - Contrainte d’implémentation: banque de questions en format GIFT  
 Pour simplifier la rédaction et le partage des questions, le format GIFT doit être utilisé pour importer les questions.
 
 **Note:** pour réaliser cette exigence vous pouvez utiliser ce projet. 

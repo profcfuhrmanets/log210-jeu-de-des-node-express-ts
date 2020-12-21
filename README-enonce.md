@@ -47,12 +47,15 @@ Beaucoup de frameworks Web sont faciles à utiliser pour une application simple,
 * Base de données: SQL et NoSQL
 
 ## SGB
+
 Le système de gestion des bordereaux des étudiants (SGB) est un système externe utilisé par votre application pour récupérer les informations sur les enseignants, les cours, les étudiants ainsi que sauvegarder les notes obtenues par les étudiants lors de la réalisation d’un questionnaire ou la correction d’un devoir. **Vous n’avez pas à modifier ce système.**
 
 SGB est une application ayant son propre modèle du domaine (comprenant les concepts comme l’université, les cours, les groupes-cours, les étudiants, les évaluations - [voir l’Annexe A](#annexe-a)). Bien que votre application SGA ne traite que l’aspect pédagogique en ligne, votre analyse de SGA doit comprendre les classes conceptuelles de SGB.
 
 Veuillez noter que l’implémentation proposée de ce système n’a aucun mécanisme de persistance des données. Il possède une interface de configuration permettant de nettoyer le contenu correspondant aux notes ou de modifier la latence de celui-ci.
 https://github.com/yvanross/log210-systeme-gestion-bordereau-node-express-ts
+
+L'API de SGB est disponible avec le code source ou à l'adresse suivante: https://cc-yvanross.github.io/8e8addd727f14edfd8c50bd99633c611956f0439/dist/docs/index.html
 
 ## Application frontale et persistance minimalistes
 Vous devez implémenter une interface utilisateur minimaliste pour la réalisation de chacun des cas d’utilisation. Le but du laboratoire étant d’appliquer la méthodologie d’analyse et de conception enseignée dans LOG210, le squelette à un mécanisme simple pour faire l’application frontale. Il s’agit des templates HTML (pug, etc.) plutôt qu’un framework complexe comme Angular.js, React, Vue, etc. Pour la même raison, les technologies de bases de données ne sont pas proposées pour la solution. Il est possible de réaliser le laboratoire sans passer du temps sur ces aspects que vous verrez plus en profondeur dans d’autres cours spécialisés.
@@ -107,7 +110,7 @@ Le calcul de la note pour cette évaluation est le suivant :
 
 Si une équipe ne réussit pas à répondre adéquatement à une exigence (fonctionnalité, tests, correspondance aux artéfacts), elle ne sera pas utilisée dans le calcul. 
 
-Pour les valeurs de d dépassant 100%, le maximum est 120%.
+Pour les valeurs de d dépassant 100%, le maximum est 110%.
 
 ## Dates de remises
 Notez que le calendrier des séances est différent pour chaque groupe-cours, mais les dates de remises suivent cette planification. Le rapport doit être prêt pour la démo afin de montrer la correspondance entre la conception et la solution.

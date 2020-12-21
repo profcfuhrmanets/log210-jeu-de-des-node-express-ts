@@ -19,6 +19,25 @@ Au lieu de faire un plan d'itération sous forme de document texte qui est gén�
 
 Je vous suggère d'utiliser les Labels pour [classer les issues](https://softwareengineering.stackexchange.com/questions/129714/how-to-manage-github-issues-for-priority-etc).   Les étapes jalon (Milestone) pour grouper plusieurs tâches ensemble. Les projets pour représenter les itérations.  
 
+Vous devez utiliser les étiquettes (labels) suivant pour classer vos tâches (issues)
+- Fonctionnality - fonctionnalité
+- Usability - Usabilité
+- Reliability - Disponibilité
+- Performance - Performance
+- Supportability - Supportabilité
+- RétroactionClient
+
+Vous devez utiliser les étapes jalon (Milestones) suivant pour regrouper vos tâches:
+1. Correction interactive du rapport de l'itération #1
+1. Rapport d'analyse et de conception de l'itération #1	
+1. Implémentation itération #1
+1. Rapport d'analyse et de conception de l'itération #2	
+1. Implémentation itération #2 
+1. Rapport d'analyse et de conception de l'itération #3	
+1. Implémentation itération #3
+
+
+
 Vous trouverez ci-dessous les différents types de tâches que nous nous attendons à retrouver dans Github issues ainsi que les points associés à chaque type.
 
 
