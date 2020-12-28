@@ -134,6 +134,8 @@ Vous devez être en mesure de générer un rapport incluant les éléments de tr
 | Mauvaise qualité du français: <br>quelques fautes (-1), <br>beaucoup de fautes (-5), <br>énormément de fautes (-10) | -10 | |
 | **Total**                                                   | -10          |       |
 
+Un travail qui contient trop d’erreurs fréquentes peut être refusé par le chargé de laboratoire. L'équipe peut reprendre le travail avec une pénalité de 25%. Vérifiez attentivement la grille de correction et les notes de cours.
+
  Total global : 50 points
 
 

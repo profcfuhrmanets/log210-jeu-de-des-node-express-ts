@@ -67,7 +67,10 @@ Beaucoup d'erreurs (-3)|
 |Mauvaise présentation du rapport|	-3|		"Peu d'erreurs de présentation (-1)<br/>Quelques erreurs de présentation OU absence du rapport en PDF (-2)<br/>Quelques erreurs de présentation ET absence du rapport en PDF (-3)|
 |Pénalité pour refus de correction par le chargé de laboratoire|	-11,25|Refus (-25%)|
 |Sous-total|	-19,25| 	|	
-			
+
+
+<u>Pénalité pour refus de correction par le chargé de laboratoire</u>: 
+Un travail qui contient trop d’erreurs fréquentes peut être refusé par le chargé de laboratoire. L'équipe peut reprendre le travail avec une pénalité de 25%. Vérifiez attentivement la grille de correction et les notes de cours.		<u>**Ce paramêtre d'évaluation s'applique à tous les travaux remis pour correction.**</u>
 
 Grand total	45
 			
