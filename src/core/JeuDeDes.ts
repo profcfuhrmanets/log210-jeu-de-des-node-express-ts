@@ -23,26 +23,26 @@ export class JeuDeDes {
      */
 
     public getJoueurs() {
-        return Array.from(this.joueurs.values());
+        return JSON.stringify(Array.from(this.joueurs.values()));
     }
     
-    public demarrerJeu(nom: string) {
+    public demarrerJeu(nom: string):string {
 
         if (this.joueurs.get(nom) !== undefined) {
             // joueur existe déjà
             throw new AlreadyExistsError("Joueur '" + nom + "' existe déjà.");
         }
-
+ 
         // 
         let joueur = new Joueur(nom);
         this.joueurs.set(nom, joueur);
 
-        return joueur;
+        return JSON.stringify(joueur);
     }
 
 
 
-    public jouer(nom: string) {
+    public jouer(nom: string):string {
         let joueur = this.joueurs.get(nom);
         if (joueur === undefined) {
             // joueur n'existe pas
@@ -55,7 +55,7 @@ export class JeuDeDes {
         let somme = v1 + v2;
         joueur.lancer();
         if (somme == 7) joueur.gagner();
-        let résultat = {
+        let resultat = {
             nom: nom,
             somme: somme,
             lancers: joueur.lancers,
@@ -64,20 +64,20 @@ export class JeuDeDes {
             v2: v2,
             message: "Vous avez " + (somme == 7 ? "gagné!!!" : "perdu.")
         };
-        return résultat;
+        return JSON.stringify(resultat);
     }
 
-    public terminerJeu(nom: string) {
+    public terminerJeu(nom: string):string  {
         if (this.joueurs.get(nom) === undefined) {
             // joueur n'existe pas
             throw new NotFoundError("Joueur '" + nom + "' n'existe pas.");
         }
         this.joueurs.delete(nom);
-        let résultat = {
+        let resultat = {
             nom: nom,
             message: "Merci d'avoir joué."
         };
-        return résultat;
+        return JSON.stringify(resultat);
     }
 
 

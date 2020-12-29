@@ -27,6 +27,7 @@ export class JeuRouter {
       // POST ne garantit pas que tous les paramètres de l'opération système sont présents
       this._demarrerJeu(nom, req, res);
     } catch (error) {
+      console.log(error.message);
       this._errorCode500(error, req, res);
     }
   }
@@ -38,13 +39,13 @@ export class JeuRouter {
 
     // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
     let joueur = this.jeu.demarrerJeu(nom);
-
+    let joueurObj = JSON.parse(joueur);
     (req as any).flash('Nouveau jeu pour ' + nom);
     res.status(201)
       .send({
         message: 'Success',
         status: res.status,
-        nom: joueur.nom
+        nom: joueurObj._nom
       });
   }
 
@@ -55,6 +56,7 @@ export class JeuRouter {
     try {
       this._jouer(req, res);
     } catch (error) {
+      console.log(error.message);
       this._errorCode500(error, req, res);
     }
   }
@@ -70,13 +72,14 @@ export class JeuRouter {
 
   private _jouer(req, res: Response<any>) {
     let nom = req.params.nom;
-    let résultat = this.jeu.jouer(nom);
-    (req as any).flash('Résultat pour ' + nom + ': ' + résultat.v1 + ' + ' + résultat.v2 + ' = ' + résultat.somme);
+    let resultat = this.jeu.jouer(nom);
+    let resultatObj = JSON.parse(resultat);
+    (req as any).flash('Resultat pour ' + nom + ': ' + resultatObj._v1 + ' + ' + resultatObj._v2 + ' = ' + resultatObj._somme);
     res.status(200)
       .send({
         message: 'Success',
         status: res.status,
-        résultat
+        resultat
       });
   }
 
@@ -90,16 +93,17 @@ export class JeuRouter {
 
     try {
       // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
-      let résultat = this.jeu.terminerJeu(nom);
+      let resultat = this.jeu.terminerJeu(nom);
       (req as any).flash('Jeu terminé pour ' + nom);      
       res.status(200)
         .send({
           message: 'Success',
           status: res.status,
-          résultat
+          resultat
         });
 
     } catch (error) {
+      console.log(error.message);
       this._errorCode500(error, req, res);
 
     }

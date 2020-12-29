@@ -14,10 +14,10 @@ beforeAll(async () => {
 describe('GET /api/v1/jeu/terminerJeu/:id', () => {
     it('responds with successful call for player ' + testNom1, async () => {
         const response = await request.get('/api/v1/jeu/terminerJeu/' + testNom1);
-
+        let resultat = JSON.parse(response.body.resultat);
         expect(response.status).toBe(200);
         expect(response.type).toBe("application/json");
-        expect(response.body.résultat.nom).toBe(testNom1);
+        expect(resultat.nom).toBe(testNom1);
     });
   
     it('Call responds with bad request when player does not exist ' + testNom1, async () => {
