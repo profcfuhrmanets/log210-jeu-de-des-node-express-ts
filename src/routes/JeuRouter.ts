@@ -45,7 +45,7 @@ export class JeuRouter {
       .send({
         message: 'Success',
         status: res.status,
-        nom: joueurObj._nom
+        joueur: joueurObj
       });
   }
 
