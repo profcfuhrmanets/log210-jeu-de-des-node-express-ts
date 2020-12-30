@@ -22,10 +22,6 @@ export class JeuDeDes {
      *  opérations systèmes
      */
 
-    public getJoueurs() {
-        return JSON.stringify(Array.from(this.joueurs.values()));
-    }
-
     public demarrerJeu(nom: string): string {
 
         if (this.joueurs.get(nom) !== undefined) {
@@ -33,16 +29,14 @@ export class JeuDeDes {
             throw new AlreadyExistsError("Joueur '" + nom + "' existe déjà.");
         }
 
-        // 
         let joueur = new Joueur(nom);
         this.joueurs.set(nom, joueur);
-
-        return JSON.stringify(joueur);
+        // rendre une copie de l'objet (séparation des couches)
+        let copie = this.copiePublique(joueur);
+        return JSON.stringify(copie);
     }
 
-
-
-    brasser():number {
+    brasser(): number {
         this.d1.brasser();
         this.d2.brasser();
         let v1 = this.d1.valeur;
@@ -83,6 +77,24 @@ export class JeuDeDes {
             message: "Merci d'avoir joué."
         };
         return JSON.stringify(resultat);
+    }
+
+    // d'autres méthodes
+    public getJoueurs() {
+        // respecter l'encapsulation (ne pas faire stringify de tout)
+        let copieJoueurs = new Array(this.joueurs.size);
+        this.joueurs.forEach((joueur, index) => {
+            copieJoueurs[index] = this.copiePublique(joueur);
+        });
+        return JSON.stringify(copieJoueurs);
+    }
+
+    private copiePublique(joueur: Joueur): any {
+        return {
+            nom: joueur.nom, 
+            lancers: joueur.lancers,
+            lancersGagnes: joueur.lancersGagnes
+        }
     }
 
 
