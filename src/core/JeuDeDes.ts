@@ -83,10 +83,12 @@ export class JeuDeDes {
     public getJoueurs() {
         // respecter l'encapsulation (ne pas faire stringify de tout)
         let copieJoueurs = new Array(this.joueurs.size);
-        this.joueurs.forEach((joueur, index) => {
-            copieJoueurs[index] = this.copiePublique(joueur);
+        let index = 0;
+        this.joueurs.forEach((joueur) => {
+            copieJoueurs[index++] = this.copiePublique(joueur);
         });
-        return JSON.stringify(copieJoueurs);
+        const jsonJoueurs = JSON.stringify(copieJoueurs);
+        return jsonJoueurs;
     }
 
     private copiePublique(joueur: Joueur): any {
