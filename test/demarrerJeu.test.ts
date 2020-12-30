@@ -13,7 +13,9 @@ describe('GET /api/v1/jeu/demarrerJeu/:id', () => {
         const response = await request.post('/api/v1/jeu/demarrerJeu').send({nom: testNom1});
         expect(response.status).toBe(201);
         expect(response.type).toBe("application/json");
-        expect(response.body.nom).toBe(testNom1);
+        expect(response.body.joueur.nom).toBe(testNom1);
+        expect(response.body.joueur.lancers).toBe(0);
+        expect(response.body.joueur.lancersGagnes).toBe(0);
     });
   
     it('duplicate call for player ' + testNom1 + ' responds with bad request', async () => {
