@@ -33,3 +33,8 @@ Ce qui signifie que les membres de l'équipe sont là pour s'entraider mais pas 
 - [Grille de pointage de tous les artéfacts](./README-grille-pointage.md)
 - [Grille de correction des plans d'itération](./README-grille-correction-plan-iteration.md)
 - [Grille de correction des artéfacts d'analyse et de conception](./README-grille-correction-rapports.md)
+
+
+## Dette technique
+Pour assurer une bonne qualité de code, nous vous demandons d'utilise le plugin Visual Studio Tech Debt Metrics. 
+https://marketplace.visualstudio.com/items?itemName=Stepsize.tech-debt-tracker
