@@ -31,9 +31,7 @@ export class JeuDeDes {
 
         let joueur = new Joueur(nom);
         this.joueurs.set(nom, joueur);
-        // rendre une copie de l'objet (séparation des couches)
-        let copie = this.copiePublique(joueur);
-        return JSON.stringify(copie);
+        return JSON.stringify(joueur);
     }
 
     brasser(): number {
@@ -81,23 +79,16 @@ export class JeuDeDes {
 
     // d'autres méthodes
     public getJoueurs() {
-        // respecter l'encapsulation (ne pas faire stringify de tout)
-        let copieJoueurs = new Array(this.joueurs.size);
-        let index = 0;
-        this.joueurs.forEach((joueur) => {
-            copieJoueurs[index++] = this.copiePublique(joueur);
-        });
-        const jsonJoueurs = JSON.stringify(copieJoueurs);
-        return jsonJoueurs;
+        return JSON.stringify(Array.from(this.joueurs.values()));
     }
 
-    private copiePublique(joueur: Joueur): any {
-        return {
-            nom: joueur.nom, 
-            lancers: joueur.lancers,
-            lancersGagnes: joueur.lancersGagnes
-        }
-    }
+    // private copiePublique(joueur: Joueur): any {
+    //     return {
+    //         nom: joueur.nom, 
+    //         lancers: joueur.lancers,
+    //         lancersGagnes: joueur.lancersGagnes
+    //     }
+    // }
 
 
 }
