@@ -82,13 +82,4 @@ export class JeuDeDes {
         return JSON.stringify(Array.from(this.joueurs.values()));
     }
 
-    // private copiePublique(joueur: Joueur): any {
-    //     return {
-    //         nom: joueur.nom, 
-    //         lancers: joueur.lancers,
-    //         lancersGagnes: joueur.lancersGagnes
-    //     }
-    // }
-
-
 }
