@@ -19,6 +19,7 @@ Ce qui signifie que les membres de l'équipe sont là pour s'entraider mais pas 
 - [Exigences du client](./README-exigences-client.md#introduction)
 - [Gabarit rapport d'analyse et de conception](./docs/rapports/Rapport-Iteration-gabarit.md)
 ### Grille de correction
+- [Déroulement des corrections interactives](./README-deroulement-correction.md)
 - [Grille de pointage de tous les artéfacts](./README-grille-pointage.md)
 - [Grille de correction des plans d'itération](./README-grille-correction-plan-iteration.md)
 - [Grille de correction des artéfacts d'analyse et de conception](./README-grille-correction-rapports.md)
