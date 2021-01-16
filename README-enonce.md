@@ -110,7 +110,7 @@ Le calcul de la note pour cette évaluation est le suivant :
 
 ![](http://www.plantuml.com/plantuml/png/SoWkIImgoKqioU1AiTKeBirLK0h8pymhKOelZi_Kr3Sqv798pKi1oGC0)
 
-[d] = 1.10
+![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5L8IapEJY_AByrBISxFoIzIA2bAp2i6IgNcbN11rEScbcHmnIIdPkP4fzJQ6keP6d0vfEQbW8J13A1v0000)
 
 Si une équipe ne réussit pas à répondre adéquatement à une exigence (fonctionnalité, tests, correspondance aux artéfacts), elle ne sera pas utilisée dans le calcul. 
 
