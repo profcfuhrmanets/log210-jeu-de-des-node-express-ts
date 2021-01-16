@@ -54,8 +54,7 @@
 |Les justifications GRASP sont pertinentes et complètes	|5| Toutes les justifications sont pertinentes ET complètes (5)<br/>Presque toutes les justifications sont pertinentes ET complètes (4)<br/>La plupart des justifications sont pertinentes OU complètes (2)<br/>Peu de justifications sont pertinentes OU complètes (0)|
 |Non-respect de la signature des opérations système|	-2| Une erreur (-1)<br/>Plus d'une erreur (-2)|
 |Références à des technologies ou à des éléments absentes du MDD|	-2| Peu de références (-1)<br/>Quelques références (-2)|
-|Non-respect de la notation UML	|-5|		Quelques erreurs (-1)<br/>Beaucoup d'erreurs (-3)
-Énormément d'erreurs (-5)|
+|Non-respect de la notation UML	|-5|		Quelques erreurs (-1)<br/>Beaucoup d'erreurs (-3)<br />Énormément d'erreurs (-5)|
 |Sous-total	|15|	|	
 			
 
