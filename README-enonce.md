@@ -1,4 +1,4 @@
-# Énoncé du laboratoire #1 en équipe
+# Énoncé du laboratoire 1 en équipe
 [README.md](./README.md)
 - [Énoncé du laboratoire #1 en équipe](#énoncé-du-laboratoire-1-en-équipe)
 	- [Introduction](#introduction)
