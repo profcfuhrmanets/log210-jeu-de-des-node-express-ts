@@ -61,13 +61,13 @@ Dans cette étude de cas, il est proposé de réaliser un système de gestion de
 
 - **Étudiant:** Il est inscrit à l’université. Il veut un moyen de remettre des devoirs et réaliser des jeux-questionnaires pour les groupes-cours dans lesquels il est inscrit.
 
-## Cas d’utilisation
+# Cas d’utilisation
 Vous devez vous assurer d’implémenter une mécanique de gestion des états permettant de s’assurer que les opérations système sont appelées dans un ordre cohérent avec le cas d’utilisation. Toute séquence d’utilisation autre que la séquence normale devrait automatiquement générer une erreur.  Nous couvrirons cette mécanique lors du cours sur les diagrammes d’états.
 
-### CU01-Gérer cours
+## CU01-Gérer cours
 L’Enseignant dans ce cas d’utilisation a un intérêt d’utiliser SGA pour gérer l’espace en ligne des groupe-cours qu’il enseigne.
 
-#### CU01a - Ajouter cours
+### CU01a - Ajouter cours
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -85,10 +85,12 @@ L’Enseignant dans ce cas d’utilisation a un intérêt d’utiliser SGA pour 
 1. Le système affiche l’information du cours et affiche la liste des étudiants inscrits dans le groupes-cours correspondant (l’information provient du SGB).
 
 **Extensions (ou scénarios alternatifs):** 
-&nbsp;&nbsp;&nbsp;3a. Un cours correspondant au groupe-cours sélectionné existe déjà. 
+
+&nbsp;&nbsp;&nbsp;3a. Un cours correspondant au groupe-cours sélectionné existe déjà.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Le système signale l'erreur et rejette la saisie.
 
-#### CU01b - Récupérer cours
+### CU01b - Récupérer cours
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -122,8 +124,10 @@ L’Enseignant dans ce cas d’utilisation a un intérêt d’utiliser SGA pour 
 1. L’enseignant confirme.
 1. Le système supprime le cours et affiche la nouvelle liste de cours.
 
-### CU02-Gérer questions
-#### CU02a-Ajouter question
+<hr />
+
+## CU02-Gérer questions
+### CU02a-Ajouter question
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -141,11 +145,14 @@ L’Enseignant dans ce cas d’utilisation a un intérêt d’utiliser SGA pour 
 1. L’enseignant répète l’étape 5 jusqu’à ce qu’il n’ait plus de questions à ajouter au cours.
 
 **Extensions (ou scénarios alternatifs):** 
+
 &nbsp;&nbsp;&nbsp;5a. L’enseignant ajoute un autre type de question (défini par S4)
+
 &nbsp;&nbsp;&nbsp;5b. Le nom de la question n’est pas unique.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Le Système signale l'erreur et rejette la saisie.
 
-#### CU02b-Récupérer question
+### CU02b-Récupérer question
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -162,7 +169,7 @@ L’Enseignant dans ce cas d’utilisation a un intérêt d’utiliser SGA pour 
    
 On répète les étapes 3 et 4 tant que l’enseignant n’a pas terminé
 
-#### CU02c-Modifier question
+### CU02c-Modifier question
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -178,7 +185,9 @@ On répète les étapes 3 et 4 tant que l’enseignant n’a pas terminé
 1. Le système affiche la question modifiée.
 
 **Extensions (ou scénarios alternatifs):** 
+
 &nbsp;&nbsp;&nbsp;3a. Le nom (modifié) de la question n’est pas unique.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Le Système signale l'erreur et rejette la saisie.
 
 #### CU02d-Supprimer question
@@ -195,10 +204,13 @@ On répète les étapes 3 et 4 tant que l’enseignant n’a pas terminé
 1. Le système affiche les valeurs actuelles de la question à supprimer.
 1. L’enseignant confirme la suppression de la question
 
-**Extensions (ou scénarios alternatifs):** 
+**Extensions (ou scénarios alternatifs):**
+
 &nbsp;&nbsp;&nbsp;2a. Le système affiche la liste des questionnaires utilisant cette question et désactive la possibilité de suppression tant que la question est utilisée dans un questionnaire.
 
-### CU03-Corriger devoir
+<hr />
+
+## CU03-Corriger devoir
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -220,11 +232,13 @@ On répète les étapes 3 et 4 tant que l’enseignant n’a pas terminé
 L’enseignant répète les étapes 5 à 7 jusqu’à ce qu’il n’ait plus de devoirs à corriger
 
 **Extensions (ou scénarios alternatifs):** 
-&nbsp;&nbsp;&nbsp;5-6-7a. L’enseignant téléverse tous les devoirs corrigés ainsi que les fichiers avec l’extension “.note” pour associer la note au devoir corrigé. Un fichier “.note” par 
-#### devoir (facultatif)
 
-### CU04-Gérer devoir
-#### CU04a-Ajouter devoir
+&nbsp;&nbsp;&nbsp;5-6-7a. L’enseignant téléverse tous les devoirs corrigés ainsi que les fichiers avec l’extension “.note” pour associer la note au devoir corrigé. Un fichier “.note” par devoir (facultatif)
+
+<hr />
+
+## CU04-Gérer devoir
+### CU04a-Ajouter devoir
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -243,11 +257,13 @@ L’enseignant répète les étapes 5 à 7 jusqu’à ce qu’il n’ait plus de
 
 On répète les étapes 5-6 tant qu’il y a un devoir à ajouter
 
-**Extensions (ou scénarios alternatifs):** 
+**Extensions (ou scénarios alternatifs):**
+
 &nbsp;&nbsp;&nbsp;5a. La date de début est après la date de fin.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Le Système signale l'erreur et rejette la saisie.
 
-#### CU04b-Récupérer devoir
+### CU04b-Récupérer devoir
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -265,14 +281,17 @@ On répète les étapes 5-6 tant qu’il y a un devoir à ajouter
 1. Le système affiche le détail du devoir
 1. Le système affiche la liste des étudiants ayant fait le devoir ainsi que la note leur étant associée. 
 
-On répète les étapes 5 à 7 tant que l’enseignant n’a pas terminé
-On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé
+On répète les étapes 5 à 7 tant que l’enseignant n’a pas terminé.
 
-**Extensions (ou scénarios alternatifs):** 
+On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé.
+
+**Extensions (ou scénarios alternatifs):**
+
 &nbsp;&nbsp;&nbsp;7a. Le système affiche les étudiants par ordre alphabétique
+
 &nbsp;&nbsp;&nbsp;7b. Le système affiche les étudiants par ordre croissant de la note
 
-#### CU04c-Modifier devoir
+### CU04c-Modifier devoir
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -287,7 +306,8 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé
 1. L’enseignant effectue les modifications du devoir et les sauvegarde
 1. Le système affiche tout le devoir modifié
 
-**Extensions (ou scénarios alternatifs):** 
+**Extensions (ou scénarios alternatifs):**
+
 &nbsp;&nbsp;&nbsp;1a. Un devoir ne peut pas être modifié si des étudiants ont déjà commencé à réaliser celui-ci.
 
 #### CU04d-Supprimer devoir
@@ -304,11 +324,14 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé
 1. Le système affiche les valeurs du devoir à supprimer.
 1. L’enseignant confirme la suppression du devoir
 
-**Extensions (ou scénarios alternatifs):** 
+**Extensions (ou scénarios alternatifs):**
+
 &nbsp;&nbsp;&nbsp;2a. Le système désactive la possibilité de suppression tant que le devoir a été utilisé par des étudiants.
 
-### CU05-Gérer questionnaire
-#### CU05a-Ajouter questionnaire
+<hr />
+
+## CU05-Gérer questionnaire
+### CU05a-Ajouter questionnaire
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -334,7 +357,7 @@ On répète les étapes 7-10 tant que l’enseignant n’a pas terminé l’ajou
 
 **Extensions (ou scénarios alternatifs):** 
 
-#### CU05b-Afficher questionnaire
+### CU05b-Afficher questionnaire
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -353,10 +376,11 @@ On répète les étapes 7-10 tant que l’enseignant n’a pas terminé l’ajou
 1. Le système affiche les détails du questionnaire avec une description et un état pour indiquer si le questionnaire est actif
 1. Le système affiche la liste des étudiants ayant réalisé le questionnaire ainsi que la note qu’ils ont obtenue.
 
-On répète les étapes 5 à 7 tant que l’enseignant n’a pas terminé
-On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé
+On répète les étapes 5 à 7 tant que l’enseignant n’a pas terminé.
 
-#### CU05c-Modifier questionnaire
+On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé.
+
+### CU05c-Modifier questionnaire
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -374,11 +398,13 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé
 1. L’enseignant modifie les questions associées au questionnaire
 1. Le système confirme la modification du questionnaire
 
-**Extensions (ou scénarios alternatifs):** 
+**Extensions (ou scénarios alternatifs):**
+
 &nbsp;&nbsp;&nbsp;3a. 4a. L’enseignant ajoute une question au questionnaire
+
 &nbsp;&nbsp;&nbsp;4b. L’enseignant supprime une question du questionnaire
 
-#### CU05d-Supprimer questionnaire
+### CU05d-Supprimer questionnaire
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -393,10 +419,13 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé
 1. Le système affiche les détails du questionnaire avec une description et un état pour indiquer si le questionnaire est actif
 1. L’enseignant supprime le questionnaire
 
-**Extensions (ou scénarios alternatifs):** 
+**Extensions (ou scénarios alternatifs):**
+
 &nbsp;&nbsp;&nbsp;1a. Le système désactive la possibilité de suppression du questionnaire aussitôt qu’un étudiant à réalisé celui-ci dans le cadre du cours.
 
-### CU06-Remettre devoir
+<hr />
+
+## CU06-Remettre devoir
 **Acteur principal:**  Étudiant
 
 **Préconditions:** 
@@ -414,9 +443,12 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé
 1. Le système confirme la réception du devoir
 
 **Extensions (ou scénarios alternatifs):** 
+
 &nbsp;&nbsp;&nbsp;3a. Un devoir ne peut être sélectionné si la date actuelle n’est pas à l’intérieur de la plage d’ouverture du devoir ou si celui-ci est inactif.
 
-### CU07-Passer questionnaire
+<hr />
+
+## CU07-Passer questionnaire
 **Acteur principal:**  Étudiant
 
 **Préconditions:** 
@@ -438,8 +470,6 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé
 1. On répète les étapes 2 à 8 tant que l’étudiant n’a pas terminé.
 
 **Extensions (ou scénarios alternatifs):** 
-
-
 
 # Spécifications supplémentaires (FURPS+)
 
