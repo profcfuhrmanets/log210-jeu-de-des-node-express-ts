@@ -1,19 +1,19 @@
 # LOG210
-## Laboratoire #1
-### système de gestion de l’apprentissage
+## Laboratoire 1
+### Système de gestion de l’apprentissage
 ## Introduction
 
-Ce document contient la table des matières vers tout les documents nécessaires à la réalisation  de votre laboratoire.
+Ce document contient la table des matières vers tous les documents nécessaires à la réalisation  de votre laboratoire.
 
 # Travail d'équipe
 
-Dans le but de faciliter le travail d'équipe, nous considérons que chaque étudiant est entirement responsable de l'analyse, la conception, l'implémentation, les tests et l'intégration du code dans le gestionnaire de source pour les cas d'utilisations (tâches git) qui lui ont été assignées.
+Dans le but de faciliter le travail d'équipe, nous considérons que chaque étudiant est entièrement responsable de l'analyse, la conception, l'implémentation, les tests et l'intégration du code dans le gestionnaire de source pour les cas d'utilisations (tâches git) qui lui ont été assignées.
 
-Ce qui signifie que les membres de l'équipe sont là pour s'entraider mais pas pour faire le travail des autres à leur place.  De cette façons, **les autres membres de votre équipe ne seront pas pénalisé si vous ne faite pas votre travail.**
+Ce qui signifie que les membres de l'équipe sont là pour s'entraider, mais pas pour faire le travail des autres à leur place.  De cette façon, **vous ne serez pas pénalisés si les autres membres de l'équipe ne font pas leur travail.**
 
 
 ### Documents de référence
-- [Identificatioun des membres de l'équipe](./README-identification.md)
+- [Identification des membres de l'équipe](./README-identification.md)
 - [Squelette](./README-squelette.md)
 - [Énoncé](./README-enonce.md)
 - [Exigences du client](./README-exigences-client.md#introduction)
@@ -26,5 +26,4 @@ Ce qui signifie que les membres de l'équipe sont là pour s'entraider mais pas 
 
 
 ## Dette technique
-Pour assurer une bonne qualité de code, nous vous demandons d'utilise le plugin Visual Studio Tech Debt Metrics. 
-https://marketplace.visualstudio.com/items?itemName=Stepsize.tech-debt-tracker
+Pour assurer une bonne qualité de code, nous vous demandons d'utilise l'extension [Visual Studio Tech Debt Metrics](https://marketplace.visualstudio.com/items?itemName=Stepsize.tech-debt-tracker).
