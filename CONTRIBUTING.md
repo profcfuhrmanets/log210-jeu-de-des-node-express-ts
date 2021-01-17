@@ -1,6 +1,6 @@
 # Faire des contributions à ce squelette
 
-:+1::tada: D'abord, merci d'avoir considéré un contribution! :tada::+1:
+:+1::tada: D'abord, merci d'avoir considéré une contribution! :tada::+1:
 
 ## Comment contribuer ?
 
