@@ -48,4 +48,12 @@ export class Joueur {
     public gagner() {
         this._nbLancersGagnes++;
     }
+
+    public toJSON() {
+        return {
+            nom: this.nom,
+            lancers: this.lancers,
+            lancersGagnes: this.lancersGagnes
+		};
+    }
 }

@@ -1,4 +1,4 @@
-# Énoncé du laboratoire #1 en équipe
+# Énoncé du laboratoire 1 en équipe
 [README.md](./README.md)
 - [Énoncé du laboratoire #1 en équipe](#énoncé-du-laboratoire-1-en-équipe)
 	- [Introduction](#introduction)
@@ -68,32 +68,35 @@ Les tests (S1 - Contrainte de développement: environnement de test) **sont obli
 
 Les points associés à chaque exigence sont définis dans la grille de correction.
 
-- Itération 1 - 3 points
-	Obligatoire :
+#### Itération 1 - 3 points
+
+**Obligatoire :**
   - CU01-Gérer cours
   - CU02-Gérer questions
 
-- Itération 2 - 3 points additionnels
-	Suggestion :
-	- CU05-Gérer questionnaire
-	- support question type choix multiple
-	- support question type mise en correspondance
+#### Itération 2 - 3 points additionnels
+
+**Suggestion :**
+  - CU05-Gérer questionnaire
+  - support question type choix multiple
+  - support question type mise en correspondance
 	
--  Itération 3 - 5 points additionnels
-Suggestion :
-	- CU07-Passer questionnaires
-	- support question type choix multiple
-	- support question type mise en correspondance
+####  Itération 3 - 5 points additionnels
+
+**Suggestion :**
+  - CU07-Passer questionnaires
+  - support question type choix multiple
+  - support question type mise en correspondance
 
 ## Processus d’évaluation des laboratoires
 Le travail de laboratoire sera évalué en deux volets, soit la partie **processus et planification** et la partie **implémentation et tests.**
 
 Voir la grille de correction pour plus de détails.
 
-|Évaluation|Itération 1|Itération 2|Itération 3|Total|
-|----------|-----------|-----------|-----------|-----|
-|Processus et planification|a|b|c|(a+b+c)|
-|Implémentation et tests |	-| - | d| d |
+| Évaluation                 | Itération 1 | Itération 2 | Itération 3 | Total       |
+|:---------------------------|:-----------:|:-----------:|:-----------:|:-----------:|
+| Processus et planification | a           | b           | c           | (a + b + c) |
+| Implémentation et tests    | -           | -           | d           | d           |
 	
 ###  Processus et planification
 Les critères d’évaluation de chaque itération (a, b, c) sont documentés dans les gabarits de chaque remise. Voir les gabarits de planification et de conception dans le squelette pour connaître les artéfacts à remettre.
@@ -106,7 +109,8 @@ Cependant, il peut y avoir une pénalité à la fin d’une itération si les cr
 Le calcul de la note pour cette évaluation est le suivant :
 
 ![](http://www.plantuml.com/plantuml/png/SoWkIImgoKqioU1AiTKeBirLK0h8pymhKOelZi_Kr3Sqv798pKi1oGC0)
-[d] = 1.20
+
+![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5L8IapEJY_AByrBISxFoIzIA2bAp2i6IgNcbN11rEScbcHmnIIdPkP4fzJQ6keP6d0vfEQbW8J13A1v0000)
 
 Si une équipe ne réussit pas à répondre adéquatement à une exigence (fonctionnalité, tests, correspondance aux artéfacts), elle ne sera pas utilisée dans le calcul. 
 

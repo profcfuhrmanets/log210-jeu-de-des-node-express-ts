@@ -45,7 +45,7 @@ export class JeuRouter {
       .send({
         message: 'Success',
         status: res.status,
-        nom: joueurObj._nom
+        joueur: joueurObj
       });
   }
 
@@ -74,7 +74,7 @@ export class JeuRouter {
     let nom = req.params.nom;
     let resultat = this.jeu.jouer(nom);
     let resultatObj = JSON.parse(resultat);
-    (req as any).flash('Resultat pour ' + nom + ': ' + resultatObj._v1 + ' + ' + resultatObj._v2 + ' = ' + resultatObj._somme);
+    (req as any).flash('Resultat pour ' + nom + ': ' + resultatObj.v1 + ' + ' + resultatObj.v2 + ' = ' + resultatObj.somme);
     res.status(200)
       .send({
         message: 'Success',

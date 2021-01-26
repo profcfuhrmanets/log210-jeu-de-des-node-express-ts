@@ -4,7 +4,7 @@
 Cette grille d'évaluation présente le pointage associé à chacun des artéfacts que vous avez à remettre pour ce laboratoire.
 
 |Artéfact|Pondération|
-|--------|-----------|
+|--------|:---------:|
 |Plan d'itération 1| 0.5|
 |Correction interactive du rapport 1|0.5|
 |Rapport 1|4|
@@ -18,8 +18,8 @@ Cette grille d'évaluation présente le pointage associé à chacun des artéfac
 # Grille de pointage des exigences
 [README-exigences-clients.md](./README-exigences-client.md)
 
-|Exigence |Points|
-|--------|-------|
+| Exigence |Points|
+|----------|:----:|
 |CU01-Gérer cours	|1|
 |CU02-Gérer questions	|2|
 |support question type choix multiple	|0,5|
@@ -47,7 +47,7 @@ Cette grille d'évaluation présente le pointage associé à chacun des artéfac
 |S3 - Contrainte de développement: gestion sémantique de version|	1|
 |S4 - Contrainte d’implémentation: banque de questions en format GIFT	|2|
 
-Pour les exigences de type URPS, celle-ci doivent être implémentés durant au moins deux itérations pour obtenir vos points.
+Pour les exigences de type Support, celle-ci doivent être implémentés durant au moins deux itérations pour obtenir vos points.
 
 
 ## **Le code qui n'a pas une dette technique de niveau A ne sera pas considéré lors de la correction.**
