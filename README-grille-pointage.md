@@ -32,7 +32,7 @@ Cette grille d'évaluation présente le pointage associé à chacun des artéfac
 |CU04-Gérer devoir	|2|
 |CU05-Gérer questionnaire	|2|
 |CU06-Remettre devoir	|1|
-|CU07-Passer questionnaires	|4|
+|CU07-Passer questionnaires	|2|
 |support question type choix multiple	|0,5|
 |support question type mise en correspondance	|0,5|
 |support question type réponse courte	|0,5|
@@ -40,7 +40,7 @@ Cette grille d'évaluation présente le pointage associé à chacun des artéfac
 |support question type choix essai	|0,5|
 |F1 - Journalisation et traitement d’erreurs	|1|
 |F2 - Sécurité	|1|
-|U1 - Facteurs humains	|1|
+|U1 - Facteurs humains	|0.25|
 |R1 – Robustesse (CU03)	|2|
 |P1 – Performance pour le passage de questionnaire	|2|
 |S2 - Contrainte de développement: environnement d’intégration continue	|1|
