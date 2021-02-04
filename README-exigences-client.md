@@ -6,30 +6,25 @@
   - [Introduction](#introduction)
   - [Survol des fonctionnalités](#survol-des-fonctionnalités)
   - [Parties prenantes et intérêts:](#parties-prenantes-et-intérêts)
-  - [Cas d’utilisation](#cas-dutilisation)
-    - [CU01-Gérer cours](#cu01-gérer-cours)
-      - [CU01a - Ajouter cours](#cu01a---ajouter-cours)
-      - [CU01b - Récupérer cours](#cu01b---récupérer-cours)
-      - [CU01c - Retirer cours](#cu01c---retirer-cours)
-    - [CU02-Gérer questions](#cu02-gérer-questions)
-      - [CU02a-Ajouter question](#cu02a-ajouter-question)
-      - [CU02b-Récupérer question](#cu02b-récupérer-question)
-      - [CU02c-Modifier question](#cu02c-modifier-question)
-      - [CU02d-Supprimer question](#cu02d-supprimer-question)
-    - [CU03-Corriger devoir](#cu03-corriger-devoir)
-      - [devoir (facultatif)](#devoir-facultatif)
-    - [CU04-Gérer devoir](#cu04-gérer-devoir)
-      - [CU04a-Ajouter devoir](#cu04a-ajouter-devoir)
-      - [CU04b-Récupérer devoir](#cu04b-récupérer-devoir)
-      - [CU04c-Modifier devoir](#cu04c-modifier-devoir)
-      - [CU04d-Supprimer devoir](#cu04d-supprimer-devoir)
-    - [CU05-Gérer questionnaire](#cu05-gérer-questionnaire)
-      - [CU05a-Ajouter questionnaire](#cu05a-ajouter-questionnaire)
-      - [CU05b-Afficher questionnaire](#cu05b-afficher-questionnaire)
-      - [CU05c-Modifier questionnaire](#cu05c-modifier-questionnaire)
-      - [CU05d-Supprimer questionnaire](#cu05d-supprimer-questionnaire)
-    - [CU06-Remettre devoir](#cu06-remettre-devoir)
-    - [CU07-Passer questionnaire](#cu07-passer-questionnaire)
+- [Cas d’utilisation](#cas-dutilisation)
+  - [CU01a - Ajouter cours](#cu01a---ajouter-cours)
+  - [CU01b - Récupérer cours](#cu01b---récupérer-cours)
+  - [CU01c - Retirer cours](#cu01c---retirer-cours)
+  - [CU02a - Ajouter question](#cu02a---ajouter-question)
+  - [CU02b - Récupérer question](#cu02b---récupérer-question)
+  - [CU02c - Modifier question](#cu02c---modifier-question)
+  - [CU02d - Supprimer question](#cu02d---supprimer-question)
+  - [CU03 - Corriger devoir](#cu03---corriger-devoir)
+  - [CU04a - Ajouter devoir](#cu04a---ajouter-devoir)
+  - [CU04b - Récupérer devoir](#cu04b---récupérer-devoir)
+  - [CU04c - Modifier devoir](#cu04c---modifier-devoir)
+  - [CU04d - Supprimer devoir](#cu04d---supprimer-devoir)
+  - [CU05a - Ajouter questionnaire](#cu05a---ajouter-questionnaire)
+  - [CU05b - Afficher questionnaire](#cu05b---afficher-questionnaire)
+  - [CU05c - Modifier questionnaire](#cu05c---modifier-questionnaire)
+  - [CU05d - Supprimer questionnaire](#cu05d---supprimer-questionnaire)
+  - [CU06 - Remettre devoir](#cu06---remettre-devoir)
+  - [CU07 - Passer questionnaire](#cu07---passer-questionnaire)
 - [Spécifications supplémentaires (FURPS+)](#spécifications-supplémentaires-furps)
   - [Fonctionnalité](#fonctionnalité)
     - [F1 - Journalisation et traitement d’erreurs](#f1---journalisation-et-traitement-derreurs)
@@ -64,10 +59,8 @@ Dans cette étude de cas, il est proposé de réaliser un système de gestion de
 # Cas d’utilisation
 Vous devez vous assurer d’implémenter une mécanique de gestion des états permettant de s’assurer que les opérations système sont appelées dans un ordre cohérent avec le cas d’utilisation. Toute séquence d’utilisation autre que la séquence normale devrait automatiquement générer une erreur.  Nous couvrirons cette mécanique lors du cours sur les diagrammes d’états.
 
-## CU01-Gérer cours
-L’Enseignant dans ce cas d’utilisation a un intérêt d’utiliser SGA pour gérer l’espace en ligne des groupe-cours qu’il enseigne.
 
-### CU01a - Ajouter cours
+## CU01a - Ajouter cours
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -90,7 +83,7 @@ L’Enseignant dans ce cas d’utilisation a un intérêt d’utiliser SGA pour 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Le système signale l'erreur et rejette la saisie.
 
-### CU01b - Récupérer cours
+## CU01b - Récupérer cours
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -105,7 +98,7 @@ L’Enseignant dans ce cas d’utilisation a un intérêt d’utiliser SGA pour 
 1. L’enseignant demande les détails d’un cours.
 1. Le système affiche l’information du cours et affiche la liste des étudiants inscrits.
 
-#### CU01c - Retirer cours
+## CU01c - Retirer cours
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -126,8 +119,7 @@ L’Enseignant dans ce cas d’utilisation a un intérêt d’utiliser SGA pour 
 
 <hr />
 
-## CU02-Gérer questions
-### CU02a-Ajouter question
+## CU02a - Ajouter question
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -152,7 +144,7 @@ L’Enseignant dans ce cas d’utilisation a un intérêt d’utiliser SGA pour 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Le Système signale l'erreur et rejette la saisie.
 
-### CU02b-Récupérer question
+## CU02b - Récupérer question
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -169,7 +161,7 @@ L’Enseignant dans ce cas d’utilisation a un intérêt d’utiliser SGA pour 
    
 On répète les étapes 3 et 4 tant que l’enseignant n’a pas terminé
 
-### CU02c-Modifier question
+## CU02c - Modifier question
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -190,7 +182,7 @@ On répète les étapes 3 et 4 tant que l’enseignant n’a pas terminé
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Le Système signale l'erreur et rejette la saisie.
 
-#### CU02d-Supprimer question
+## CU02d - Supprimer question
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -210,7 +202,7 @@ On répète les étapes 3 et 4 tant que l’enseignant n’a pas terminé
 
 <hr />
 
-## CU03-Corriger devoir
+## CU03 - Corriger devoir
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -237,8 +229,7 @@ L’enseignant répète les étapes 5 à 7 jusqu’à ce qu’il n’ait plus de
 
 <hr />
 
-## CU04-Gérer devoir
-### CU04a-Ajouter devoir
+## CU04a - Ajouter devoir
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -263,7 +254,7 @@ On répète les étapes 5-6 tant qu’il y a un devoir à ajouter
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Le Système signale l'erreur et rejette la saisie.
 
-### CU04b-Récupérer devoir
+## CU04b - Récupérer devoir
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -291,7 +282,7 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé.
 
 &nbsp;&nbsp;&nbsp;7b. Le système affiche les étudiants par ordre croissant de la note
 
-### CU04c-Modifier devoir
+## CU04c - Modifier devoir
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -310,7 +301,7 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé.
 
 &nbsp;&nbsp;&nbsp;1a. Un devoir ne peut pas être modifié si des étudiants ont déjà commencé à réaliser celui-ci.
 
-#### CU04d-Supprimer devoir
+## CU04d - Supprimer devoir
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -330,8 +321,7 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé.
 
 <hr />
 
-## CU05-Gérer questionnaire
-### CU05a-Ajouter questionnaire
+## CU05a - Ajouter questionnaire
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -357,7 +347,7 @@ On répète les étapes 7-10 tant que l’enseignant n’a pas terminé l’ajou
 
 **Extensions (ou scénarios alternatifs):** 
 
-### CU05b-Afficher questionnaire
+## CU05b - Afficher questionnaire
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -380,7 +370,7 @@ On répète les étapes 5 à 7 tant que l’enseignant n’a pas terminé.
 
 On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé.
 
-### CU05c-Modifier questionnaire
+## CU05c - Modifier questionnaire
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -404,7 +394,7 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé.
 
 &nbsp;&nbsp;&nbsp;4b. L’enseignant supprime une question du questionnaire
 
-### CU05d-Supprimer questionnaire
+## CU05d - Supprimer questionnaire
 **Acteur principal:**  Enseignant
 
 **Préconditions:** 
@@ -425,7 +415,7 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé.
 
 <hr />
 
-## CU06-Remettre devoir
+## CU06 - Remettre devoir
 **Acteur principal:**  Étudiant
 
 **Préconditions:** 
@@ -448,7 +438,7 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé.
 
 <hr />
 
-## CU07-Passer questionnaire
+## CU07 - Passer questionnaire
 **Acteur principal:**  Étudiant
 
 **Préconditions:** 
