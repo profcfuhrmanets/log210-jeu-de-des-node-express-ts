@@ -568,4 +568,3 @@ N’hésitez pas à faire des propositions.
 1. En tant qu’enseignant, je veux ajouter un étudiant pour qu’il soit enseignant (i.e. chargé de laboratoire)
 1. Une route (en JSON) qui indique la santé de l’application. (c.-à-d. Si le SGB est disponible ou non pour l’équipe de DevOps, et toute autre dépendance du système)
 
-[README.md](./README.md)
