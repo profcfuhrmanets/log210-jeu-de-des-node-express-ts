@@ -220,7 +220,7 @@ Cette grille d'évaluation présente le pointage associé à chacun des artéfac
 | Exigence |Points|
 |----------|:----:|
 |CU01-Gérer cours	|1|
-|CU02-Gérer questions	|2|
+|CU02-Gérer questions	|2 <sup>contrats</sup>|
 |support question type choix multiple	|0,5|
 |support question type mise en correspondance	|0,5|
 |support question type réponse courte	|0,5|
