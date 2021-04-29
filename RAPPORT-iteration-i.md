@@ -59,13 +59,14 @@ Assurez-vous d'utiliser toujours le même compte GitHub pour accéder à ce proj
 
 - [ ] Vous avez un seul MDD
   - [ ] Vous avez mis un verbe à chaque association
-  - [ ] Chaque association à une multiplicité
+  - [ ] Chaque association a une multiplicité
 - [ ] Vous avez un DSS par cas d'utilisation
-  - [ ] Chaque opération synchrone à un retour d'opération
+  - [ ] Chaque opération synchrone a un retour d'opération
   - [ ] L'utilisation d'une boucle (LOOP) est justifiée par les exigences
 - [ ] Vous avez autant de contrats que d'opérations système
   - [ ] Les postconditions des contrats sont écrites au passé
 - [ ] Vous avez autant de RDCU que d'opérations système
   - [ ] Chaque patron GRASP est identifié et surtout **justifié**
+  - [ ] Votre code source (implémentation) est cohérent avec le RDCU (ce n'est pas juste un diagramme)
 - [ ] Vous avez un seul DCL
 - [ ] Vous avez remis la version PDF de ce document dans votre répertoire
