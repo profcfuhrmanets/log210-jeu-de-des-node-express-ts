@@ -62,9 +62,9 @@ Assurez-vous d'utiliser toujours le même compte GitHub pour accéder à ce proj
   - [ ] Chaque association à une multiplicité
 - [ ] Vous avez un DSS par cas d'utilisation
   - [ ] Chaque opération synchrone à un retour d'opération
-  - [ ] L'utilisation d'un Loop et justifié par les exigences
+  - [ ] L'utilisation d'une boucle (LOOP) est justifiée par les exigences
 - [ ] Vous avez autant de contrats que d'opérations système
-  - [ ] Vos contrats sont écrits au passé
+  - [ ] Les postconditions des contrats sont écrites au passé
 - [ ] Vous avez autant de RDCU que d'opérations système
   - [ ] Chaque patron GRASP est identifié et surtout **justifié**
 - [ ] Vous avez un seul DCL
