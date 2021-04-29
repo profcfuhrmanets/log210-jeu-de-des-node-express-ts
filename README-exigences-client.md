@@ -75,7 +75,7 @@ Vous devez vous assurer d’implémenter une mécanique de gestion des états pe
 1. L’enseignant demande de créer un nouveau cours.
 1. Le système affiche la liste des groupes-cours qu’enseigne l’enseignant (l’information provient du SGB).
 1. L’enseignant choisit un groupe-cours dans la liste.
-1. Le système affiche l’information du cours et affiche la liste des étudiants inscrits dans le groupes-cours correspondant (l’information provient du SGB).
+1. Le système affiche l’information du cours et affiche la liste des étudiants inscrits dans le groupe-cours correspondant (l’information provient du SGB).
 
 **Extensions (ou scénarios alternatifs):** 
 
@@ -278,9 +278,9 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé.
 
 **Extensions (ou scénarios alternatifs):**
 
-&nbsp;&nbsp;&nbsp;7a. Le système affiche les étudiants par ordre alphabétique
+&nbsp;&nbsp;&nbsp;7a. Le système affiche les étudiants par ordre alphabétique.
 
-&nbsp;&nbsp;&nbsp;7b. Le système affiche les étudiants par ordre croissant de la note
+&nbsp;&nbsp;&nbsp;7b. Le système affiche les étudiants par ordre croissant de la note.
 
 ## CU04c - Modifier devoir
 **Acteur principal:**  Enseignant
@@ -294,7 +294,7 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé.
 **Scénario principal (succès):** 
 1. L’enseignant commence la modification d’un devoir
 1. Le système affiche les valeurs actuelles du devoir à modifier.
-1. L’enseignant effectue les modifications du devoir et les sauvegarde
+1. L’enseignant effectue les modifications du devoir et les sauvegarde.
 1. Le système affiche tout le devoir modifié
 
 **Extensions (ou scénarios alternatifs):**
@@ -390,9 +390,9 @@ On répète les étapes 3 à 7 tant que l’enseignant n’a pas terminé.
 
 **Extensions (ou scénarios alternatifs):**
 
-&nbsp;&nbsp;&nbsp;3a. 4a. L’enseignant ajoute une question au questionnaire
+&nbsp;&nbsp;&nbsp;3a. 4a. L’enseignant ajoute une question au questionnaire.
 
-&nbsp;&nbsp;&nbsp;4b. L’enseignant supprime une question du questionnaire
+&nbsp;&nbsp;&nbsp;4b. L’enseignant supprime une question du questionnaire.
 
 ## CU05d - Supprimer questionnaire
 **Acteur principal:**  Enseignant
@@ -485,9 +485,9 @@ Toutes les erreurs doivent être journalisées en mémoire persistante.
 ### F2 - Sécurité
 Toute utilisation implique une authentification avec le Système d’authentification (SSO). 
 
-Vous devez remplacer la mécanique d'autenthentification actuel par une authentification par Middleware de type JWT (Json Web Token)
+Vous devez remplacer la mécanique d'authentification actuelle par une authentification par Intergiciel de type JWT (Json Web Token)
 
-référence: https://nozzlegear.com/blog/implementing-a-jwt-auth-system-with-typescript-and-node
+Référence: https://nozzlegear.com/blog/implementing-a-jwt-auth-system-with-typescript-and-node
 
 ## Convivialité
 
@@ -565,6 +565,6 @@ N’hésitez pas à faire des propositions.
 1. Avoir une date limite pour les questionnaires
 1. En tant qu’étudiant, je veux avoir une vue globale de mes devoirs et mes questionnaires à réaliser grâce à un calendrier (pour tous les cours et pour chaque cours)
 1. L’enseignant veut informer les étudiants des derniers développements via un forum de nouvelles
-1. En tant qu’enseignant, je veux ajouter un étudiant pour qu’il soit enseignant (i.e. chargé de laboratoire)
+1. En tant qu’enseignant, je veux ajouter un étudiant pour qu’il soit enseignant (c.-à-d. chargé de laboratoire)
 1. Une route (en JSON) qui indique la santé de l’application. (c.-à-d. Si le SGB est disponible ou non pour l’équipe de DevOps, et toute autre dépendance du système)
 
