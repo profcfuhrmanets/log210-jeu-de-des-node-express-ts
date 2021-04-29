@@ -67,6 +67,6 @@ Assurez-vous d'utiliser toujours le même compte GitHub pour accéder à ce proj
   - [ ] Les postconditions des contrats sont écrites au passé
 - [ ] Vous avez autant de RDCU que d'opérations système
   - [ ] Chaque patron GRASP est identifié et surtout **justifié**
-  - [ ] Votre code source (implémentation) est cohérent avec le RDCU (ce n'est pas juste un diagramme)
+  - [ ] Votre code source (implémentation) est cohérent avec la RDCU (ce n'est pas juste un diagramme)
 - [ ] Vous avez un seul DCL
 - [ ] Vous avez remis la version PDF de ce document dans votre répertoire
