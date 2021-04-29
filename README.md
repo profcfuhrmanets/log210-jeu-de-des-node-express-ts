@@ -52,7 +52,7 @@ Notez que la logique du routeur (web) est simple :
 
 ## Documents de référence
 ### Squelettes pour commencer le SGA
-En plus de ce squelette de démarrage de projet pour Node.js, des exemples de code supplémentaire pour vous aider dna svotre projet sont aussi disponibles: : https://github.com/profcfuhrmanets/exemples-ts
+En plus de ce squelette de démarrage de projet pour Node.js, des exemples de code supplémentaire pour vous aider dans votre projet sont aussi disponibles: : https://github.com/profcfuhrmanets/exemples-ts
 
 > Les solutions impliquant les langages et technologies autres que ceux dans le squelette ne sont pas permises.
 
@@ -113,7 +113,7 @@ L'objectif de cette partie et de montrer que l'application est conforme aux prin
         5. intercepter et traiter les erreurs adéquatement
         6. :warning: Cette méthode ne doit pas retourner une vue. Pour ce faire, il faut faire une autre route qui appelle l'opération système.
     1. une méthode avec la même signature est présente dans un contrôleur. 
-       1. L'opération du controleur ne doit pas utiliser d'objet comme paramêtres
+       1. L'opération du contrôleur ne doit pas utiliser d'objets comme paramètres
        2. Le retour d'opération correspond à une valeur primitive
 
 - exécuter les tests
@@ -156,8 +156,14 @@ Pour les valeurs de d dépassant 100%, le maximum est 120%.
 ### Dates de remises
 Notez que le calendrier des séances est différent pour chaque groupe-cours, mais les dates de remises suivent cette planification. Le rapport doit être prêt pour la démo afin de montrer la correspondance entre la conception et la solution.
 
+| Itération | Plan d’itération     | Démo / Rapport  |
+| --------: | :-------------------- | :-------------- |
+|         1 | Fin séance 3 du labo  | Début séance 6  |
+|         2 | Fin séance 7 du labo  | Début séance 9  |
+|         3 | Fin séance 10 du labo | Début séance 12 |
+
 ### Correction interactive du [rapport](RAPPORT-iteration1.md) de l’itération 1
-À la deuxième semaine de l’itération 1, vous devrez présenter les artéfacts, l’implémentation et les tests des CU01a et CU01b à votre chargé de laboratoire. Vous recevrez des commentaires pour vous aider avant la remise de votre premier rapport et de votre première démo. Cette activité est informelle mais votre participation est notée et obligatoire.
+À la deuxième semaine de l’itération 1, vous devrez présenter les artéfacts, l’implémentation et les tests des CU01a et CU01b à votre chargé de laboratoire. Vous recevrez des commentaires pour vous aider avant la remise de votre premier rapport et de votre première démo. Cette activité est informelle, mais votre participation est notée et obligatoire.
 ## Plan d'itération
 Au lieu de faire un plan d'itération sous forme de document texte qui est généralement statique, vous devez utiliser Github issues.   
 
