@@ -162,7 +162,7 @@ Notez que le calendrier des séances est différent pour chaque groupe-cours, ma
 |         2 | Fin séance 7 du labo  | Début séance 9  |
 |         3 | Fin séance 10 du labo | Début séance 12 |
 
-[Dates des séances de lab](https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=Y185b3UycWwwcjBjNm1iOHYzMnFsMjR2NmJhZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Y190ZGh0NG84OW5rNGozY2htYmJkZjBsNWFoZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23F4511E&amp;color=%23C0CA33&amp;mode=AGENDA&amp;hl=fr_CA&amp;title=Calendrier%20des%20s%C3%A9ances%20LOG210%20%C3%89t%C3%A9%202021)
+[Dates des séances de lab](https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=Y185b3UycWwwcjBjNm1iOHYzMnFsMjR2NmJhZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Y190ZGh0NG84OW5rNGozY2htYmJkZjBsNWFoZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23F4511E&amp;color=%23C0CA33&amp;mode=AGENDA&amp;hl=fr_CA&amp;title=Calendrier%20des%20s%C3%A9ances%20de%20laboratoire%20LOG210%20%C3%89t%C3%A9%202021)
 
 ### Correction interactive du [rapport](RAPPORT-iteration-i.md) de l’itération 1
 À la deuxième semaine de l’itération 1, vous devrez présenter les artéfacts, l’implémentation et les tests des CU01a et CU01b à votre chargé de laboratoire. Vous recevrez des commentaires pour vous aider avant la remise de votre premier rapport et de votre première démo. Cette activité est informelle, mais votre participation est notée et obligatoire.
