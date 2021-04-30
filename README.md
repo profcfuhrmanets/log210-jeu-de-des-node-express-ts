@@ -215,9 +215,9 @@ Cette grille d'évaluation présente le pointage associé à chacun des artéfac
 |Correction interactive du rapport 1|2|
 |Rapport 1|5|
 |Plan d'itération 2|1|
-|Rapport 2|5|
+|Rapport 2|6|
 |Plan d'itération 3|1|
-|Rapport 3|5|
+|Rapport 3|6|
 |Implémentation| Réalisation exigences (10)<br/>Test (2.5)<br/>Qualité du code (2.5)<br/>|
 | Total | 35%|
 
@@ -288,7 +288,7 @@ Un travail qui contient trop d’erreurs fréquentes peut être refusé par le c
 |Complétude du RDCU|3|Tous les éléments conceptuels sont présents (3)<br/>Quelques éléments sont manquantes (2)<br/>Beaucoup d'éléments sont manquantes (1)<br/>L'artéfact ne répond pas aux exigences (0)<br/>Éléments: classes, associations, attributs, multiplicités|
 |Cohérence entre le RDCU et le code|3|L'artéfact et le code correspondent parfaitement (3)<br/>L'artéfact le code ont quelques différences (2)<br/>L'artéfact et le code ont beaucoup de différences (1)<br/>L'artéfact et le code ne correspondent pas (0)|
 |**Démonstration**|**Pondération**|**Niveau**|
-|Réalisation d'une exigence|1|Exigence satisfaites (1)<br/>Cas alternatif non fonctionnel (0.5)<br/>Exigence partiellement satisfaite (0.25)<br/>Exigence non satisfaite (0)|
+|Réalisation d'une exigence|1|Exigence satisfaites (3)<br/>Cas alternatif non fonctionnel (2)<br/>Exigence partiellement satisfaite (1)<br/>Exigence non satisfaite (0)|
 |**Qualité du code**|**Pondération**|**Niveau**|
 |Qualité du code|3|Dette tecchnique de niveau A (3)<br/>Dette technique de niveau B (2)<br/>Dette technique de niveau C (1)<br/>Dette technique de niveau D (0)|
 |**Test automatisé**|**Pondération**|**Niveau**|
