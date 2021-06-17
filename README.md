@@ -66,6 +66,14 @@ Le système de gestion des bordereaux des étudiants (SGB) est un système exter
 
 SGB est une application ayant son propre modèle du domaine (comprenant les concepts comme l’université, les cours, les groupes-cours, les étudiants, les évaluations. Bien que votre application SGA ne traite que l’aspect pédagogique en ligne, votre analyse de SGA doit comprendre les classes conceptuelles de SGB.
 
+<details>
+<summary><b>Cliquez ici pour voir les détails sur le MDD du SGB</b></summary>
+
+[Fichier source en PlantUML](https://raw.github.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/modeles/mdd_sgb_sga.puml)  
+![Modèle du domaine pour SGB avec liens au MDD de SGA](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/modeles/mdd_sgb_sga.puml)
+
+</details>
+
 Veuillez noter que l’implémentation proposée de ce système n’a aucun mécanisme de persistance des données. Il possède une interface de configuration permettant de nettoyer le contenu correspondant aux notes ou de modifier la latence de celui-ci.
 https://github.com/yvanross/log210-systeme-gestion-bordereau-node-express-ts
 
