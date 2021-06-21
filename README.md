@@ -119,7 +119,7 @@ L'objectif de cette partie et de montrer que l'application est conforme aux prin
         3. extraire et convertir et vérifier la présence des paramètres de la requête HTTP
         4. faire un seul appel à la méthode du contrôleur et retourne sa réponse sous forme de JSON avec le code HTTP approprié
         5. intercepter et traiter les erreurs adéquatement
-        6. :warning: Cette méthode ne doit pas retourner une vue. Pour ce faire, il faut faire une autre route qui appelle l'opération système.
+        6. :warning: [Cette méthode ne doit pas retourner une vue](https://github.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/wiki/Vue-sans-route-d'API-(endpoint)). Pour ce faire, il faut faire une autre route qui appelle l'opération système.
     1. une méthode avec la même signature est présente dans un contrôleur. 
        1. L'opération du contrôleur ne doit pas utiliser d'objets comme paramètres
        2. Le retour d'opération correspond à une valeur primitive
@@ -140,7 +140,7 @@ Voir la grille de correction pour plus de détails.
 
 | Évaluation                 | Itération 1 | Itération 2 | Itération 3 | Total       |
 |:---------------------------|:-----------:|:-----------:|:-----------:|:-----------:|
-| Rapport et planification | a           | b           | c           | (a + b + c) |
+| Rapport et planification   | a           | b           | c           | (a + b + c) |
 | Implémentation et tests    | -           | -           | d           | d           |
 	
 ###  Rapport et planification
@@ -164,7 +164,7 @@ Pour les valeurs de d dépassant 100%, le maximum est 120%.
 ### Dates de remises
 Notez que le calendrier des séances est différent pour chaque groupe-cours, mais les dates de remises suivent cette planification. Le rapport doit être prêt pour la démo afin de montrer la correspondance entre la conception et la solution.
 
-| Itération | Plan d’itération     | Démo / Rapport  |
+| Itération | Plan d’itération      | Démo / Rapport  |
 | --------: | :-------------------- | :-------------- |
 |         1 | Fin séance 3 du labo  | Début séance 6  |
 |         2 | Fin séance 7 du labo  | Début séance 9  |
@@ -174,12 +174,11 @@ Notez que le calendrier des séances est différent pour chaque groupe-cours, ma
 
 ### Correction interactive du [rapport](RAPPORT-iteration-i.md) de l’itération 1
 À la deuxième semaine de l’itération 1, vous devrez présenter les artéfacts, l’implémentation et les tests des CU01a et CU01b à votre chargé de laboratoire. Vous recevrez des commentaires pour vous aider avant la remise de votre premier rapport et de votre première démo. Cette activité est informelle, mais votre participation est notée et obligatoire.
+
 ## Plan d'itération
 Au lieu de faire un plan d'itération sous forme de document texte qui est généralement statique, vous devez utiliser Github issues.   
 
 Je vous suggère d'utiliser les Labels pour [classer les issues](https://softwareengineering.stackexchange.com/questions/129714/how-to-manage-github-issues-for-priority-etc).  
-
-
 
 Vous trouverez ci-dessous les différents types de tâches que nous nous attendons à retrouver dans votre Github issues.
 
@@ -314,7 +313,3 @@ Assurez-vous que votre implémentation respecte la séparation des couches prés
 
 Prenez note que nous sommes ouverts à toutes suggestions permettant d’apporter des améliorations au laboratoire. Normalement, le document est dans le mode suggestion. Vous pouvez donc modifier le document ou y apporter des commentaires. Nous analyserons chacune de vos suggestions.
 Merci de votre participation et bon laboratoire.
-
-
-
-
