@@ -1,36 +1,5 @@
 # Système de gestion de l'apprentissage
 
-- [Système de gestion de l'apprentissage](#système-de-gestion-de-lapprentissage)
-  - [Introduction](#introduction)
-  - [Déploiement du système](#déploiement-du-système)
-  - [Documents de référence](#documents-de-référence)
-    - [Squelettes pour commencer le SGA](#squelettes-pour-commencer-le-sga)
-    - [SGB](#sgb)
-  - [Application frontale et persistance minimalistes](#application-frontale-et-persistance-minimalistes)
-- [Travail d'équipe](#travail-déquipe)
-  - [Déroulement des itérations](#déroulement-des-itérations)
-  - [Déroulement des corrections interactives](#déroulement-des-corrections-interactives)
-    - [Démonstration](#démonstration)
-      - [Évaluation de l'implémentation et des tests](#évaluation-de-limplémentation-et-des-tests)
-  - [Processus d'évaluation des laboratoires](#processus-dévaluation-des-laboratoires)
-    - [Rapport et planification](#rapport-et-planification)
-    - [Implémentation](#implémentation)
-    - [Dates de remises](#dates-de-remises)
-    - [Correction interactive du rapport de l'itération 1](#correction-interactive-du-rapport-de-litération-1)
-  - [Plan d'itération](#plan-ditération)
-    - [Tâches: Étapes jalons](#tâches-étapes-jalons)
-    - [Tâches: Objectifs clés (issues)](#tâches-objectifs-clés-issues)
-    - [Pour planifier vos itérations](#pour-planifier-vos-itérations)
-  - [Modalités d'évaluation](#modalités-dévaluation)
-    - [Grille de pointage de tous les artéfacts](#grille-de-pointage-de-tous-les-artéfacts)
-    - [Grille de pointage des exigences](#grille-de-pointage-des-exigences)
-  - [Grilles de correction](#grilles-de-correction)
-    - [Critères appliqués au plan d'itération](#critères-appliqués-au-plan-ditération)
-    - [Critères appliqués au rapport](#critères-appliqués-au-rapport)
-    - [Critères appliqués aux artéfacts d'analyse et de conception du rapport](#critères-appliqués-aux-artéfacts-danalyse-et-de-conception-du-rapport)
-  - [Dette technique](#dette-technique)
-  - [Conclusion](#conclusion)
-
 ## Introduction
 
 Le laboratoire consiste à analyser, concevoir, implémenter et tester une solution pour satisfaire les besoins en ce qui concerne une application cliente. [Voir le document des exigences du client](README-exigences-client.md).
