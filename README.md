@@ -86,12 +86,6 @@ L'API de SGB est disponible avec le code source ou à l'adresse suivante: https:
 
 Vous devez implémenter une interface utilisateur minimaliste pour la réalisation de chacun des cas d'utilisation. Le but du laboratoire étant d'appliquer la méthodologie d'analyse et de conception enseignée dans LOG210, le squelette à un mécanisme simple pour faire l'application frontale. Il s'agit des templates HTML (pug, etc.) plutôt qu'un framework complexe comme Angular.js, React, Vue, etc. Pour la même raison, les technologies de bases de données ne sont pas proposées pour la solution. Il est possible de réaliser le laboratoire sans passer du temps sur ces aspects que vous verrez plus en profondeur dans d'autres cours spécialisés.
 
-# Travail d'équipe
-
-Dans le but de faciliter le travail d'équipe, nous considérons que chaque étudiant est entièrement responsable de l'analyse, la conception, l'implémentation, les tests et l'intégration du code dans le gestionnaire de source pour les cas d'utilisations (tâches git) qui lui ont été assignées.
-
-Ce qui signifie que les membres de l'équipe sont là pour s'entraider, mais pas pour faire le travail des autres à leur place.  De cette façon, **vous ne serez pas pénalisés si les autres membres de l'équipe ne font pas leur travail**.
-
 ## Déroulement des itérations
 
 Chaque itération nécessite un avancement (évolution) sur le plan des exigences par une valeur minimale indiquée.
