@@ -283,7 +283,7 @@ Un travail qui contient trop d'erreurs fréquentes peut être refusé par le cha
 
 ## Dette technique
 
-Pour assurer une bonne qualité de code, nous vous demandons d'utilise l'extension [Visual Studio Tech Debt Metrics](https://marketplace.visualstudio.com/items?itemName=Stepsize.tech-debt-tracker).
+Pour assurer une bonne qualité de code, nous vous demandons d'utiliser l'extension [Visual Studio Tech Debt Metrics](https://marketplace.visualstudio.com/items?itemName=Stepsize.tech-debt-tracker).
 
 ## Conclusion
 
