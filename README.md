@@ -274,14 +274,8 @@ Un travail qui contient trop d'erreurs fréquentes peut être refusé par le cha
 |Cohérence entre le RDCU et le code|3|L'artéfact et le code correspondent parfaitement (3)<br/>L'artéfact le code ont quelques différences (2)<br/>L'artéfact et le code ont beaucoup de différences (1)<br/>L'artéfact et le code ne correspondent pas (0)|
 |**Démonstration**|**Pondération**|**Niveau**|
 |Réalisation d'une exigence|1|Exigence satisfaite (3)<br/>Cas alternatif non fonctionnel (2)<br/>Exigence partiellement satisfaite (1)<br/>Exigence non satisfaite (0)|
-|**Qualité du code**|**Pondération**|**Niveau**|
-|Qualité du code|3|Dette technique de niveau A (3)<br/>Dette technique de niveau B (2)<br/>Dette technique de niveau C (1)<br/>Dette technique de niveau D (0)|
 |**Test automatisé**|**Pondération**|**Niveau**|
 |Réalisation des tests|3|95-100% (3)<br/>90-95% (2)<br/>80-90 (1)<br/>0-79 (0)|
-
-## Dette technique
-
-Pour assurer une bonne qualité de code, nous vous demandons d'utilise l'extension [Visual Studio Tech Debt Metrics](https://marketplace.visualstudio.com/items?itemName=Stepsize.tech-debt-tracker).
 
 ## Conclusion
 
