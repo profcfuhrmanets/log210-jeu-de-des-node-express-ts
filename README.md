@@ -123,13 +123,11 @@ Cependant, il peut y avoir une pénalité à la fin d'une itération si les crit
 
 Le calcul de la note pour cette évaluation est le suivant :
 
-![](http://www.plantuml.com/plantuml/png/SoWkIImgoKqioU1AiTKeBirLK0h8pymhKOelZi_KrDV8ImekAKr9pIjHq58mDDGtqUHoICrB0Qa70000)
+> ![d = (Sommation (Points) / 10)](https://latex.codecogs.com/svg.latex?d%3D%5Cfrac%7B%5Csum%20Points%7D%7B10%7D)
 
-![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5L8IapEJY_AByrBISxFoIzIA2bAp2i6IgNcbN11rEScbcHmnIIdPkP4fzJQ6keP6d0vfEQbW8J13A1v0000)
+Pour les valeurs de *d* dépassant 100&nbsp;%, le maximum est 110&nbsp;%.
 
 Si une équipe ne réussit pas à répondre adéquatement à une exigence (fonctionnalité, tests, correspondance aux artéfacts), cette dernière ne sera pas utilisée dans le calcul.
-
-Pour les valeurs de *d* dépassant 100%, le maximum est 120%.
 
 ### Dates de remises
 
