@@ -62,7 +62,7 @@ Les éléments de travail suivants seront abordés dans cette itération:
 > **Note:** cette section n'est pas complétée avant l'évaluation faite par le chargé de lab lors de la démo en lab.
 
 <!-- GitHub ne supporte pas les tables sans entête: https://stackoverflow.com/a/17543474/1168342 -->
-| Résumé |
+| Résumé | |
 | ------------------------------------- | ------------------------------------------------------------------------ |
 | Cible d'évaluation                    | Itération <!-- *Cela pourrait être toute l'itération ou simplement un composant spécifique* -->                            |
 | Date d'évaluation  |   2019/05/16 |
