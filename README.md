@@ -123,13 +123,11 @@ Cependant, il peut y avoir une pénalité à la fin d'une itération si les crit
 
 Le calcul de la note pour cette évaluation est le suivant :
 
-![](http://www.plantuml.com/plantuml/png/SoWkIImgoKqioU1AiTKeBirLK0h8pymhKOelZi_KrDV8ImekAKr9pIjHq58mDDGtqUHoICrB0Qa70000)
+> ![d = (Sommation (Points) / 10)](https://latex.codecogs.com/svg.latex?d%3D%5Cfrac%7B%5Csum%20Points%7D%7B10%7D)
 
-![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5L8IapEJY_AByrBISxFoIzIA2bAp2i6IgNcbN11rEScbcHmnIIdPkP4fzJQ6keP6d0vfEQbW8J13A1v0000)
+Pour les valeurs de *d* dépassant 100&nbsp;%, le maximum est 110&nbsp;%.
 
 Si une équipe ne réussit pas à répondre adéquatement à une exigence (fonctionnalité, tests, correspondance aux artéfacts), cette dernière ne sera pas utilisée dans le calcul.
-
-Pour les valeurs de *d* dépassant 100%, le maximum est 120%.
 
 ### Dates de remises
 
@@ -276,14 +274,8 @@ Un travail qui contient trop d'erreurs fréquentes peut être refusé par le cha
 |Cohérence entre le RDCU et le code|3|L'artéfact et le code correspondent parfaitement (3)<br/>L'artéfact le code ont quelques différences (2)<br/>L'artéfact et le code ont beaucoup de différences (1)<br/>L'artéfact et le code ne correspondent pas (0)|
 |**Démonstration**|**Pondération**|**Niveau**|
 |Réalisation d'une exigence|1|Exigence satisfaite (3)<br/>Cas alternatif non fonctionnel (2)<br/>Exigence partiellement satisfaite (1)<br/>Exigence non satisfaite (0)|
-|**Qualité du code**|**Pondération**|**Niveau**|
-|Qualité du code|3|Dette technique de niveau A (3)<br/>Dette technique de niveau B (2)<br/>Dette technique de niveau C (1)<br/>Dette technique de niveau D (0)|
 |**Test automatisé**|**Pondération**|**Niveau**|
 |Réalisation des tests|3|95-100% (3)<br/>90-95% (2)<br/>80-90 (1)<br/>0-79 (0)|
-
-## Dette technique
-
-Pour assurer une bonne qualité de code, nous vous demandons d'utiliser l'extension [Visual Studio Tech Debt Metrics](https://marketplace.visualstudio.com/items?itemName=Stepsize.tech-debt-tracker).
 
 ## Conclusion
 
