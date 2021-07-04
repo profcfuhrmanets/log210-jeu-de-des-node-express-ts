@@ -61,12 +61,13 @@ Les éléments de travail suivants seront abordés dans cette itération:
 > Utiliser cette section pour la saisie et la communication des résultats et les actions des évaluations, qui sont généralement faites à la fin de chaque itération. Si vous ne le faites pas, l'équipe ne peut pas être en mesure d'améliorer la façon dont ils développent des logiciels.
 > **Note:** cette section n'est pas complétée avant l'évaluation faite par le chargé de lab lors de la démo en lab.
 
-|                    |                                                                                                                            |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| Cible d'évaluation | Itération <!-- *Cela pourrait être toute l'itération ou simplement un composant spécifique* -->                            |
-| Date d'évaluation  |   10 février 2019 |
-| Participants       | **Coéquipiers** : Jérémie, Jacques-Éric, Pierre (Hélène avait une absence justifiée), **Chargé de laboratoire** : Jonathan Mayhem |
-| État du projet     | Vert <!-- *Rouge, Orange, ou Vert.* --> |
+<!-- GitHub ne supporte pas les tables sans entête: https://stackoverflow.com/a/17543474/1168342 -->
+| | |
+| ------------------------------------- | ------------------------------------------------------------------------ |
+| Cible d'évaluation                    | Itération <!-- *Cela pourrait être toute l'itération ou simplement un composant spécifique* -->                            |
+| Date d'évaluation  |   2019/05/16 |
+| Participants       | **Coéquipiers** : Jérémie, Jacques-Éric, Pierre (Hélène avait une absence justifiée),<br> **Chargé de laboratoire** : Jonathan Mayhem |
+| État du projet     | 🟢 <!-- 🔴🟠🟢 *Rouge, Orange, ou Vert.* --> |
 
 ### Évaluation par rapport aux objectifs
 
