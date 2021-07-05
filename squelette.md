@@ -1,24 +1,4 @@
 # Squelette pour un API simple dans Node, Express et TypeScript
-[README.md](./README.md)
-- [Squelette pour un API simple dans Node, Express et TypeScript](#squelette-pour-un-api-simple-dans-node-express-et-typescript)
-  - [Introduction](#introduction)
-  - [D'où vient l'idée de base pour ce squelette?](#doù-vient-lidée-de-base-pour-ce-squelette)
-  - [Voulez-vous utiliser ce squelette?](#voulez-vous-utiliser-ce-squelette)
-  - [Développement piloté par les tests (TDD)](#développement-piloté-par-les-tests-tdd)
-  - [Support pour déboguage](#support-pour-déboguage)
-    - [Déboguage avec Visual Studio Code](#déboguage-avec-visual-studio-code)
-    - [Déboguage avec JetBrains WebStorm](#déboguage-avec-jetbrains-webstorm)
-  - [Couplage souhaitable entre la couche Présentation et la couche Domaine](#couplage-souhaitable-entre-la-couche-présentation-et-la-couche-domaine)
-  - [Artefacts d'analyse et de conception](#artefacts-danalyse-et-de-conception)
-    - [Cas d'utilisation](#cas-dutilisation)
-      - [Jouer aux dés](#jouer-aux-dés)
-    - [Diagramme de cas d’utilisation](#diagramme-de-cas-dutilisation)
-    - [Modèle du domaine](#modèle-du-domaine)
-    - [Diagramme de séquence système (DSS)](#diagramme-de-séquence-système-dss)
-    - [Contrats d'opération et Réalisations de cas d'utilisation (RDCU)](#contrats-dopération-et-réalisations-de-cas-dutilisation-rdcu)
-      - [Opération: `démarrerJeu(nom:String)`](#opération-démarrerjeunomstring)
-      - [Opération: `jouer(nom:String)`](#opération-jouernomstring)
-      - [Opération: `terminerJeu(nom:String)`](#opération-terminerjeunomstring)
 
 ## Introduction
 Ce squelette est proposé pour commencer les projets en LOG210. Il possède les qualités suivantes:
