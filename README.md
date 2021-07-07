@@ -180,9 +180,9 @@ Vous devez utiliser les étapes-jalon (Milestones) suivantes pour regrouper vos 
 
 ### Pour planifier vos itérations
 
-- <a onclick="window.open('https://docs.google.com/a/etsmtl.net/document/d/1xeCCdR4-sTznTPaSKYIl4l_bQi-gE5stPWSA5VArRlY/edit?usp=sharing')">Comment planifier une itération selon le processus unifié</a>
+- [Comment planifier une itération selon le processus unifié](https://docs.google.com/a/etsmtl.net/document/d/1xeCCdR4-sTznTPaSKYIl4l_bQi-gE5stPWSA5VArRlY/edit?usp=sharing)
 
-- <a onclick="window.open('https://docs.google.com/a/etsmtl.net/document/d/1bDy0chpWQbK9bZ82zdsBweuAgNYni3T2k79xihr6CuU/edit?usp=sharing')">Comment estimer la taille d'une itération</a>
+- [Comment estimer la taille d'une itération](https://docs.google.com/a/etsmtl.net/document/d/1bDy0chpWQbK9bZ82zdsBweuAgNYni3T2k79xihr6CuU/edit?usp=sharing)
 
 ## Modalités d'évaluation
 
