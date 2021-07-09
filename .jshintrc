@@ -16,9 +16,9 @@
     "confirm": false
   },
   "esnext": true,
-  "node" : true,
-  "browser" : true,
-  "boss" : false,
+  "node": true,
+  "browser": true,
+  "boss": false,
   "curly": false,
   "debug": false,
   "devel": false,

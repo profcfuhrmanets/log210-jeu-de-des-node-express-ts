@@ -8,25 +8,26 @@ participant "d1:De" as d1
 participant "d2:De" as d2
 participant "j:Joueur" as j
 ->c : jouer(nom)
-note right : selon Contrôleur 
+note right : selon Contrôleur
 c->jm : j = chercher(nom)
-note right : selon Transformer ID en objets 
+note right : selon Transformer ID en objets
 c->d1 : brasser()
-note right : selon Expert 
+note right : selon Expert
 c->d1 : v1 = valeur
-note right : selon Expert 
+note right : selon Expert
 c->d2 : brasser()
-note right : selon Expert 
+note right : selon Expert
 c->d2 : v2 = valeur
-note right : selon Expert 
+note right : selon Expert
 c->j : incNbParties()
-note right : selon Expert 
+note right : selon Expert
 opt v1 + v2 == 7
   c->j : incNbPartiesGagnees()
-  note right : selon Expert 
-end opt
-c->j : p = nbParties
-note right : selon Expert 
-c->j : g = nbPartiesGagnees
-note right : selon Expert 
+  note right : selon Expert
+  end opt
+  c->j : p = nbParties
+  note right : selon Expert
+  c->j : g = nbPartiesGagnees
+  note right : selon Expert
+end
 @enduml

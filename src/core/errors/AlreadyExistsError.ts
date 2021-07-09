@@ -2,9 +2,9 @@
  * @see Applying UML and Patterns, Chapter A35/F30
  */
 export class AlreadyExistsError extends Error {
-    private _code:number = 400;
+    private _code: number = 400;
 
-    constructor(message:string) {
+    constructor(message: string) {
         super(message);
     }
 

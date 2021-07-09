@@ -2,13 +2,13 @@ import { InvalidParameterError } from '../core/errors/InvalidParameterError';
 
 export class Joueur {
     // classe inspirée de la classe conceptuelle (du MDD)
-    private _nom : string;
-    private _nbLancers : number;
-    private _nbLancersGagnes : number;
+    private _nom: string;
+    private _nbLancers: number;
+    private _nbLancersGagnes: number;
 
-    constructor(nom : string) {
+    constructor(nom: string) {
         this._nom = this.assainirNom(nom);
-        this._nbLancers = 0; 
+        this._nbLancers = 0;
         this._nbLancersGagnes = 0;
     }
 
@@ -22,8 +22,7 @@ export class Joueur {
      * @param nom Le nom à assainir
      * @return Le nom, sans espaces blancs au début ou à la fin
      */
-    private assainirNom(nom:string)
-    {
+    private assainirNom(nom: string) {
         nom = nom.trim();
 
         if (nom.length == 0) {
@@ -54,6 +53,6 @@ export class Joueur {
             nom: this.nom,
             lancers: this.lancers,
             lancersGagnes: this.lancersGagnes
-		};
+        };
     }
 }

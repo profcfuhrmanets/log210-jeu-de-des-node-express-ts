@@ -4,31 +4,31 @@ digraph G {
 	edge [fontname="Helvetica",fontsize=9,labelfontname="Helvetica",labelfontsize=9];
 	node [fontname="Helvetica",fontsize=9, shape=box, style=filled, fillcolor="white"];
 
-   	c0 [label="Utilsateur", shape=oval]
-    subgraph cluster_0 {
-        style=filled;
+	c0 [label="Utilsateur", shape=oval]
+	subgraph cluster_0 {
+		style=filled;
 		label = "Couche présentation"; labeljust=l; fontname="Helvetica-Oblique";fontsize=9;
-        color = "#ddffdd";
-	    c1 [label="Page web\n(navigateur)", shape=note]
-    	c1 -> c2 [label=" HTTP GET /api/v1/demarrerJeu/Cris", fontname="Courier-Bold"];
-        c11 [label="" , shape=none, fillcolor=invis]
-        c13 [label="" , shape=none, fillcolor=invis]
-	    c2 [label=<<TABLE BORDER="0" ALIGN="LEFT"><TR><TD><B>:Router</B><BR/>(Express)</TD></TR></TABLE>>, style=filled, fillcolor=lightyellow]
-    	c11 -> c13 [label="", style=invis];
+		color = "#ddffdd";
+		c1 [label="Page web\n(navigateur)", shape=note]
+		c1 -> c2 [label=" HTTP GET /api/v1/demarrerJeu/Cris", fontname="Courier-Bold"];
+		c11 [label="" , shape=none, fillcolor=invis]
+		c13 [label="" , shape=none, fillcolor=invis]
+		c2 [label=<<TABLE BORDER="0" ALIGN="LEFT"><TR><TD><B>:Router</B><BR/>(Express)</TD></TR></TABLE>>, style=filled, fillcolor=lightyellow]
+		c11 -> c13 [label="", style=invis];
 	}
-    subgraph cluster_1 {
-        style=filled; color = "#ddddff";
+	subgraph cluster_1 {
+		style=filled; color = "#ddddff";
 		label = "Couche domaine"; labeljust=l; fontname="Helvetica-Oblique";fontsize=9;
-	    c4 [label="", shape=point, fillcolor=invis, color=invis]
-	    c5 [label="", shape=none, fillcolor=invis]
-    	c3 [label=<<TABLE BORDER="0" ALIGN="LEFT"><TR><TD><b>:JeuDeDes</b></TD></TR></TABLE>>, style=filled, fillcolor=lightyellow]
-	    c6 [label="", shape=none, fillcolor=invis]
-    }
+		c4 [label="", shape=point, fillcolor=invis, color=invis]
+		c5 [label="", shape=none, fillcolor=invis]
+		c3 [label=<<TABLE BORDER="0" ALIGN="LEFT"><TR><TD><b>:JeuDeDes</b></TD></TR></TABLE>>, style=filled, fillcolor=lightyellow]
+		c6 [label="", shape=none, fillcolor=invis]
+	}
 
-    c2 -> c3 [taillabel=<<TABLE BORDER="0" ALIGN="LEFT"><TR><TD VALIGN="MIDDLE" BGCOLOR="yellow"><FONT FACE="Helvetica-Oblique" POINT-SIZE="9">op&eacute;ration syst&egrave;me (du DSS)</FONT></TD><TD><FONT FACE="Helvetica" POINT-SIZE="10"><B>demarrerJeu(nom)</B></FONT></TD></TR></TABLE>>,
-	         labeldistance = 2.3, labelangle=-40]
+	c2 -> c3 [taillabel=<<TABLE BORDER="0" ALIGN="LEFT"><TR><TD VALIGN="MIDDLE" BGCOLOR="yellow"><FONT FACE="Helvetica-Oblique" POINT-SIZE="9">op&eacute;ration syst&egrave;me (du DSS)</FONT></TD><TD><FONT FACE="Helvetica" POINT-SIZE="10"><B>demarrerJeu(nom)</B></FONT></TD></TR></TABLE>>,
+	labeldistance = 2.3, labelangle=-40]
 
 	c0 -> c1 [label="  appuie sur un bouton", style=dashed, labeljust=r];
-    c3 -> c4 [label=" ... (selon la logique\ndu domaine)"]
+	c3 -> c4 [label=" ... (selon la logique\ndu domaine)"]
 }
 @enddot

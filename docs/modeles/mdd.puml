@@ -15,7 +15,7 @@ class Dé {
 }
 class JeuDeDés
 
-JeuDeDés "1" -- "2" Dé : inclut > 
-Joueur "*" -l- "1" JeuDeDés : joue > 
-'Joueur "1" -- "2" Dé : lance > 
+JeuDeDés "1" -- "2" Dé : inclut >
+Joueur "*" -l- "1" JeuDeDés : joue >
+'Joueur "1" -- "2" Dé : lance >
 @enduml
