@@ -111,7 +111,8 @@ Vous devez vous assurer d'implémenter une mécanique de gestion des états perm
 1. L'enseignant sélectionne un cours
 1. Le système affiche toutes les questions associées au cours.
 1. L'enseignant ajoute une question de type vrai-faux en spécifiant une ou plusieurs catégories non hiérarchiques (“tags”), un nom (court) de la question, l'énoncé (le texte) de la question, la vérité (vrai ou faux) de l'énoncé, un texte de rétroaction pour la bonne réponse et un texte de rétroaction pour la mauvaise réponse.
-1. L'enseignant répète l'étape 5 jusqu'à ce qu'il n'ait plus de questions à ajouter au cours.
+
+L'enseignant répète l'étape 5 jusqu'à ce qu'il n'ait plus de questions à ajouter au cours.
 
 **Extensions (ou scénarios alternatifs):**
 
@@ -360,6 +361,8 @@ On répète les étapes 7-10 tant que l'enseignant n'a pas terminé l'ajout de q
 
 **Extensions (ou scénarios alternatifs):**
 
+Sans objet.
+
 ## CU05b - Afficher questionnaire
 
 **Acteur principal:**  Enseignant
@@ -386,6 +389,10 @@ On répète les étapes 7-10 tant que l'enseignant n'a pas terminé l'ajout de q
 On répète les étapes 5 à 7 tant que l'enseignant n'a pas terminé.
 
 On répète les étapes 3 à 7 tant que l'enseignant n'a pas terminé.
+
+**Extensions (ou scénarios alternatifs):**
+
+Sans objet.
 
 ## CU05c - Modifier questionnaire
 
@@ -494,16 +501,18 @@ On répète les étapes 3 à 7 tant que l'enseignant n'a pas terminé.
 
 **Extensions (ou scénarios alternatifs):**
 
+Sans objet.
+
 # Spécifications supplémentaires (FURPS+)
 
 Rappel de l'acronyme FURPS+:
-**F**unctionality: Fonctionnalité courante dans beaucoup de cas d'utilisation (la sécurité est considérée comme des Fonctionnalités dans FURPS)
-**U**sability: Convivialité? Combien de clics pour réaliser chaque cas d'utilisation?
-**R**eliability: Fiabilité? Définir ce qui se passe lors d'une panne de système externe? Reprise?
-**P**erformance: Combien d'utilisateurs en même temps?
-**S**upportability: Rajout facile de nouveaux types de questions, internationalisation (i18n) facile des textes dans l'interface?
-**+** le reste…
-- Licences du code source? OpenSource? Politiques de confidentialité?
+
+- **F**unctionality: Fonctionnalité courante dans beaucoup de cas d'utilisation (la sécurité est considérée comme des Fonctionnalités dans FURPS)
+- **U**sability: Convivialité? Combien de clics pour réaliser chaque cas d'utilisation?
+- **R**eliability: Fiabilité? Définir ce qui se passe lors d'une panne de système externe? Reprise?
+- **P**erformance: Combien d'utilisateurs en même temps?
+- **S**upportability: Rajout facile de nouveaux types de questions, internationalisation (i18n) facile des textes dans l'interface?
+- **+** le reste… Licences du code source? OpenSource? Politiques de confidentialité?
 
 ## Fonctionnalité
 
