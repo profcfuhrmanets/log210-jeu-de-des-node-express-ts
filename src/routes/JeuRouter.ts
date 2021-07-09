@@ -1,6 +1,4 @@
 import { Router, Request, Response, NextFunction } from 'express';
-import flash from 'node-twinkle';
-
 import { JeuDeDes } from '../core/JeuDeDes';
 import { InvalidParameterError } from '../core/errors/InvalidParameterError';
 
