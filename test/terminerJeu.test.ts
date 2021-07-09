@@ -1,4 +1,4 @@
-import * as supertest from "supertest";
+import supertest from 'supertest';
 import 'jest-extended';
 import app from '../src/App';
 

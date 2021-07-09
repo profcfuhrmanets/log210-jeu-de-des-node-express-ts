@@ -1,9 +1,9 @@
 import * as path from 'path';
-import * as express from 'express';
-import * as logger from 'morgan';
+import express from 'express';
+import logger from 'morgan';
 import * as bodyParser from 'body-parser';
-import * as flash from 'node-twinkle';
-import * as ExpressSession from 'express-session';
+import flash from 'node-twinkle';
+import ExpressSession from 'express-session';
 
 import { jeuRoutes } from './routes/JeuRouter';
 
