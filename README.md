@@ -226,7 +226,7 @@ Cette grille d'évaluation présente le pointage associé à chacun des artéfac
 | support question type choix essai                                      |          0,5          |
 | F1 - Journalisation et traitement d'erreurs                            |           1           |
 | F2 - Sécurité                                                          |           1           |
-| U1 - Facteurs humains                                                  |         0.25          |
+| U1 - Facteurs humains                                                  |         0,25          |
 | R1 – Robustesse (CU03)                                                 |           2           |
 | P1 – Performance pour le passage de questionnaire                      |           2           |
 | S2 - Contrainte de développement: environnement d'intégration continue |           1           |
@@ -264,27 +264,27 @@ Un travail qui contient trop d'erreurs fréquentes peut être refusé par le cha
 | Cohérence entre le MDD et le code |      3      | L'artéfact et le code correspondent parfaitement (3)<br/>L'artéfact le code ont quelques différences (2)<br/>L'artéfact et le code ont beaucoup de différences (1)<br/>L'artéfact et le code ne correspondent pas (0)                              |
 
 | DSS               | Pondération | Niveau                                                                                                                                                                                                                                             |
-| ----------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------------- | :---------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Qualité du DSS    | 3           | Pas de problème de qualité (3)<br/>Quelques problèmes de qualité (2)<br/>Beaucoup de problèmes de qualité (1)<br/>Qualité inacceptable (0)                                                                                                         |
 | Complétude du DSS | 3           | Tous les éléments conceptuels sont présents (3)<br/>Quelques éléments sont manquantes (2)<br/>Beaucoup d'éléments sont manquantes (1)<br/>L'artéfact ne répond pas aux exigences (0)<br/>Éléments: classes, associations, attributs, multiplicités |
 
 | Contrats<br/>Lorsqu'applicable | Pondération | Niveau                                                                                                                                                                                                                                             |
-| ------------------------------ | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------------------------ | :---------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Qualité du contrat             | 3           | Pas de problème de qualité (3)<br/>Quelques problèmes de qualité (2)<br/>Beaucoup de problèmes de qualité (1)<br/>Qualité inacceptable (0)                                                                                                         |
 | Complétude du contrat          | 3           | Tous les éléments conceptuels sont présents (3)<br/>Quelques éléments sont manquantes (2)<br/>Beaucoup d'éléments sont manquantes (1)<br/>L'artéfact ne répond pas aux exigences (0)<br/>Éléments: classes, associations, attributs, multiplicités |
 
 | RDCU                               | Pondération | Niveau                                                                                                                                                                                                                                             |
-| ---------------------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ---------------------------------- | :---------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Qualité du RDCU                    | 3           | Pas de problème de qualité (3)<br/>Quelques problèmes de qualité (2)<br/>Beaucoup de problèmes de qualité (1)<br/>Qualité inacceptable (0)                                                                                                         |
 | Complétude du RDCU                 | 3           | Tous les éléments conceptuels sont présents (3)<br/>Quelques éléments sont manquantes (2)<br/>Beaucoup d'éléments sont manquantes (1)<br/>L'artéfact ne répond pas aux exigences (0)<br/>Éléments: classes, associations, attributs, multiplicités |
 | Cohérence entre le RDCU et le code | 3           | L'artéfact et le code correspondent parfaitement (3)<br/>L'artéfact le code ont quelques différences (2)<br/>L'artéfact et le code ont beaucoup de différences (1)<br/>L'artéfact et le code ne correspondent pas (0)                              |
 
 | Démonstration              | Pondération | Niveau                                                                                                                                   |
-| -------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------------------- | :---------: | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | Réalisation d'une exigence | 1           | Exigence satisfaite (3)<br/>Cas alternatif non fonctionnel (2)<br/>Exigence partiellement satisfaite (1)<br/>Exigence non satisfaite (0) |
 
 | Test automatisé       | Pondération | Niveau                                                |
-| --------------------- | ----------- | ----------------------------------------------------- |
+| --------------------- | :---------: | ----------------------------------------------------- |
 | Réalisation des tests | 3           | 95-100% (3)<br/>90-95% (2)<br/>80-90 (1)<br/>0-79 (0) |
 
 ## Conclusion
