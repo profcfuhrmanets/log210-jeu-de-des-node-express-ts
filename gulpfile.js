@@ -14,7 +14,7 @@ gulp.task('scripts', () => {
     .pipe(tsProject())
     .js
     .pipe(sourcemaps.write('.', {
-      sourceRoot: function(file) { return file.cwd + '/src'; }
+      sourceRoot: function(file) {return file.cwd + '/src';}
     }))
     .pipe(gulp.dest('dist'));
 });
@@ -25,20 +25,20 @@ gulp.task('watch', function watchSrc() {
 
 gulp.task('jsonAssets', function jsonAssets() {
   return gulp.src(JSON_FILES)
-  .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('jsAssets', function jsAssets() {
   return gulp.src(JS_FILES, {base: './public'})
-  .pipe(gulp.dest('dist/public'));
+    .pipe(gulp.dest('dist/public'));
 });
 
 gulp.task('cssAssets', function cssAssets() {
   return gulp.src(CSS_FILES, {base: './public'})
-  .pipe(gulp.dest('dist/public'));
+    .pipe(gulp.dest('dist/public'));
 });
 
-gulp.task('build', gulp.parallel('jsonAssets', 'jsAssets', 'cssAssets', 'scripts') );
+gulp.task('build', gulp.parallel('jsonAssets', 'jsAssets', 'cssAssets', 'scripts'));
 
 gulp.task('default', gulp.parallel('watch', 'build'));
 

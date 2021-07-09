@@ -8,7 +8,7 @@ let testNom1 = 'Jean-Marc';
 let testNom2 = 'Pierre';
 
 beforeAll(async () => {
-    await request.post('/api/v1/jeu/demarrerJeu').send({nom: testNom1});
+    await request.post('/api/v1/jeu/demarrerJeu').send({ nom: testNom1 });
 });
 
 describe('GET /api/v1/jeu/terminerJeu/:id', () => {
@@ -19,7 +19,7 @@ describe('GET /api/v1/jeu/terminerJeu/:id', () => {
         expect(response.type).toBe("application/json");
         expect(resultat.nom).toBe(testNom1);
     });
-  
+
     it('Call responds with bad request when player does not exist ' + testNom1, async () => {
         const response = await request.get('/api/v1/jeu/terminerJeu/' + testNom1);
 
@@ -27,5 +27,5 @@ describe('GET /api/v1/jeu/terminerJeu/:id', () => {
         expect(response.type).toBe("application/json");
         expect(response.body.error).toInclude("n'existe pas");
         expect(response.body.error).toInclude(testNom1);
-    });  
+    });
 });

@@ -13,7 +13,7 @@ Dans cette étude de cas, il est proposé de réaliser un système de gestion de
 
 ## Parties prenantes et intérêts
 
-- **Enseignant:** Il est employé de l'université et il est responsable d'enseigner un groupe-cours d'un cours offert par l'université. S'il décide d'utiliser le SGA pour son groupe-cours (c'est facultatif, il peut y avoir des groupes-cours de cours où l'enseignant n'utilise pas SGA), alors il veut un moyen de gérer toutes les facettes de l'application d'apprentissage. 
+- **Enseignant:** Il est employé de l'université et il est responsable d'enseigner un groupe-cours d'un cours offert par l'université. S'il décide d'utiliser le SGA pour son groupe-cours (c'est facultatif, il peut y avoir des groupes-cours de cours où l'enseignant n'utilise pas SGA), alors il veut un moyen de gérer toutes les facettes de l'application d'apprentissage.
 
 - **Étudiant:** Il est inscrit à l'université. Il veut un moyen de remettre des devoirs et réaliser des jeux-questionnaires pour les groupes-cours dans lesquels il est inscrit.
 
@@ -29,7 +29,7 @@ Vous devez vous assurer d'implémenter une mécanique de gestion des états perm
 
 - L'enseignant est authentifié. SGA transfère l'information à SGB pour l'authentification. SGB retourne un token que SGA retourne à l'usager. L'usager doit nécessairement utiliser ce token pour faire ses requêtes à SGA..
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - Un nouveau cours est créé.
 - L'enseignant est associé au cours
@@ -56,7 +56,7 @@ Vous devez vous assurer d'implémenter une mécanique de gestion des états perm
 
 - L'enseignant est authentifié.
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - Aucun
 
@@ -75,7 +75,7 @@ Vous devez vous assurer d'implémenter une mécanique de gestion des états perm
 
 - L'enseignant est authentifié.
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - Le cours n'existe plus dans le système SGA
 
@@ -100,7 +100,7 @@ Vous devez vous assurer d'implémenter une mécanique de gestion des états perm
 
 - L'enseignant est authentifié.
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - Une nouvelle question a été créée dans la banque pour le cours.
 
@@ -129,7 +129,7 @@ Vous devez vous assurer d'implémenter une mécanique de gestion des états perm
 
 - L'enseignant est authentifié.
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - Aucun
 
@@ -150,7 +150,7 @@ On répète les étapes 3 et 4 tant que l'enseignant n'a pas terminé
 
 - L'enseignant est authentifié.
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - La question a été modifiée dans la banque pour le cours.
 
@@ -175,7 +175,7 @@ On répète les étapes 3 et 4 tant que l'enseignant n'a pas terminé
 
 - L'enseignant est authentifié.
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - Une question a été supprimée de la banque pour le cours.
 
@@ -199,7 +199,7 @@ On répète les étapes 3 et 4 tant que l'enseignant n'a pas terminé
 
 - L'enseignant est authentifié.
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - Les devoirs associés au cours ont été corrigés
 - Les notes des devoirs ont été transmises au système de gestion des bordereaux (SGB).
@@ -213,7 +213,7 @@ On répète les étapes 3 et 4 tant que l'enseignant n'a pas terminé
 1. L'enseignant télécharge (“download”) le devoir de l'étudiant et le corrige.
 1. L'enseignant téléverse (“upload”) la version corrigée du devoir.
 1. L'enseignant indique la note du devoir.
-  
+
 L'enseignant répète les étapes 5 à 7 jusqu'à ce qu'il n'ait plus de devoirs à corriger
 
 **Extensions (ou scénarios alternatifs):**
@@ -230,7 +230,7 @@ L'enseignant répète les étapes 5 à 7 jusqu'à ce qu'il n'ait plus de devoirs
 
 - L'enseignant est authentifié.
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - Un nouveau devoir est créé et associé à un cours
 
@@ -240,7 +240,7 @@ L'enseignant répète les étapes 5 à 7 jusqu'à ce qu'il n'ait plus de devoirs
 1. Le système affiche les cours de l'enseignant ainsi que le nombre de devoirs associés à chaque cours
 1. L'enseignant sélectionne un cours
 1. Le système affiche tous les devoirs associés au cours.
-1. L'enseignant crée un nouveau devoir avec une description et un nom, une note maximale, une date de début, une date de fin et un état visible ou non.  
+1. L'enseignant crée un nouveau devoir avec une description et un nom, une note maximale, une date de début, une date de fin et un état visible ou non.
 1. Le système confirme l'ajout du devoir et affiche tous les devoirs associés au cours.
 
 On répète les étapes 5-6 tant qu'il y a un devoir à ajouter
@@ -259,7 +259,7 @@ On répète les étapes 5-6 tant qu'il y a un devoir à ajouter
 
 - L'enseignant est authentifié.
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - Aucune
 
@@ -271,7 +271,7 @@ On répète les étapes 5-6 tant qu'il y a un devoir à ajouter
 1. Le système affiche tous les devoirs associés au cours.
 1. L'enseignant sélectionne un devoir
 1. Le système affiche le détail du devoir
-1. Le système affiche la liste des étudiants ayant fait le devoir ainsi que la note leur étant associée. 
+1. Le système affiche la liste des étudiants ayant fait le devoir ainsi que la note leur étant associée.
 
 On répète les étapes 5 à 7 tant que l'enseignant n'a pas terminé.
 
@@ -291,7 +291,7 @@ On répète les étapes 3 à 7 tant que l'enseignant n'a pas terminé.
 
 - L'enseignant est authentifié.
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - Un devoir est modifié
 
@@ -314,7 +314,7 @@ On répète les étapes 3 à 7 tant que l'enseignant n'a pas terminé.
 
 - L'enseignant est authentifié.
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - Un devoir a été supprimé pour le cours.
 
@@ -338,7 +338,7 @@ On répète les étapes 3 à 7 tant que l'enseignant n'a pas terminé.
 
 - L'enseignant est authentifié.
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - Un nouveau questionnaire a été créé et associé à un cours
 - Des questions ont étés associées au questionnaire
@@ -369,7 +369,7 @@ On répète les étapes 7-10 tant que l'enseignant n'a pas terminé l'ajout de q
 - L'enseignant est authentifié.
 - Il existe un cours, un questionnaire, etc.
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - Aucune
 
@@ -396,7 +396,7 @@ On répète les étapes 3 à 7 tant que l'enseignant n'a pas terminé.
 - L'enseignant est authentifié.
 - Il existe un cours, un questionnaire, etc.
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - Un questionnaire a été modifié
 - Les questions associées au questionnaire ont été modifiées
@@ -475,7 +475,7 @@ On répète les étapes 3 à 7 tant que l'enseignant n'a pas terminé.
 
 - L'étudiant est authentifié.
 
-**Garanties en cas de succès (postconditions):**  
+**Garanties en cas de succès (postconditions):**
 
 - Une association entre l'étudiant et le questionnaire a été créée
 - Le résultat est sauvegardé dans le système de gestion des bordereaux
@@ -517,7 +517,7 @@ Toutes les erreurs doivent être journalisées en mémoire persistante.
 
 ### F2 - Sécurité
 
-Toute utilisation implique une authentification avec le Système d'authentification (SSO). 
+Toute utilisation implique une authentification avec le Système d'authentification (SSO).
 
 Vous devez remplacer la mécanique d'authentification actuelle par une authentification par Intergiciel de type JWT (Json Web Token)
 
@@ -529,7 +529,7 @@ Référence: https://nozzlegear.com/blog/implementing-a-jwt-auth-system-with-typ
 
 Le client doit voir les informations (surtout les questions) clairement sur plusieurs formats d'écran: téléphone, tablette et écran PC. Alors, les pages web doivent supporter des appareils avec une taille d'écran de 320 par 568 pixels jusqu'à 1920 par 1080 pixels et le texte doit être lisible à une distance de 25 cm. Il ne doit y avoir aucun défilement horizontal sur la page ou ses éléments.
 
-**Note:** vous pouvez utiliser les outils de développement du navigateur pour simuler des appareils de différentes tailles d'écran. 
+**Note:** vous pouvez utiliser les outils de développement du navigateur pour simuler des appareils de différentes tailles d'écran.
 
 ## Fiabilité (Reliability)
 
@@ -547,7 +547,7 @@ R1 s'applique uniquement à l'exigence CU03-Corriger devoir pour les scénarios 
 
 ### P1 – Performance pour le passage de questionnaire
 
-Les étudiants supportent mal l'attente. L'un des goulets d'étranglement possibles est la durée d'enregistrement de résultats de passage de questionnaire. Notre objectif sera donc que le délai séparant la demande de la réponse soit inférieur à 5 secondes dans 90% des cas. 
+Les étudiants supportent mal l'attente. L'un des goulets d'étranglement possibles est la durée d'enregistrement de résultats de passage de questionnaire. Notre objectif sera donc que le délai séparant la demande de la réponse soit inférieur à 5 secondes dans 90% des cas.
 
 **Note:** pour démontrer que vous avez réalisé cette exigence, il faudra automatiser les passages de questionnaire en parallèle pour créer une charge et mesurer le temps de réponse. Voir le chapitre F30/A35.
 
@@ -562,7 +562,7 @@ Ces exigences doivent être implémentées durant **au moins deux itérations** 
 
 ### S1 - Contrainte de développement: environnement de test
 
-Les décisionnaires de SGA insistent pour des technologies de test, qui, selon eux, fourniront à long terme la robustesse du code. 
+Les décisionnaires de SGA insistent pour des technologies de test, qui, selon eux, fourniront à long terme la robustesse du code.
 
 **Note:** pour réaliser cette exigence, il faudra automatiser les tests de l'ensemble des opérations système de chaque cas d'utilisation et s'assurer que les contrats sont respectés. Les tests devront être séparés en suites pour chaque cas d'utilisation.
 
@@ -582,7 +582,7 @@ Les décisionnaires de SGA insistent pour une gestion sémantique de version pou
 
 Pour simplifier la rédaction et le partage des questions, le format GIFT doit être utilisé pour importer les questions.
 
-**Note:** pour réaliser cette exigence vous pouvez utiliser [ce projet](https://github.com/fuhrmanator/GIFT-grammar-PEG.js). 
+**Note:** pour réaliser cette exigence vous pouvez utiliser [ce projet](https://github.com/fuhrmanator/GIFT-grammar-PEG.js).
 
 # Glossaire
 
