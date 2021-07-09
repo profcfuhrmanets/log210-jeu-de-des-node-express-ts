@@ -5,7 +5,8 @@ import { JeuDeDes } from '../core/JeuDeDes';
 import { InvalidParameterError } from '../core/errors/InvalidParameterError';
 
 // TODO: rethink the name for this "router" function, since it's not really an Express router (no longer being "use()"ed inside Express)
-export class JeuRouter {
+export class JeuRouter
+{
   router: Router;
   jeu: JeuDeDes;  // contrôleur GRASP
 
