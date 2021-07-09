@@ -1,5 +1,4 @@
 import { Router, Request, Response, NextFunction } from 'express';
-
 import { JeuDeDes } from '../core/JeuDeDes';
 import { InvalidParameterError } from '../core/errors/InvalidParameterError';
 
