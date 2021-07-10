@@ -548,8 +548,9 @@ En cas d'indisponibilité du système connecté (SGB - système de gestion des b
 
 **Note:** Larman propose des solutions avec plusieurs patrons de conception pour réaliser cette exigence. Voir le chapitre F30/A35.
 
-R1 s'applique uniquement à l'exigence CU03-Corriger devoir pour les scénarios suivants:
-&nbsp;&nbsp;&nbsp;&nbsp;9. L'enseignant téléverse (“upload”) la version corrigée du devoir.
+<!-- on met 2 espaces à la fin de markdown pour avoir un <br/> -->
+R1 s'applique uniquement à l'exigence CU03-Corriger devoir pour les scénarios suivants:  
+&nbsp;&nbsp;&nbsp;&nbsp;9. L'enseignant téléverse (“upload”) la version corrigée du devoir.  
 &nbsp;&nbsp;&nbsp;10. L'enseignant indique la note du devoir.
 
 ## Performance
