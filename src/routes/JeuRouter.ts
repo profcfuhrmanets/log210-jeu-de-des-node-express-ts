@@ -39,7 +39,7 @@ export class JeuRouter {
     // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
     let joueur = this.jeu.demarrerJeu(nom);
     let joueurObj = JSON.parse(joueur);
-    req.flash(`Nouveau jeu pour ${nom}`);
+    req.flash('info', `Nouveau jeu pour ${nom}`);
     res.status(201)
       .send({
         message: 'Success',
@@ -63,7 +63,7 @@ export class JeuRouter {
   private _errorCode500(error: any, req, res: Response<any>) {
     var code = 500;
     if (error.code) {
-      req.flash(error.message, 'error');
+      req.flash('error', error.message);
       code = error.code;
     }
     res.status(code).json({ error: error.toString() });
@@ -73,7 +73,7 @@ export class JeuRouter {
     let nom = req.params.nom;
     let resultat = this.jeu.jouer(nom);
     let resultatObj = JSON.parse(resultat);
-    req.flash(
+    req.flash('info', 
       `Resultat pour ${nom}: ${resultatObj.v1} + ${resultatObj.v2} = ${resultatObj.somme}`);
     res.status(200)
       .send({
@@ -86,7 +86,7 @@ export class JeuRouter {
   /**
    * terminer
    */
-  public terminerJeu(req: Request, res: Response, next: NextFunction) {
+  public terminerJeu(req, res: Response, next: NextFunction) {
 
     // obtenir nom de la requête
     let nom = req.params.nom;
@@ -94,7 +94,7 @@ export class JeuRouter {
     try {
       // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
       let resultat = this.jeu.terminerJeu(nom);
-      req.flash(`Jeu terminé pour ${nom}`);
+      req.flash('info', `Jeu terminé pour ${nom}`);
       res.status(200)
         .send({
           message: 'Success',
