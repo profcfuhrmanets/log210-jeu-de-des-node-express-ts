@@ -1,7 +1,7 @@
 import express from 'express';
-import logger from 'morgan';
 import ExpressSession from 'express-session';
-import Flash from './middlewares/Flash';
+import logger from 'morgan';
+import flash from './middlewares/flash';
 
 import { jeuRoutes } from './routes/JeuRouter';
 
@@ -32,7 +32,7 @@ class App {
         resave: false,
         saveUninitialized: true
       }));
-    this.expressApp.use(Flash.middleware); // https://www.npmjs.com/package/node-twinkle typed using https://stackoverflow.com/a/53786892/1168342 (solution #2)
+    this.expressApp.use(flash());
   }
 
   // Configure API endpoints.

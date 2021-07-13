@@ -1,5 +1,5 @@
 import 'jest-extended';
-import Flash from '../../src/middlewares/Flash'
+import flash from '../../src/middlewares/flash'
 import type { Request, Response, NextFunction } from 'express'
 
 let req: Request;
@@ -11,7 +11,8 @@ beforeEach(() => {
     res = { locals: {} } as Response;
     next = function () { } as NextFunction;
 
-    Flash.middleware(req, res, next);
+    const middleware = flash();
+    middleware(req, res, next);
 });
 
 describe('::middleware(req, res, next)', () => {
@@ -22,7 +23,8 @@ describe('::middleware(req, res, next)', () => {
         let next = function () { } as NextFunction;
 
         try {
-            Flash.middleware(req, res, next);
+            const middleware = flash();
+            middleware(req, res, next);
         } catch (error) {
             const err = error as Error;
             expect(error.toString()).toContain('session');
@@ -36,14 +38,13 @@ describe('::middleware(req, res, next)', () => {
     it('append flashMessageQueue onto res.locals', () => {
         expect(res.locals.flashMessageQueue).toBeDefined();
         expect(res.locals.flashMessageQueue.hasMessage).toBeDefined();
-        expect(res.locals.flashMessageQueue).toBe(req.session.flashMessageQueue);
+        expect(res.locals.flashMessageQueue).toBe(res.locals.flashMessageQueue);
     });
 });
 
-
 describe('req.flash()', function () {
     it('write one object {message, category} into the queue', function () {
-        const flashMessageQueue = req.session.flashMessageQueue;
+        const flashMessageQueue = res.locals.flashMessageQueue;
         const testMessage = 'test message';
         const testMessage2 = 'yet another test message';
 
@@ -51,7 +52,6 @@ describe('req.flash()', function () {
         expect(flashMessageQueue.length).toBe(1);
         expect(flashMessageQueue.messages()[0].message).toBe(testMessage);
         expect(flashMessageQueue.messages()[0].category).toBeUndefined();
-
 
         req.flash(testMessage2, 'info');
         expect(flashMessageQueue.length).toBe(2);
@@ -63,8 +63,9 @@ describe('req.flash()', function () {
 describe('res.locals.flashMessageQueue', function () {
     describe('::hasMessage()', function () {
         it('return false when there are no flashed messages and otherwise return true', function () {
-            const flashMessageQueue = req.session.flashMessageQueue;
+            const flashMessageQueue = res.locals.flashMessageQueue;
             expect(flashMessageQueue.hasMessage()).toBeFalse();
+
             req.flash('test message');
             expect(flashMessageQueue.hasMessage()).toBeTrue();
         });
@@ -72,7 +73,7 @@ describe('res.locals.flashMessageQueue', function () {
 
     describe('::shift()', function () {
         it('return the first message and remove it from the queue', function () {
-            const flashMessageQueue = req.session.flashMessageQueue;
+            const flashMessageQueue = res.locals.flashMessageQueue;
             req.flash('test message');
             req.flash('message test');
             expect(flashMessageQueue.length).toBe(2);
@@ -85,9 +86,7 @@ describe('res.locals.flashMessageQueue', function () {
         });
     });
 
-
     describe('::messages()', function () {
-
         beforeEach(()=>{
             req.flash('Roses are red');
             req.flash('violets are blue', 'info');
@@ -95,17 +94,15 @@ describe('res.locals.flashMessageQueue', function () {
             req.flash('on line 32', 'error');
         })
         it('return an array of messages', function () {
-            const flashMessages = req.session.flashMessageQueue.messages('info', 'error', undefined);
+            const flashMessages = res.locals.flashMessageQueue.messages('info', 'error', undefined);
             expect(flashMessages.length).toBe(4);
             expect(flashMessages[2].message).toBe('unexpected `{`');
         });
-
         it('has an optional "categories" filter argument', function () {
             const flashMessages = res.locals.flashMessageQueue.messages('info');
             expect(flashMessages.length).toBe(2);
             expect(flashMessages[1].message).toBe('unexpected `{`');
         });
-
         it('allow the "categories" filter argument to have many argument', function () {
             const flashMessages = res.locals.flashMessageQueue.messages('info', 'error');
             expect(flashMessages.length).toBe(3);
