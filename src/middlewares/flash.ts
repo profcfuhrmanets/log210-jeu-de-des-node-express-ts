@@ -1,4 +1,3 @@
-import { RequestHandler } from 'express';
 import type { Middleware } from '.';
 
 type FlashMessage = {
@@ -91,7 +90,7 @@ export class Flash {
  * Returns a flashing message middleware that expose
  * a flash function into the req context.
  */
-export default function (): RequestHandler {
+export default function () {
     return Flash.middleware;
 }
 
