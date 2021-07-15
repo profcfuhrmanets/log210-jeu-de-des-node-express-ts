@@ -3,8 +3,7 @@ import { JeuDeDes } from '../core/JeuDeDes';
 import { InvalidParameterError } from '../core/errors/InvalidParameterError';
 
 // TODO: rethink the name for this "router" function, since it's not really an Express router (no longer being "use()"ed inside Express)
-export class JeuRouter
-{
+export class JeuRouter {
   router: Router;
   jeu: JeuDeDes;  // contrôleur GRASP
 
@@ -22,6 +21,7 @@ export class JeuRouter
    */
   public demarrerJeu(req: Request, res: Response, next: NextFunction) {
     let nom = req.body.nom;
+
     try {
       // POST ne garantit pas que tous les paramètres de l'opération système sont présents
       this._demarrerJeu(nom, req, res);
@@ -39,7 +39,7 @@ export class JeuRouter
     // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
     let joueur = this.jeu.demarrerJeu(nom);
     let joueurObj = JSON.parse(joueur);
-    (req as any).flash('Nouveau jeu pour ' + nom);
+    req.flash('info', `Nouveau jeu pour ${nom}`);
     res.status(201)
       .send({
         message: 'Success',
@@ -63,7 +63,7 @@ export class JeuRouter
   private _errorCode500(error: any, req, res: Response<any>) {
     var code = 500;
     if (error.code) {
-      (req as any).flash(error.message);
+      req.flash('error', error.message);
       code = error.code;
     }
     res.status(code).json({ error: error.toString() });
@@ -73,7 +73,8 @@ export class JeuRouter
     let nom = req.params.nom;
     let resultat = this.jeu.jouer(nom);
     let resultatObj = JSON.parse(resultat);
-    (req as any).flash('Resultat pour ' + nom + ': ' + resultatObj.v1 + ' + ' + resultatObj.v2 + ' = ' + resultatObj.somme);
+    req.flash('info', 
+      `Resultat pour ${nom}: ${resultatObj.v1} + ${resultatObj.v2} = ${resultatObj.somme}`);
     res.status(200)
       .send({
         message: 'Success',
@@ -85,7 +86,7 @@ export class JeuRouter
   /**
    * terminer
    */
-  public terminerJeu(req: Request, res: Response, next: NextFunction) {
+  public terminerJeu(req, res: Response, next: NextFunction) {
 
     // obtenir nom de la requête
     let nom = req.params.nom;
@@ -93,7 +94,7 @@ export class JeuRouter
     try {
       // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
       let resultat = this.jeu.terminerJeu(nom);
-      (req as any).flash('Jeu terminé pour ' + nom);
+      req.flash('info', `Jeu terminé pour ${nom}`);
       res.status(200)
         .send({
           message: 'Success',

@@ -9,8 +9,10 @@ html
     div.container
       h1 JeuDeDés-Node-Express-TS-TDD-LOG210
 
-      each message in flashedMessages
-        div.flash.alert.alert-success.col-sm-4(role='success') #{message}
+      .messages
+        if (messages.info)
+          each message in messages.info
+            div.flash.alert.alert-success.col-sm-4(roll='success') #{message}
 
       form#formNouveauJoueur.form-group(action='javascript:void(0);')
         dl

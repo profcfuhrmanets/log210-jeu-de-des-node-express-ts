@@ -7,7 +7,6 @@
   },
   "include": [
     "src/**/*.ts",
-    "./typings-custom/**/*.ts"
   ],
   "exclude": [
     "node_modules"

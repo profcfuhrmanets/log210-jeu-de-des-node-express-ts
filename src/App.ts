@@ -1,7 +1,7 @@
 import express from 'express';
-import logger from 'morgan';
-import flash from 'node-twinkle';
 import ExpressSession from 'express-session';
+import logger from 'morgan';
+import flash from 'express-flash-plus'
 
 import { jeuRoutes } from './routes/JeuRouter';
 
@@ -32,15 +32,14 @@ class App {
         resave: false,
         saveUninitialized: true
       }));
-    this.expressApp.use(flash); // https://www.npmjs.com/package/node-twinkle typed using https://stackoverflow.com/a/53786892/1168342 (solution #2)
+    this.expressApp.use(flash());
   }
 
   // Configure API endpoints.
   private routes(): void {
     let router = express.Router();
     router.get('/', (req, res, next) => {
-      let messages = res.locals.has_flashed_messages() ? res.locals.get_flashed_messages() : [];
-      res.render('index', { title: 'Jeu de dés', flashedMessages: messages, joueurs: JSON.parse(jeuRoutes.jeu.getJoueurs()) });
+      res.render('index', { title: 'Jeu de dés', joueurs: JSON.parse(jeuRoutes.jeu.getJoueurs()) });
     });
 
     this.expressApp.use('/', router);  // routage de base
