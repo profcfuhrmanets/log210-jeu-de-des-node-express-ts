@@ -495,9 +495,12 @@ Sans objet.
 1. L'étudiant sélectionne un questionnaire à compléter
 1. Le système affiche une question
 1. L'étudiant répond à la question
-1. On répète les étapes 5-6 tant que toutes les questions n'ont pas été complétées.
-1. Le système affiche la note obtenue et le texte de rétroaction (bonne ou mauvaise réponse) pour chaque question ainsi que la note résultante en pourcentage
-1. On répète les étapes 2 à 8 tant que l'étudiant n'a pas terminé.
+
+*On répète les étapes 5 à 6 tant que toutes les questions n'ont pas été complétées.*
+
+7. Le système affiche la note obtenue et le texte de rétroaction (bonne ou mauvaise réponse) pour chaque question ainsi que la note résultante en pourcentage
+
+*On répète les étapes 2 à 7 tant que l'étudiant n'a pas terminé.*
 
 **Extensions (ou scénarios alternatifs):**
 
