@@ -112,7 +112,7 @@ Vous devez vous assurer d'implémenter une mécanique de gestion des états perm
 1. Le système affiche toutes les questions associées au cours.
 1. L'enseignant ajoute une question de type vrai-faux en spécifiant une ou plusieurs catégories non hiérarchiques (“tags”), un nom (court) de la question, l'énoncé (le texte) de la question, la vérité (vrai ou faux) de l'énoncé, un texte de rétroaction pour la bonne réponse et un texte de rétroaction pour la mauvaise réponse.
 
-L'enseignant répète l'étape 5 jusqu'à ce qu'il n'ait plus de questions à ajouter au cours.
+*L'enseignant répète l'étape 5 jusqu'à ce qu'il n'ait plus de questions à ajouter au cours.*
 
 **Extensions (ou scénarios alternatifs):**
 
@@ -141,7 +141,7 @@ L'enseignant répète l'étape 5 jusqu'à ce qu'il n'ait plus de questions à aj
 1. L'enseignant sélectionne une question
 1. Le système affiche les détails de la question
 
-On répète les étapes 3 et 4 tant que l'enseignant n'a pas terminé
+*On répète les étapes 3 et 4 tant que l'enseignant n'a pas terminé.*
 
 ## CU02c - Modifier question
 
@@ -215,7 +215,7 @@ On répète les étapes 3 et 4 tant que l'enseignant n'a pas terminé
 1. L'enseignant téléverse (“upload”) la version corrigée du devoir.
 1. L'enseignant indique la note du devoir.
 
-L'enseignant répète les étapes 5 à 7 jusqu'à ce qu'il n'ait plus de devoirs à corriger
+*L'enseignant répète les étapes 5 à 7 jusqu'à ce qu'il n'ait plus de devoirs à corriger.*
 
 **Extensions (ou scénarios alternatifs):**
 
@@ -244,7 +244,7 @@ L'enseignant répète les étapes 5 à 7 jusqu'à ce qu'il n'ait plus de devoirs
 1. L'enseignant crée un nouveau devoir avec une description et un nom, une note maximale, une date de début, une date de fin et un état visible ou non.
 1. Le système confirme l'ajout du devoir et affiche tous les devoirs associés au cours.
 
-On répète les étapes 5-6 tant qu'il y a un devoir à ajouter
+*On répète les étapes 5-6 tant qu'il y a un devoir à ajouter.*
 
 **Extensions (ou scénarios alternatifs):**
 
@@ -274,9 +274,9 @@ On répète les étapes 5-6 tant qu'il y a un devoir à ajouter
 1. Le système affiche le détail du devoir
 1. Le système affiche la liste des étudiants ayant fait le devoir ainsi que la note leur étant associée.
 
-On répète les étapes 5 à 7 tant que l'enseignant n'a pas terminé.
+*On répète les étapes 5 à 7 tant que l'enseignant n'a pas terminé.*
 
-On répète les étapes 3 à 7 tant que l'enseignant n'a pas terminé.
+*On répète les étapes 3 à 7 tant que l'enseignant n'a pas terminé.*
 
 **Extensions (ou scénarios alternatifs):**
 
@@ -357,7 +357,7 @@ On répète les étapes 3 à 7 tant que l'enseignant n'a pas terminé.
 1. Le système affiche les questions correspondant à la catégorie non hiérarchique ainsi que le nombre de questionnaires auxquels ces questions ont déjà été ajoutées.
 1. L'enseignant sélectionne une ou plusieurs questions et les ajoute au questionnaire.
 
-On répète les étapes 7-10 tant que l'enseignant n'a pas terminé l'ajout de questions.
+*On répète les étapes 7 à 10 tant que l'enseignant n'a pas terminé l'ajout de questions.*
 
 **Extensions (ou scénarios alternatifs):**
 
@@ -386,9 +386,9 @@ Sans objet.
 1. Le système affiche les détails du questionnaire avec une description et un état pour indiquer si le questionnaire est actif
 1. Le système affiche la liste des étudiants ayant réalisé le questionnaire ainsi que la note qu'ils ont obtenue.
 
-On répète les étapes 5 à 7 tant que l'enseignant n'a pas terminé.
+*On répète les étapes 5 à 7 tant que l'enseignant n'a pas terminé.*
 
-On répète les étapes 3 à 7 tant que l'enseignant n'a pas terminé.
+*On répète les étapes 3 à 7 tant que l'enseignant n'a pas terminé.*
 
 **Extensions (ou scénarios alternatifs):**
 
