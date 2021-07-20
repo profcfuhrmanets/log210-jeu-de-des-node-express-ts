@@ -1,5 +1,3 @@
-import { JeuDeDes } from "./JeuDeDes";
-
 export class De {
     // classe inspirée de la classe conceptuelle (du MDD)
     private _valeur: number;
