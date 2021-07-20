@@ -18,7 +18,6 @@ class App {
     this.routes();
     this.expressApp.set('view engine', 'pug');
     this.expressApp.use(express.static(__dirname + '/public') as express.RequestHandler); // https://expressjs.com/en/starter/static-files.html
-
   }
 
   // Configure Express middleware.
