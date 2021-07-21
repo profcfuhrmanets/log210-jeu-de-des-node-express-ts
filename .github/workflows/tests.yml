@@ -41,6 +41,14 @@ jobs:
       - name: Run tests
         run : npm run test
 
+      - name: Check for circular dependencies using Madge
+        uses: gerrit0/circular-dependency-check@v1
+        with:
+          entry: >
+            src/index.ts
+          extensions: >
+            ts
+
       - name: Upload coverage info to Coveralls
         uses: coverallsapp/github-action@master
         with:
