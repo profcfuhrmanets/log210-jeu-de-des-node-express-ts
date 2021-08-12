@@ -80,6 +80,7 @@ Dans le but de faciliter le travail d'équipe, nous considérons que chaque étu
 
 Ce qui signifie que les membres de l'équipe sont là pour s'entraider, mais pas pour faire le travail des autres à leur place.  De cette façon, **vous ne serez pas pénalisés si les autres membres de l'équipe ne font pas leur travail.** 
 
+Chaque membre d'équipe est responsable de la totalité du travail réalisé et remis par son équipe. Toutefois, les membres de l'équipe ayant réalisé un travail peuvent décider de ne pas mettre sur le rapport le nom d’un ou de plusieurs autres membres qui n'ont pas fait une contribution (conception et codage) significative à l’itération. **Avant la remise du travail**, un courriel doit être envoyé en copie conforme à tous les membres de l’équipe, aux chargés de laboratoire ainsi qu’à l’enseignant pour indiquer les raisons du retrait du nom. Un membre de l'équipe dont son nom n'est pas sur un travail de laboratoire reçoit une note de "0" pour le travail.
 
 ## Déroulement des itérations
 Chaque itération nécessite un avancement (évolution) sur le plan des exigences par une valeur minimale indiquée.
@@ -253,6 +254,15 @@ Cette grille d'évaluation présente le pointage associé à chacun des artéfac
 |S4 - Contrainte d’implémentation: banque de questions en format GIFT	|2|
 
 **contrats:** Vous devez obligatoirement réaliser les artéfacts de contrat pour cet exigence.
+
+Le nombre de points minimal requis pour une note de 100% correspond au tableau suivant:
+|Nombre d'étudiant| Nb points|
+|---|---|
+|3|8.25|
+|4|11|
+|5|13.75|
+
+Vous pouvez implémenter plus de points pour compenser les pertes durant la correction mais la note maximale sera de 100%.
 
 
 ## Grilles de correction
