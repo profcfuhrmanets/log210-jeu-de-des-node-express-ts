@@ -12,7 +12,7 @@ beforeAll(async () => {
 });
 
 describe('GET /api/v1/jeu/terminerJeu/:id', () => {
-    it('responds with successful call for player ' + testNom1, async () => {
+    it('responds with successful call', async () => {
         const response = await request.get('/api/v1/jeu/terminerJeu/' + testNom1);
         let resultat = JSON.parse(response.body.resultat);
         expect(response.status).toBe(200);
@@ -20,7 +20,7 @@ describe('GET /api/v1/jeu/terminerJeu/:id', () => {
         expect(resultat.nom).toBe(testNom1);
     });
 
-    it('Call responds with bad request when player does not exist ' + testNom1, async () => {
+    it('responds with bad request when player does not exist', async () => {
         const response = await request.get('/api/v1/jeu/terminerJeu/' + testNom1);
 
         expect(response.status).toBe(404);

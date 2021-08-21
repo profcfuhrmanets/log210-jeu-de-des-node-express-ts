@@ -9,7 +9,7 @@ let testNom2 = 'Pierre';
 
 describe('GET /api/v1/jeu/demarrerJeu/:id', () => {
 
-    it('responds with successful first call for player ' + testNom1, async () => {
+    it('responds with successful first call for player', async () => {
         const response = await request.post('/api/v1/jeu/demarrerJeu').send({ nom: testNom1 });
         expect(response.status).toBe(201);
         expect(response.type).toBe("application/json");
@@ -18,7 +18,7 @@ describe('GET /api/v1/jeu/demarrerJeu/:id', () => {
         expect(response.body.joueur.lancersGagnes).toBe(0);
     });
 
-    it('duplicate call for player ' + testNom1 + ' responds with bad request', async () => {
+    it('duplicate call for player responds with bad request', async () => {
         const response = await request.post('/api/v1/jeu/demarrerJeu').send({ nom: testNom1 });
 
         expect(response.status).toBe(400);

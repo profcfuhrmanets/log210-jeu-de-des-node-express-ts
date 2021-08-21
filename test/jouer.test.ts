@@ -14,7 +14,7 @@ beforeAll(async () => {
 describe('GET /api/v1/jeu/jouer/:id', () => {
     // plusieurs appels à jouer (pour valider la somme aléatoire)
     for (let i = 0; i < 20; i++) {
-        it('responds with successful call for initialized player ' + testNom1, async () => {
+        it('responds with successful call for initialized player', async () => {
             const response = await request.get('/api/v1/jeu/jouer/' + testNom1);
             let resultat = JSON.parse(response.body.resultat);
 
@@ -28,7 +28,7 @@ describe('GET /api/v1/jeu/jouer/:id', () => {
         });
     }
 
-    it('Call responds with bad request when player is not intialized ' + testNom2, async () => {
+    it('responds with bad request when player is not intialized', async () => {
         const response = await request.get('/api/v1/jeu/jouer/' + testNom2);
 
         expect(response.status).toBe(404);

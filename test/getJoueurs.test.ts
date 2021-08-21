@@ -18,7 +18,7 @@ describe('contrôleur getJoueurs()', () => {
     expect(joueursArray.length).toBe(0);
   });
 
-  it('Nombre de Joueurs est 1 et le nouveau joueur ' + testNom1 + 'a été ajouté.', async () => {
+  it('Nombre de Joueurs est 1 et le nouveau joueur a été ajouté.', async () => {
     const response = await request.post('/api/v1/jeu/demarrerJeu').send({ nom: testNom1 });
     const joueursJSON = jeuRoutes.jeu.getJoueurs();
     const joueursArray = JSON.parse(joueursJSON);
