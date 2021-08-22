@@ -8,6 +8,7 @@
         "watch": "jest --watch --coverage test",
         "test": "jest --env=node --colors --coverage test",
         "build": "gulp build",
+        "uml-classes": "tplant -i src/App.ts -A -o App.puml",
         "circular": "madge src/App.ts -c",
         "madge": "madge src/App.ts -i madge.png; open madge.png"
     },
@@ -56,6 +57,7 @@
         "express-flash-plus": "^0.0.7",
         "express-session": "^1.17.2",
         "morgan": "^1.10.0",
-        "pug": "^3.0.2"
+        "pug": "^3.0.2",
+        "tplant": "^3.0.0"
     }
 }
