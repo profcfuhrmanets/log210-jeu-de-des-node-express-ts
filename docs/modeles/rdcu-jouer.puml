@@ -24,10 +24,9 @@ note right : selon Expert
 opt v1 + v2 == 7
   c->j : incNbPartiesGagnees()
   note right : selon Expert
-  end opt
-  c->j : p = nbParties
-  note right : selon Expert
-  c->j : g = nbPartiesGagnees
-  note right : selon Expert
-end
+end opt
+c->j : p = nbParties
+note right : selon Expert
+c->j : g = nbPartiesGagnees
+note right : selon Expert
 @enduml

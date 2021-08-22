@@ -4,12 +4,12 @@ skinparam defaultfontname Verdana
 title RDCU pour démarrerJeu
 participant ":JeuDeDes" as c
 ->c : demarrerJeu(nom)
-note right : selon Contrôleur\n(JeuDeDés est\nl'objet racine)
+note right : selon Contrôleur\n(JeuDeDés est l'objet racine du MDD)
 participant "j:Joueur" as j
 create j
 participant "joueurs:\nMap<String,Joueur>" as jm
 c-->j : j = create(nom)
-note right : selon Créateur\n(JeuDeDes\n//agrège// Joueur)
+note right : selon Créateur\n(JeuDeDes //agrège// Joueur)
 c -> jm : add(j)
 note right : selon Expert
 @enduml
