@@ -17,7 +17,7 @@ export class Joueur {
     }
 
     /**
-     * Assaini (sanitize) le nom.
+     * Assainir (sanitize) le nom.
      * Il serait préférable d'avoir un mutateur privé, mais TypeScript n'aime pas ça
      * @param nom Le nom à assainir
      * @return Le nom, sans espaces blancs au début ou à la fin

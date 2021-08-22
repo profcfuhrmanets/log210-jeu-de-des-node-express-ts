@@ -5,7 +5,6 @@ export class De {
         this.brasser();
     }
 
-    // opérations systèmes
     public brasser() {
         this._valeur = Math.floor(Math.random() * 6 + 1);
     }
