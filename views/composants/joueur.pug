@@ -1,0 +1,8 @@
+-var nom = joueur.nom;
+strong(id=nom) #{nom}
+= ' '
+| tentatives: #{joueur.lancers}, réussites: #{joueur.lancersGagnes}
+= ' '
+button.lancer(id=nom) Lancer les dés
+= ' '
+button.terminer(id=nom) Terminer
