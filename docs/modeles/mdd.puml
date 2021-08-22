@@ -1,9 +1,8 @@
 @startuml MDD
 skinparam style strictuml
-skinparam defaultfontname Verdana
-left to right direction
+skinparam ArrowThickness 2
+skinparam ArrowColor #gray
 hide empty members
-'skinparam linetype ortho
 title Modèle du domaine (adapté du Jeu de dés du Ch. 1 de Larman)
 class Joueur {
   nom : String
@@ -14,8 +13,8 @@ class Dé {
   valeur : int
 }
 class JeuDeDés
-
-JeuDeDés "1" -- "2" Dé : inclut >
-Joueur "*" -l- "1" JeuDeDés : joue >
-'Joueur "1" -- "2" Dé : lance >
+' associations
+Joueur "*" -down- "1" JeuDeDés : joue >
+Joueur "1" -right- "2" Dé : lance >
+JeuDeDés "1" -up- "2" Dé : inclut >
 @enduml
