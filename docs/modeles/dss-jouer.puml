@@ -11,7 +11,6 @@ c->s : démarrerJeu(nom : String)
 loop pas terminé
     c->s : jouer(nom : String)
     c<<--s : nom, total du lancer,  résultat (gagné ou perdu),\nnb de parties, nb de parties gagnées
-    end loop
-    c->s : terminerJeu(nom :String)
-end
+end loop
+c->s : terminerJeu(nom :String)
 @enduml
