@@ -4,15 +4,23 @@ import { InvalidParameterError } from '../core/errors/InvalidParameterError';
 
 // TODO: rethink the name for this "router" function, since it's not really an Express router (no longer being "use()"ed inside Express)
 export class JeuRouter {
-  router: Router;
-  jeu: JeuDeDes;  // contrôleur GRASP
+  private _router: Router;
+  private _jeu: JeuDeDes;  // contrôleur GRASP
+
+  get jeu() {
+    return this._jeu;
+  }
+
+  get router() {
+    return this._router;
+  }
 
   /**
-   * Initialize the Router
+   * Initialiser le router
    */
   constructor() {
-    this.jeu = new JeuDeDes();  // init contrôleur GRASP
-    this.router = Router();
+    this._jeu = new JeuDeDes();  // un routeur pointe vers au moins un contrôleur GRASP
+    this._router = Router();
     this.init();
   }
 
@@ -37,7 +45,7 @@ export class JeuRouter {
     }
 
     // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
-    let joueur = this.jeu.demarrerJeu(nom);
+    let joueur = this._jeu.demarrerJeu(nom);
     let joueurObj = JSON.parse(joueur);
     req.flash('info', `Nouveau jeu pour ${nom}`);
     res.status(201)
@@ -71,9 +79,9 @@ export class JeuRouter {
 
   private _jouer(req, res: Response<any>) {
     let nom = req.params.nom;
-    let resultat = this.jeu.jouer(nom);
+    let resultat = this._jeu.jouer(nom);
     let resultatObj = JSON.parse(resultat);
-    req.flash('info', 
+    req.flash('info',
       `Resultat pour ${nom}: ${resultatObj.v1} + ${resultatObj.v2} = ${resultatObj.somme}`);
     res.status(200)
       .send({
@@ -93,7 +101,7 @@ export class JeuRouter {
 
     try {
       // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
-      let resultat = this.jeu.terminerJeu(nom);
+      let resultat = this._jeu.terminerJeu(nom);
       req.flash('info', `Jeu terminé pour ${nom}`);
       res.status(200)
         .send({
@@ -114,9 +122,9 @@ export class JeuRouter {
      * endpoints.
      */
   init() {
-    this.router.post('/demarrerJeu', this.demarrerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
-    this.router.get('/jouer/:nom', this.jouer.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
-    this.router.get('/terminerJeu/:nom', this.terminerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
+    this._router.post('/demarrerJeu', this.demarrerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
+    this._router.get('/jouer/:nom', this.jouer.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
+    this._router.get('/terminerJeu/:nom', this.terminerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
   }
 
 }
