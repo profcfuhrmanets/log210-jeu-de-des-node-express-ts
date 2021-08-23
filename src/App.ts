@@ -1,7 +1,7 @@
 import express from 'express';
 import ExpressSession from 'express-session';
 import logger from 'morgan';
-import flash from 'express-flash-plus'
+import flash from 'express-flash-plus';
 
 import { jeuRoutes } from './routes/JeuRouter';
 

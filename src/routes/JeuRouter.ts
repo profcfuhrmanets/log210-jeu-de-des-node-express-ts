@@ -2,7 +2,6 @@ import { Router, Request, Response, NextFunction } from 'express';
 import { JeuDeDes } from '../core/JeuDeDes';
 import { InvalidParameterError } from '../core/errors/InvalidParameterError';
 
-// TODO: rethink the name for this "router" function, since it's not really an Express router (no longer being "use()"ed inside Express)
 export class JeuRouter {
   private _router: Router;
   private _controleurJeu: JeuDeDes;  // contrôleur GRASP
@@ -28,7 +27,7 @@ export class JeuRouter {
    * démarrer le jeu
    */
   public demarrerJeu(req: Request, res: Response, next: NextFunction) {
-    let nom = req.body.nom;
+    const nom = req.body.nom;
 
     try {
       // POST ne garantit pas que tous les paramètres de l'opération système sont présents
@@ -39,7 +38,7 @@ export class JeuRouter {
     }
   }
 
-  private _demarrerJeu(nom: any, req: any, res: Response<any, Record<string, any>>) {
+  private _demarrerJeu(nom: string, req: Request, res: Response<any, Record<string, any>>) {
     if (!nom) {
       throw new InvalidParameterError('Le paramètre nom est absent');
     }
@@ -60,16 +59,16 @@ export class JeuRouter {
    * jouer une fois aux dés
    */
   public jouer(req: Request, res: Response, next: NextFunction) {
+    const nom = req.params.nom;
     try {
-      this._jouer(req, res);
+      this._jouer(nom, req, res);
     } catch (error) {
       console.error(error.message);
       this._errorCode500(error, req, res);
     }
   }
 
-  private _jouer(req: any, res: Response<any, Record<string, any>>) {
-    const nom = req.params.nom;
+  private _jouer(nom: string, req: Request, res: Response<any, Record<string, any>>) {
     // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
     const resultat = this._controleurJeu.jouer(nom);
     const resultatObj = JSON.parse(resultat);
@@ -96,7 +95,7 @@ export class JeuRouter {
   /**
    * terminer
    */
-  public terminerJeu(req, res: Response, next: NextFunction) {
+  public terminerJeu(req: Request, res: Response, next: NextFunction) {
 
     // obtenir nom de la requête
     const nom = req.params.nom;
@@ -107,11 +106,10 @@ export class JeuRouter {
     } catch (error) {
       console.error(error.message);
       this._errorCode500(error, req, res);
-
     }
   }
 
-  private _terminerJeu(nom: any, req: any, res: Response<any, Record<string, any>>) {
+  private _terminerJeu(nom: string, req: Request, res: Response<any, Record<string, any>>) {
     const resultat = this._controleurJeu.terminerJeu(nom);
     req.flash('info', `Jeu terminé pour ${nom}`);
     res.status(200)
