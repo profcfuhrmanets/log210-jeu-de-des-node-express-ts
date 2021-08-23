@@ -1,4 +1,4 @@
-import * as supertest from "supertest";
+import supertest from 'supertest';
 import 'jest-extended';
 import app from '../src/App';
 
@@ -10,16 +10,16 @@ let testNom2 = 'Pierre';
 describe('GET /api/v1/jeu/demarrerJeu/:id', () => {
 
     it('responds with successful first call for player ' + testNom1, async () => {
-        const response = await request.post('/api/v1/jeu/demarrerJeu').send({nom: testNom1});
+        const response = await request.post('/api/v1/jeu/demarrerJeu').send({ nom: testNom1 });
         expect(response.status).toBe(201);
         expect(response.type).toBe("application/json");
         expect(response.body.joueur.nom).toBe(testNom1);
         expect(response.body.joueur.lancers).toBe(0);
         expect(response.body.joueur.lancersGagnes).toBe(0);
     });
-  
+
     it('duplicate call for player ' + testNom1 + ' responds with bad request', async () => {
-        const response = await request.post('/api/v1/jeu/demarrerJeu').send({nom: testNom1});
+        const response = await request.post('/api/v1/jeu/demarrerJeu').send({ nom: testNom1 });
 
         expect(response.status).toBe(400);
         expect(response.type).toBe("application/json");
@@ -35,11 +35,11 @@ describe('GET /api/v1/jeu/demarrerJeu/:id', () => {
     });
 
     it('empty name parameter responds with bad request', async () => {
-        const response = await request.post('/api/v1/jeu/demarrerJeu').send({nom: "   \t"});
+        const response = await request.post('/api/v1/jeu/demarrerJeu').send({ nom: "   \t" });
 
         expect(response.status).toBe(400);
         expect(response.type).toBe("application/json");
         expect(response.body.error).toInclude('Le nom ne peut pas être vide');
     });
-  
+
 });

@@ -1,4 +1,4 @@
-import * as supertest from "supertest";
+import supertest from 'supertest';
 import 'jest-extended';
 import app from '../src/App';
 
@@ -8,9 +8,9 @@ let testNom1 = 'Jean-Marc';
 let testNom2 = 'Pierre';
 
 beforeAll(async () => {
-    await request.post('/api/v1/jeu/demarrerJeu').send({nom: testNom1});
+    await request.post('/api/v1/jeu/demarrerJeu').send({ nom: testNom1 });
 });
- 
+
 describe('GET /api/v1/jeu/jouer/:id', () => {
     // plusieurs appels à jouer (pour valider la somme aléatoire)
     for (let i = 0; i < 20; i++) {

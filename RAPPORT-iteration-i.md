@@ -37,9 +37,9 @@ Assurez-vous d'utiliser toujours le même compte GitHub pour accéder à ce proj
 ## Exigences
 > Liste des exigences et personnes responsables de celles-ci.
 
-|Exigence|Responsable|
-|-|-|
-|CU01|Yvan|
+| Exigence | Responsable |
+| -------- | ----------- |
+| CU01     | Yvan        |
 ## Modèle du domaine (MDD)
 
 ## Diagramme de séquence système (DSS)
