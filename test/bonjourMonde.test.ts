@@ -4,14 +4,12 @@ import app from '../src/App';
 
 const request = supertest(app);
 
-let testNom1 = 'Jean-Marc';
-let testNom2 = 'Pierre';
+const testNom1 = 'Jean-Marc';
 
 describe('baseRoute', () => {
 
-  it('should be html', async () => {
+  it('devrait avoir un contenu HTML', async () => {
     const response = await request.get('/');
-
     expect(response.status).toBe(200);
     expect(response.type).toBe("text/html");
   });
@@ -19,9 +17,8 @@ describe('baseRoute', () => {
 });
 
 describe('GET /bo/gu/s/URL/', () => {
-  it('Call responds with bad request when bogus URL is sent.', async () => {
-    const response = await request.get('/bo/gu/s/URL/' + testNom2);
-
+  it(`devrait répondre avec une mauvaise demande lorsque l'URL est mauvais`, async () => {
+    const response = await request.get('/bo/gu/s/URL/' + testNom1);
     expect(response.status).toBe(404);
   });
 });

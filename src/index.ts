@@ -10,7 +10,9 @@ if (Number.isNaN(port)) {
   process.exit(1);
 }
 
-const server = App.listen(port, () => { });
+const server = App.listen(port, () => {
+  console.info(`Serveur disponible à http://localhost:${port}`);
+});
 server.on('error', onError);
 server.on('listening', onListening);
 
@@ -30,7 +32,7 @@ function onError(error: NodeJS.ErrnoException) {
 }
 
 function onListening() {
-  let addr = server.address();
+  const addr = server.address();
   let bind = 'null';
 
   if (addr)

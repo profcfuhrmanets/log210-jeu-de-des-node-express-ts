@@ -4,6 +4,9 @@
     "module": "commonjs",
     "outDir": "dist",
     "esModuleInterop": true,
+    "sourceMap": true,
+    "incremental": true,
+    "typeRoots": ["./src/types", "node_modules/@types"]
   },
   "include": [
     "src/**/*.ts",

@@ -1,14 +1,8 @@
+import AbstractError from "./AbstractError";
+
 /**
  * @see Applying UML and Patterns, Chapter A35/F30
  */
-export class AlreadyExistsError extends Error {
-    private _code: number = 400;
-
-    constructor(message: string) {
-        super(message);
-    }
-
-    get code() {
-        return this._code;
-    }
+export class AlreadyExistsError extends AbstractError {
+    public readonly code = 400;
 }

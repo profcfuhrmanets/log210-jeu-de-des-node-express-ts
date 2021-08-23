@@ -1,7 +1,7 @@
 import express from 'express';
 import ExpressSession from 'express-session';
 import logger from 'morgan';
-import flash from 'express-flash-plus'
+import flash from 'express-flash-plus';
 
 import { jeuRoutes } from './routes/JeuRouter';
 
@@ -38,7 +38,7 @@ class App {
   private routes(): void {
     let router = express.Router();
     router.get('/', (req, res, next) => {
-      res.render('index', { title: 'Jeu de dés', joueurs: JSON.parse(jeuRoutes.jeu.getJoueurs()) });
+      res.render('index', { title: 'Jeu de dés', joueurs: JSON.parse(jeuRoutes.controleurJeu.joueurs) });
     });
 
     this.expressApp.use('/', router);  // routage de base
