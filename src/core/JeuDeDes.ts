@@ -12,7 +12,7 @@ export class JeuDeDes {
     private _d2: De;
 
     constructor() {
-        console.log("Initialiser JeuDeDes");
+        console.info("Initialiser JeuDeDes");
         this._joueurs = new Map<string, Joueur>();
         this._d1 = new De();
         this._d2 = new De();

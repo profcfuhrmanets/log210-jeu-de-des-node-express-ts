@@ -38,7 +38,7 @@ class App {
   private routes(): void {
     let router = express.Router();
     router.get('/', (req, res, next) => {
-      res.render('index', { title: 'Jeu de dés', joueurs: JSON.parse(jeuRoutes.jeu.joueurs) });
+      res.render('index', { title: 'Jeu de dés', joueurs: JSON.parse(jeuRoutes.controleurJeu.joueurs) });
     });
 
     this.expressApp.use('/', router);  // routage de base
