@@ -1,7 +1,7 @@
-import { De } from "./De";
-import { Joueur } from "./Joueur";
-import { NotFoundError } from "./errors/NotFoundError";
-import { AlreadyExistsError } from "./errors/AlreadyExistsError";
+import { De } from "../core/De";
+import { Joueur } from "../core/Joueur";
+import { NotFoundError } from "../core/errors/NotFoundError";
+import { AlreadyExistsError } from "../core/errors/AlreadyExistsError";
 
 export class JeuDeDes {
     // classe contrôleur GRASP, car JeuDeDes est un objet racine dans le MDD
@@ -12,7 +12,6 @@ export class JeuDeDes {
     private _d2: De;
 
     constructor() {
-        console.info("Initialiser JeuDeDes");
         this._joueurs = new Map<string, Joueur>();
         this._d1 = new De();
         this._d2 = new De();

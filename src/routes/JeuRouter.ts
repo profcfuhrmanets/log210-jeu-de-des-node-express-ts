@@ -1,5 +1,5 @@
 import { Router, Request, Response, NextFunction } from 'express';
-import { JeuDeDes } from '../core/JeuDeDes';
+import { JeuDeDes } from '../controller/JeuDeDes';
 import { InvalidParameterError } from '../core/errors/InvalidParameterError';
 
 export class JeuRouter {
@@ -83,12 +83,12 @@ export class JeuRouter {
   }
 
   private _errorCode500(error: any, req: any, res: Response<any, Record<string, any>>) {
-    let code = 500;
-    if (error.code) {
+    // let code = 500;
+    // if (error.code) {
       req.flash('error', error.message);
-      code = error.code;
-    }
-    res.status(code).json({ error: error.toString() });
+      // code = error.code;
+    // }
+    res.status(error.code).json({ error: error.toString() });
   }
 
 
