@@ -22,36 +22,33 @@ Dans cette étude de cas, il est proposé de réaliser un système de gestion de
 Vous devez vous assurer d'implémenter une mécanique de gestion des états permettant de s'assurer que les opérations système sont appelées dans un ordre cohérent avec le cas d'utilisation. Toute séquence d'utilisation autre que la séquence normale devrait automatiquement générer une erreur.  Nous couvrirons cette mécanique lors du cours sur les diagrammes d'états.
 
 <hr>
-## CU01 - S'inscrire à un cours (1 points)
+## CU01 - Ajouter un groupe-cours (1 point)
 
-**Acteur principal:**  Étudiant
+**Acteur principal:**  Enseignant
 
 **Préconditions:**
 
-- L'étudiant est authentifié.
+- L'enseignant est authentifié. SGA transfère l'information à SGB pour l'authentification. SGB retourne un token que SGA retourne à l'usager. L'usager doit nécessairement utiliser ce token pour faire ses requêtes à SGA..
 
 **Garanties en cas de succès (postconditions):**
 
-- Une association entre l'étudiant et le cours a été créée
+- Un nouveau grouper-cours est créé.
+- L'enseignant est associé au groupe-cours
+- Les étudiants inscrits dans le groupe-cours(SGB) sont associés au cours
 
 **Scénario principal (succès):**
 
-1. L'étudiant débute le processus d'inscription
-2. Le système affiche la liste des cours auxquel il peut s'inscrire. Doit respecter les préalables des cours disponibles.
-3. L'étudiant sélectionne un cours
-1. Le système affiche les groupes cours disponibles
-4. L'étudiant sélectionne un groupe cours
-5. Le système enregistre l'inscription au groupe-cours.
-6. Le système affiche les inscriptions de l'étudiant pour la session.
+1. L'enseignant demande de créer un nouveau cours.
+1. Le système affiche la liste des groupes-cours qu'enseigne l'enseignant (l'information provient du SGB).
+1. L'enseignant choisit un groupe-cours dans la liste (groupe-cours non créé sur SGA).
+1. Le système affiche l'information du cours et affiche la liste des étudiants inscrits dans le groupe-cours correspondant (l'information provient du SGB).
 
 **Extensions (ou scénarios alternatifs):**
 
-5.a Le système envoie un courriel à l'étudiant pour confirmer son inscription
-
 <hr />
-## CU02 - Abandonner un cours (1 points)
+## CU02 - Afficher groupe-cours (1 points)
 
-**Acteur principal:**  Étudiant
+**Acteur principal:**  Enseignant
 
 **Préconditions:**
 
@@ -59,15 +56,13 @@ Vous devez vous assurer d'implémenter une mécanique de gestion des états perm
 
 **Garanties en cas de succès (postconditions):**
 
-- L'inscription de l'étudiant est identifié comme un abandon
+- Aucun
 
 **Scénario principal (succès):**
-
-1. L'étudiant sélectionne le menu d'abandon de cours.
-2. Le système affiche la liste des groupe-cours auxquel l'étudiant est inscrit.
-3. L'étudiant sélectionne le cours qu'il veut abandonné.
-4. Le système affiche les informations détaillé du cours et demande la confirmation à l'étudiant.
-5. Le système enregistre l'abandon du cours et affiche à nouveau la liste de cours auxquel l'étudiant est inscrit.
+1. L'enseignant demande la liste de ses cours.
+2. Le système affiche la liste de ses cours.
+3. L'enseignant demande les détails d'un cours.
+4. Le système affiche l'information du cours et affiche la liste des étudiants inscrits.
 
 **Extensions (ou scénarios alternatifs):**
 
@@ -665,30 +660,25 @@ Le client doit voir les informations (surtout les questions) clairement sur plus
 
 ## Fiabilité (Reliability)
 
-<s>### R1 – Robustesse (2 points)
+### R1 – Robustesse (2 points)
 
 En cas d'indisponibilité du système connecté (SGB - système de gestion des bordereaux ), il faut une solution de recouvrement. P. ex. un stockage temporaire qui permet de sauvegarder quand même les résultats de la correction d'un devoir. Lorsque le SGB est à nouveau disponible, les notes locales doivent y être transférées.
 
 **Note:** Larman propose des solutions avec plusieurs patrons de conception pour réaliser cette exigence. Voir le chapitre F30/A35.
 
 <!-- on met 2 espaces à la fin de markdown pour avoir un <br/> -->
-R1 s'applique uniquement à l'exigence CU03-Corriger devoir pour les scénarios suivants:  
-&nbsp;&nbsp;&nbsp;&nbsp;9. L'enseignant téléverse (“upload”) la version corrigée du devoir.  
-&nbsp;&nbsp;&nbsp;10. L'enseignant indique la note du devoir.
-</s>
+R1 s'applique uniquement à l'exigence CU16-Corriger devoir pour les scénarios suivants:  
+&nbsp;&nbsp;&nbsp;&nbsp;- L'enseignant téléverse (“upload”) la version corrigée du devoir.  
+&nbsp;&nbsp;&nbsp;- L'enseignant indique la note du devoir.
+
 ## Performance
 
-<s>### P1 – Performance pour le passage de questionnaire (2 points)
+### P1 – Performance (2 points)
 
-Les étudiants supportent mal l'attente. L'un des goulets d'étranglement possibles est la durée d'enregistrement de résultats de passage de questionnaire. Notre objectif sera donc que le délai séparant la demande de la réponse soit inférieur à 5 secondes dans 90% des cas.
+Les étudiants supportent mal l'attente. L'un des goulets d'étranglement possibles est la récupération des informations de SGB.  Vous devez utiliser un cache mémoire pour éviter l'accès à SGB au niveau de l'authentification et des requètes d'information subséquentes. Notre objectif sera donc que le délai séparant la demande de la réponse soit inférieur à 50ms dans 90% des cas.
 
-**Note:** pour démontrer que vous avez réalisé cette exigence, il faudra automatiser les passages de questionnaire en parallèle pour créer une charge et mesurer le temps de réponse. Voir le chapitre F30/A35.
+**Note:** pour démontrer que vous avez réalisé cette exigence, il faudra mesurer le temps d'exécution des différentes requètes et montrer avec des chiffres à l'appuie l'avantage d'utiliser le cache mémoire. Voir le chapitre F30/A35.
 
-Outils pour la mesure de performance
-
-- ab - Apache HTTP server benchmarking tool
-- curl
-</s>
 ## Support
 
 Ces exigences doivent être implémentées durant **au moins deux itérations** pour obtenir vos points.
@@ -727,6 +717,10 @@ SGB - Système externe de gestion des bordereaux
 GIFT - PEG grammar to support GIFT (quiz) format
 
 Tag - Catégorie non hiérarchique
+
+Devoir - Document pdf à téléchargé, a compléter et remettre
+
+Question - Question à répondre en ligne
 
 # Modèle de données des questions Moodle
 

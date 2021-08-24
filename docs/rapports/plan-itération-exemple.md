@@ -1,5 +1,9 @@
 # [Plan d'itération](#commentPlanifier "Comment planifier?") - 2
 
+## Documenter votre plan d'itération à l'aide de Github issues.  Utiliser ce document pour avoir une idée des informations que les issues devraient contenir.
+
+## La tracabilité entre une exigence et la personne responsable de réaliser celle-ci est cruciales pour une bonne gestion de projet.
+
 > Note: Texte en bloc comme ceci indique des directives aux auteurs
 
 ## Étapes jalons

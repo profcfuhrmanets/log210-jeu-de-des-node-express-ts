@@ -2,17 +2,17 @@
 
 ## Introduction
 
-Le laboratoire consiste à analyser, concevoir, implémenter et tester une solution pour satisfaire les besoins en ce qui concerne une application cliente. [Voir le document des exigences du client](README-exigences-client.md).
+Le laboratoire consiste à analyser, concevoir, implémenter et tester une solution pour satisfaire les besoins en ce qui concerne une application cliente. [Voir le document des exigences du client](docs/exigences/README-exigences-client.md).
 
 ## Déploiement du système
 
 Le diagramme suivant décrit les différentes parties du système. Nous cherchons à simplifier les aspects techniques qui ne sont pas le sujet principal du cours: framework d'application frontale, services REST, utilisation de bases de données, etc.
 
-![déploiement](README/deploiement.svg)
+![déploiement](docs/exigences/README/deploiement.svg)
 
 Il faut que la solution respecte la séparation des couches présentation et domaine. Les opérations système doivent être le mécanisme pour traverser ces deux couches (pas de logique applicative dans la couche présentation). Pour vérifier cet aspect, la figure suivante est utile:
 
-![figure-f16.24-web](README/figureF16.24-web.svg "figure-f16.24-web")
+![figure-f16.24-web](docs/exigences/README/figureF16.24-web.svg "figure-f16.24-web")
 
 Notez que la logique du routeur (web) est simple :
 * décortiquer l'argument, p. ex. nom, de la requête et
@@ -24,7 +24,7 @@ Notez que la logique du routeur (web) est simple :
 
 ### Squelettes pour commencer le SGA
 
-En plus de ce squelette de démarrage de projet pour Node.js, des exemples de code supplémentaire pour vous aider dans votre projet sont aussi disponibles: : https://github.com/profcfuhrmanets/exemples-ts
+En plus de ce [squelette](docs/exigences/squelette.md) de démarrage de projet pour Node.js, des exemples de code supplémentaire pour vous aider dans votre projet sont aussi disponibles: : https://github.com/profcfuhrmanets/exemples-ts
 
 > Les solutions impliquant les langages et technologies autres que ceux dans le squelette ne sont pas permises.
 
@@ -46,7 +46,7 @@ SGB est une application ayant son propre modèle du domaine (comprenant les conc
 
 </details>
 
-Veuillez noter que l'implémentation proposée de ce système n'a aucun mécanisme de persistance des données. Il possède une interface de configuration permettant de nettoyer le contenu correspondant aux notes ou de modifier la latence de celui-ci.
+Veuillez noter que l'implémentation proposée de ce système n'a aucun mécanisme de persistance des données. Il possède une interface de configuration permettant de nettoyer le contenu correspondant aux notes.
 https://github.com/yvanross/log210-systeme-gestion-bordereau-node-express-ts
 
 L'API de SGB est disponible avec le code source.  Lire le README.md de SGB pour savoir comment générer cette documentation.
@@ -62,7 +62,7 @@ Vous devez implémenter une interface utilisateur minimaliste pour la réalisati
 
 ## Déroulement des itérations
 
-Chaque itération nécessite un avancement (évolution) sur le plan des exigences par une valeur minimale indiquée.
+Chaque itération nécessite un avancement (**évolution**) sur le plan des exigences par une **valeur minimale** indiquée.
 
 - Itération 1 - 3 points
 - Itération 2 - 3 points supplémentaires
@@ -78,13 +78,13 @@ Les corrections interactives à chaque itération seront réalisées en suivant 
 
 L'objectif de cette partie est de montrer le fonctionnement de l'application au client. Elle suit les étapes suivantes :
 
-![](README/dss-demonstration.svg)
+![](docs/exigences/README/dss-demonstration.svg)
 
 #### Évaluation de l'implémentation et des tests
 
 L'objectif de cette partie et de montrer que l'application est conforme aux principes vus en classe et à la conception des étudiants. Elle suit les étapes suivantes :
 
-![](README/dss-evaluation-implementation.svg)
+![](docs/exigences/README/dss-evaluation-implementation.svg)
 
 - Vérifier correspondance code et RDCU
     1. une méthode avec le même nom est présente dans un routeur. Elle doit :
@@ -136,7 +136,7 @@ Le nombre de points minimal requis pour une note de 100% correspond au tableau s
 |3| 8.25|
 |4|11.00|
 |5|13.75|
-|6| 6.50|
+|6|16.50|
 
 
 Vous pouvez implémenter plus de points pour compenser les pertes durant la correction mais la note maximale sera de 100%.
@@ -155,9 +155,9 @@ Notez que le calendrier des séances est différent pour chaque groupe-cours, ma
 |         2 | Fin séance 7 du labo  | Début séance 9  |
 |         3 | Fin séance 10 du labo | Début séance 12 |
 
-[Dates des séances de lab](https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=Y185b3UycWwwcjBjNm1iOHYzMnFsMjR2NmJhZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Y190ZGh0NG84OW5rNGozY2htYmJkZjBsNWFoZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23F4511E&amp;color=%23C0CA33&amp;mode=AGENDA&amp;hl=fr_CA&amp;title=Calendrier%20des%20s%C3%A9ances%20de%20laboratoire%20LOG210%20%C3%89t%C3%A9%202021)
 
-### Correction interactive du [rapport](RAPPORT-iteration-i.md) de l'itération 1
+
+### Correction interactive du [rapport](docs/rapports/RAPPORT-iteration-i.md) de l'itération 1
 
 À la deuxième semaine de l'itération 1, vous devrez présenter les artéfacts, l'implémentation et les tests des CU01a et CU01b à votre chargé de laboratoire. Vous recevrez des commentaires pour vous aider avant la remise de votre premier rapport et de votre première démo. Cette activité est informelle, mais votre participation est notée et obligatoire.
 
@@ -219,7 +219,7 @@ Cette grille d'évaluation présente le pointage associé à chacun des artéfac
 | Total                               |                                   35%                                    |
 
 ### Grille de pointage des exigences
-[voir les exigences client](README-exigences-client.md)
+[voir les exigences client](docs/exigences/README-exigences-client.md)
 
 ## Grilles de correction
 
