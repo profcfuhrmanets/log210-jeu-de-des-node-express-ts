@@ -33,7 +33,7 @@ export class JeuRouter {
       // POST ne garantit pas que tous les paramètres de l'opération système sont présents
       this._demarrerJeu(nom, req, res);
     } catch (error) {
-      console.error(error.message);
+      console.error(error);
       this._errorCode500(error, req, res);
     }
   }
@@ -63,7 +63,7 @@ export class JeuRouter {
     try {
       this._jouer(nom, req, res);
     } catch (error) {
-      console.error(error.message);
+      console.error(error);
       this._errorCode500(error, req, res);
     }
   }
@@ -104,7 +104,7 @@ export class JeuRouter {
       // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
       this._terminerJeu(nom, req, res);
     } catch (error) {
-      console.error(error.message);
+      console.error(error);
       this._errorCode500(error, req, res);
     }
   }
