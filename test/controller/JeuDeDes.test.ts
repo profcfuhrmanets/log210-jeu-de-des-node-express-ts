@@ -5,7 +5,7 @@ import app from '../../src/App';
 const request = supertest(app);
 
 import { De } from '../../src/core/De';
-import { JeuDeDes } from '../../src/controller/JeuDeDes';
+import { JeuDeDes } from '../../src/core/JeuDeDes';
 
 describe('JeuDeDesTest', () => {
   let controller: JeuDeDes;
