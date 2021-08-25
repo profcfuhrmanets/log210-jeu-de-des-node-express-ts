@@ -34,7 +34,7 @@ export class JeuDeDes {
     }
 
     public jouer(nom: string): string {
-        let joueur = this._joueurs.get(nom);
+        const joueur = this._joueurs.get(nom);
         if (!joueur) {
             throw new NotFoundError(`Joueur '${nom}' n'existe pas.`);
         }
@@ -60,7 +60,7 @@ export class JeuDeDes {
             throw new NotFoundError(`Joueur '${nom}' n'existe pas.`);
         }
         this._joueurs.delete(nom);
-        let resultat = {
+        const resultat = {
             nom: nom,
             message: "Merci d'avoir joué."
         };
@@ -69,12 +69,12 @@ export class JeuDeDes {
     }
 
     // d'autres méthodes (des RDCU)
-    brasser(): number {
+    brasser() {
         this._d1.brasser();
         this._d2.brasser();
-        let v1 = this._d1.valeur;
-        let v2 = this._d2.valeur;
-        let somme = v1 + v2;
+        const v1 = this._d1.valeur;
+        const v2 = this._d2.valeur;
+        const somme = v1 + v2;
         return somme;
     }
 
