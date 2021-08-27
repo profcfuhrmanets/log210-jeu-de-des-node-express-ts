@@ -1,25 +1,34 @@
-import supertest from 'supertest';
 import 'jest-extended';
-
-import app from '../../src/App';
-const request = supertest(app);
-
 import { De } from '../../src/core/De';
+
+const de = new De();
 
 describe('De', () => {
 
-  it('brasser', async () => {
-    let de: De = new De();
-    let valeur1 = de.valeur;
-    de.brasser();
-    let valeur2 = de.valeur;
-    de.brasser();
-    let valeur3 = de.valeur;
-    
-    let result = valeur1 == valeur2 && valeur2 == valeur3 && valeur1 == valeur3;
-    expect(result).toBe(false);
+  it('devrait toujours avoir une valeur entre 1 et 6 à l\'intialisation', async () => {
+    for (let i = 0; i < 100; i++) {
+      const de1 = new De();
+      expect(de1.valeur).toBeWithin(1, 7)
+    }
+  });
 
+  it('devrait toujours avoir une valeur entre 1 et 6 après brasser', async () => {
+    for (let i = 0; i < 100; i++) {
+      de.brasser()
+      expect(de.valeur).toBeWithin(1, 7)
+    }
+  });
+
+  it('devrait donner finalement toutes les valeurs entre 1 et 6 après brasser', async () => {
+    const resultats = new Set()
+    for (let i = 0; i < 100; i++) {
+      de.brasser()
+      resultats.add(de.valeur)
+    }
+    expect(resultats.size).toBe(6);
+    for (let i = 0; i < 6; i++) {
+      expect(resultats.has(i + 1))
+    }
   });
 
 });
- 
