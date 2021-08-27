@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Le laboratoire consiste à analyser, concevoir, implémenter et tester une solution pour satisfaire les besoins en ce qui concerne une application cliente. [Voir le document des exigences du client](docs/exigences/README-exigences-client.md).
+Le laboratoire consiste à analyser, concevoir, implémenter et tester une solution pour satisfaire les besoins en ce qui concerne une application cliente. [Voir le document des exigences du client](docs/exigences/README-exigences-client.md)
 
 ## Déploiement du système
 
@@ -68,7 +68,7 @@ Chaque itération nécessite un avancement (**évolution**) sur le plan des exig
 - Itération 2 - 3 points supplémentaires
 - Itération 3 - 4 points supplémentaires
 
-Les points associés à chaque exigence sont définis dans la grille de correction.
+Les points associés à chaque exigence sont définis dans la [grille de correction](https://docs.google.com/spreadsheets/d/17Ks_0Q60R8Ti1CMTIYo9Pw6gUO_OS8Wf?rtpof=true&authuser=cc-yvan.ross%40etsmtl.net&usp=drive_fs).
 
 ## Déroulement des corrections interactives
 
