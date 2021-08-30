@@ -60,8 +60,10 @@ export class JeuRouter {
       // Invoquer l'opération système (du DSS) dans le contrôleur GRASP
       const resultat = this._controleurJeu.jouer(nom);
       const resultatObj = JSON.parse(resultat);
-      req.flash('info',
-        `Resultat pour ${nom}: ${resultatObj.v1} + ${resultatObj.v2} = ${resultatObj.somme}`);
+      // flash un message selon le résultat
+      const key = resultatObj.somme == 7 ? 'win' : 'info';
+      req.flash(key,
+        `Résultat pour ${nom}: ${resultatObj.v1} + ${resultatObj.v2} = ${resultatObj.somme}`);
       res.status(200)
         .send({
           message: 'Success',
@@ -74,12 +76,8 @@ export class JeuRouter {
     }
   }
 
-  private _errorCode500(error: any, req: any, res: Response<any, Record<string, any>>) {
-    // let code = 500;
-    // if (error.code) {
-      req.flash('error', error.message);
-      // code = error.code;
-    // }
+  private _errorCode500(error: any, req: Request, res: Response<any, Record<string, any>>) {
+    req.flash('error', error.message);
     res.status(error.code).json({ error: error.toString() });
   }
 
