@@ -1,4 +1,4 @@
-import { InvalidParameterError } from '../core/errors/InvalidParameterError';
+import { InvalidParameterError } from './errors/invalidParameterError';
 
 export class Joueur {
     // classe inspirée de la classe conceptuelle (du MDD)

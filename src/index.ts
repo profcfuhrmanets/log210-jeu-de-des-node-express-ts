@@ -1,6 +1,6 @@
 import debug from 'debug';
 
-import App from './App';
+import App from './app';
 
 debug('ts-express:server');
 

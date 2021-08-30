@@ -1,6 +1,6 @@
 import { Router, Request, Response, NextFunction } from 'express';
-import { JeuDeDes } from '../core/JeuDeDes';
-import { InvalidParameterError } from '../core/errors/InvalidParameterError';
+import { JeuDeDes } from '../core/jeuDeDes';
+import { InvalidParameterError } from '../core/errors/invalidParameterError';
 
 export class JeuRouter {
   private _router: Router;

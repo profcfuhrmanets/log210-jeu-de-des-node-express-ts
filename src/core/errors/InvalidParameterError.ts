@@ -1,4 +1,4 @@
-import AbstractError from "./AbstractError";
+import AbstractError from "./abstractError";
 
 
 /**

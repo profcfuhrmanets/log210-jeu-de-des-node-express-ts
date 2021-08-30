@@ -1,7 +1,7 @@
-import { De } from "./De";
-import { Joueur } from "./Joueur";
-import { NotFoundError } from "./errors/NotFoundError";
-import { AlreadyExistsError } from "./errors/AlreadyExistsError";
+import { De } from "./de";
+import { Joueur } from "./joueur";
+import { NotFoundError } from "./errors/notFoundError";
+import { AlreadyExistsError } from "./errors/alreadyExistsError";
 
 export class JeuDeDes {
     // classe contrôleur GRASP, car JeuDeDes est un objet racine dans le MDD

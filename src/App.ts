@@ -3,7 +3,7 @@ import ExpressSession from 'express-session';
 import logger from 'morgan';
 import flash from 'express-flash-plus';
 
-import { jeuRoutes } from './routes/JeuRouter';
+import { jeuRoutes } from './routes/jeuRouter';
 
 // Creates and configures an ExpressJS web server.
 class App {
