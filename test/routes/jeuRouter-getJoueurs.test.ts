@@ -1,6 +1,6 @@
 import supertest from 'supertest';
 import 'jest-extended';
-import app from '../../src/App';
+import app from '../../src/app';
 import { jeuRoutes } from "../../src/routes/jeuRouter";
 
 const request = supertest(app);

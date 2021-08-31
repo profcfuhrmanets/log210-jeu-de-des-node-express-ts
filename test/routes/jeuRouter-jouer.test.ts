@@ -1,6 +1,6 @@
 import supertest from 'supertest';
 import 'jest-extended';
-import app from '../../src/App';
+import app from '../../src/app';
 
 const request = supertest(app);
 

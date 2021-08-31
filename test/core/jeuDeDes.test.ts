@@ -1,5 +1,5 @@
 import 'jest-extended';
-import { JeuDeDes } from '../../src/core/JeuDeDes';
+import { JeuDeDes } from '../../src/core/jeuDeDes';
 
 describe('JeuDeDesTest', () => {
   let jdd: JeuDeDes;
