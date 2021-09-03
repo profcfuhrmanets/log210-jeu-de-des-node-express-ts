@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "tsc -b --verbose && shx cp -ru public dist/",
+        "build": "tsc -b --verbose && shx --verbose cp -ru public dist/",
         "start": "node dist/index.js",
         "watch": "jest --watch --coverage test",
         "test": "jest --env=node --colors --coverage test",
