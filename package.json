@@ -11,7 +11,8 @@
         "uml-classes-puml": "tplant -i src/app.ts -A -o docs/modeles/App.puml",
         "uml-classes-svg": "tplant -i src/app.ts -A -o docs/modeles/App.svg",
         "circular": "madge src/app.ts -c",
-        "madge": "madge src/app.ts -i madge.png; open madge.png"
+        "madge": "madge src/app.ts -i madge.png; open madge.png",
+        "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
     },
     "nodemonConfig": {
         "ignore": [
