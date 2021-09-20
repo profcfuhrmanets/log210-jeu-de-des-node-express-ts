@@ -103,7 +103,7 @@ Le lien suivant présente les subtilités de l'utilisation du fichier `launch.js
 
 Les configurations créées dans ce fichier peuvent ensuite être lancées à partir de l'onglet «&nbsp;Run&nbsp;» de la barre de régions à gauche de VS Code.
 
-Sinon, il est possible d'attacher le débogueur de VS Code à une nouvelle exécution du projet sans avoir à créer un fichier <i>launch.json</i>. Il suffit de se rendre sur le fichier [package.json](./package.json) et de cliquer sur le bouton «&nbsp;Debug&nbsp;» qui apparaît au-dessus de la section «&nbsp;Script&nbsp;».
+Sinon, il est possible d'attacher le débogueur de VS Code à une nouvelle exécution du projet sans avoir à créer un fichier *launch.json*. Il suffit de se rendre sur le fichier *package.json* et de cliquer sur le bouton «&nbsp;Debug&nbsp;» qui apparaît au-dessus de la section «&nbsp;Script&nbsp;».
 
 Une fois le débogueur attaché par l'une ou l'autre des méthodes présentées ci-dessus, l'exécution du code cessera lors de la rencontre d'un point d'arrêt sur un fichier TypeScript et il sera possible d'inspecter la valeur des variables visibles.
 
@@ -202,4 +202,4 @@ Voici la même figure, mais sous forme de diagramme de séquence avec l'acteur. 
 
 ![Diagramme de séquence, terminerJeu](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/modeles/rdcu-terminerJeu.puml)
 
-[README.md](./README.md)
+[README.md](/README.md)
