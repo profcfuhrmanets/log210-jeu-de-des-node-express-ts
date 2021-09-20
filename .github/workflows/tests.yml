@@ -17,6 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
+      - name: markdown-link-check
+        uses: gaurav-nelson/github-action-markdown-link-check@1.0.13
+
       - name: Use Node.js 15
         uses: actions/setup-node@v1
         with:
