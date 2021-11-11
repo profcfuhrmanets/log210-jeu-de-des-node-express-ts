@@ -54,6 +54,7 @@
         "express": "^4.17.1",
         "express-flash-plus": "^0.0.7",
         "express-session": "^1.17.2",
+        "jest-runner": "^27.3.1",
         "morgan": "^1.10.0",
         "pug": "^3.0.2",
         "tplant": "^3.0.0"
