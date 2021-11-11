@@ -46,7 +46,7 @@ export class JeuRouter {
           joueur: joueurObj
         });
     } catch (error) {
-      console.error(error);
+      // console.error(error);
       this._errorCode500(error, req, res);
     }
   }
@@ -71,7 +71,7 @@ export class JeuRouter {
           resultat
         });
     } catch (error) {
-      console.error(error);
+      // console.error(error);
       this._errorCode500(error, req, res);
     }
   }
@@ -101,7 +101,7 @@ export class JeuRouter {
           resultat
         });
     } catch (error) {
-      console.error(error);
+      // console.error(error);
       this._errorCode500(error, req, res);
     }
   }
