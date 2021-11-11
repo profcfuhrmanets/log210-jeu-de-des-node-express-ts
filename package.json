@@ -4,14 +4,15 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "tsc -b --verbose && shx cp -ru public dist/",
+        "build": "tsc -b --verbose && shx --verbose cp -ru public dist/",
         "start": "node dist/index.js",
         "watch": "jest --watch --coverage test",
         "test": "jest --env=node --colors --coverage test",
-        "uml-classes-puml": "tplant -i src/app.ts -A -o App.puml",
-        "uml-classes-svg": "tplant -i src/app.ts -A -o App.svg",
+        "uml-classes-puml": "tplant -i src/app.ts -A -o docs/modeles/App.puml",
+        "uml-classes-svg": "tplant -i src/app.ts -A -o docs/modeles/App.svg",
         "circular": "madge src/app.ts -c",
-        "madge": "madge src/app.ts -i madge.png; open madge.png"
+        "madge": "madge src/app.ts -i madge.png; open madge.png",
+        "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
     },
     "nodemonConfig": {
         "ignore": [
@@ -33,21 +34,22 @@
         "@types/debug": "^4.1.6",
         "@types/express": "^4.17.13",
         "@types/express-session": "^1.17.4",
-        "@types/jest": "^26.0.24",
+        "@types/jest": "^27.0.1",
         "@types/morgan": "^1.9.3",
-        "@types/node": "^16.3.0",
+        "@types/node": "^16.9.1",
         "@types/supertest": "^2.0.11",
         "coveralls": "^3.1.1",
         "gitinspector": "^0.5.0-dev-2",
-        "jest": "^27.0.6",
+        "jest": "^27.2.0",
         "jest-extended": "^0.11.5",
         "madge": "^5.0.1",
         "nodemon": "^2.0.12",
         "shx": "^0.3.3",
         "supertest": "^6.1.3",
+        "tplant": "^3.1.0",
         "ts-jest": "^27.0.3",
         "ts-node": "^10.0.0",
-        "typescript": "^4.3.5"
+        "typescript": "^4.4.3"
     },
     "dependencies": {
         "debug": "^4.3.2",
@@ -56,7 +58,6 @@
         "express-session": "^1.17.2",
         "jest-runner": "^27.3.1",
         "morgan": "^1.10.0",
-        "pug": "^3.0.2",
-        "tplant": "^3.0.0"
+        "pug": "^3.0.2"
     }
 }

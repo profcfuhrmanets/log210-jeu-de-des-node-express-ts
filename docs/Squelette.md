@@ -1,15 +1,16 @@
 # Squelette pour un API simple dans Node, Express et TypeScript
 
 ## Introduction
+
 Ce squelette est proposé pour commencer les projets en LOG210. Il possède les qualités suivantes:
 
- - il est simple pour les débutants en LOG210
-   - il n'y a pas de framework pour le front-end ni pour la persistance, mais ça n'empêche pas d'ajouter ces dimensions.
-   - il est seulement [REST niveau 2](https://restfulapi.net/richardson-maturity-model/#level-two), mais ça n'empêche pas de modifier l'API pour qu'il soit [REST niveau 3](https://restfulapi.net/richardson-maturity-model/#level-three).
- - il est orienté objet (avec TypeScript)
- - il contient des tests pour l'API (avec Jest et Supertest)
- - il fait une séparation entre les couches présentation et domaine, selon la méthodologie de conception du cours LOG210 (Larman)
- - il fonctionne sur Windows 10 (et probablement d'autres systèmes d'exploitation avec Node)
+- il est simple pour les débutants en LOG210
+  - il n'y a pas de framework pour le front-end ni pour la persistance, mais ça n'empêche pas d'ajouter ces dimensions.
+  - il est seulement [REST niveau 1](https://restfulapi.net/richardson-maturity-model/#level-two), mais ça n'empêche pas de modifier l'API pour qu'il soit [REST niveau 3](https://restfulapi.net/richardson-maturity-model/#level-three).
+- il est orienté objet (avec TypeScript)
+- il contient des tests pour l'API (avec Jest et Supertest)
+- il fait une séparation entre les couches présentation et domaine, selon la méthodologie de conception du cours LOG210 (Larman)
+- il fonctionne sur Windows 10 (et probablement d'autres systèmes d'exploitation avec Node)
 
 ## D'où vient l'idée de base pour ce squelette?
 
@@ -63,7 +64,7 @@ Le TDD suit un cycle particulier, comme vous pouvez voir à l'image plus haut:
   </p>
   </details>
 
-## Support pour déboguage
+## Support pour débogage
 
    <details>
      <summary>Plus de détails</summary><p>
@@ -72,11 +73,11 @@ Ce squelette offre la possibilité de déboguer le code du serveur à l'aide de 
 
 Voici comment il est possible de déboguer le projet à l'aide de différents environnements de développement.
 
-### Déboguage avec Visual Studio Code
+### Débogage avec Visual Studio Code
 
-VS Code offre la possibilité d'ajouter des configurations d'exécution à l'aide d'un fichier local. Ce fichier doit être nommé <i>launch.json</i> et être placé dans un dossier nommé <i>.vscode</i> à la racine du projet.
+VS Code offre la possibilité d'ajouter des configurations d'exécution à l'aide d'un fichier local. Ce fichier doit être nommé `launch.json` et être placé dans un dossier nommé `.vscode` à la racine du projet.
 
-On peut utiliser ce fichier afin de créer des configurations d'exécution de déboguage pour le projet. Un exemple de contenu pour ce fichier pourrait être :
+On peut utiliser ce fichier afin de créer des configurations d'exécution de débogage pour le projet. Un exemple de contenu pour ce fichier pourrait être :
 
 ```json
 {
@@ -98,31 +99,31 @@ On peut utiliser ce fichier afin de créer des configurations d'exécution de d�
 }
 ```
 
-Le lien suivant présente les subtilités de l'utilisation du fichier <i>launch.json</i> de VS Code dans le cadre d'un projet NodeJS : https://code.visualstudio.com/docs/nodejs/nodejs-debugging
+Le lien suivant présente les subtilités de l'utilisation du fichier `launch.json` de VS Code dans le cadre d'un projet NodeJS : <https://code.visualstudio.com/docs/nodejs/nodejs-debugging>
 
-Les configurations créées dans ce fichier peuvent ensuite être lancées à partir de l'onglet « Run » de la barre de régions à gauche de VS Code.
+Les configurations créées dans ce fichier peuvent ensuite être lancées à partir de l'onglet «&nbsp;Run&nbsp;» de la barre de régions à gauche de VS Code.
 
-Alternativement, il est possible d'attacher le débogueur de VS Code à une nouvelle exécution du projet sans avoir à créer un fichier <i>launch.json</i>. Il suffit de se rendre sur le fichier [package.json](./package.json) et de cliquer sur le bouton « Debug » qui apparaît au-dessus de la section « Script ».
-
-Une fois le débogueur attaché par l'une ou l'autre des méthodes présentées ci-dessus, l'exécution du code cessera lors de la rencontre d'un point d'arrêt sur un fichier TypeScript et il sera possible d'inspecter la valeur des variables visibles.
-
-Pour plus d'informations au sujet de l'utilisation des breakpoints dans VS Code, voir https://code.visualstudio.com/docs/editor/debugging#_breakpoints
-
-### Déboguage avec JetBrains WebStorm
-
-Les mêmes instructions présentées dans cette section peuvent être utilisées pour déboguer le projet à partir d'un autre environnement JetBrains (comme IntelliJ) lorsque les plugins nécessaires sont installés.
-
-Dans WebStorm, il est possible de créer une configuration d'exécution à l'aide de la liste défilante à côté du bouton d'exécution « Run ». Pour ce projet, il est nécessaire de créer une configuration de type « npm » et de lui associer la commande « run » ainsi que le script « start » ou « start:watch ».
-
-Le lien suivant présente les subtilités de cette configuration avec plus de détails : https://www.jetbrains.com/help/webstorm/run-debug-configuration-npm.html
-
-Les configurations ainsi créées peuvent ensuite être lancées en mode déboguage en cliquant sur le bouton « Debug » à droite du bouton « Start ».
-
-Alternativement, il est possible d'attacher le débogueur de WebStorm à une nouvelle exécution du projet sans avoir à créer une nouvelle configuration d'exécution. Il suffit de se rendre sur le fichier [package.json](./package.json) et de cliquer sur le bouton en forme de triangle vert à côté des scripts « start » ou « start:watch » et de sélectionner l'option « Debug ».
+Sinon, il est possible d'attacher le débogueur de VS Code à une nouvelle exécution du projet sans avoir à créer un fichier `launch.json`. Il suffit de se rendre sur le fichier `package.json` et de cliquer sur le bouton «&nbsp;Debug&nbsp;» qui apparaît au-dessus de la section «&nbsp;Script&nbsp;».
 
 Une fois le débogueur attaché par l'une ou l'autre des méthodes présentées ci-dessus, l'exécution du code cessera lors de la rencontre d'un point d'arrêt sur un fichier TypeScript et il sera possible d'inspecter la valeur des variables visibles.
 
-Pour plus d'informations au sujet de l'utilisation des breakpoints dans WebStorm, voir https://www.jetbrains.com/help/webstorm/using-breakpoints.html
+Pour plus d'informations au sujet de l'utilisation des breakpoints dans VS Code, voir <https://code.visualstudio.com/docs/editor/debugging#_breakpoints>
+
+### Débogage avec JetBrains WebStorm
+
+Les mêmes instructions présentées dans cette section peuvent être utilisées pour déboguer le projet à partir d'un autre environnement JetBrains (comme IntelliJ) lorsque les plug-ins nécessaires sont installés.
+
+Dans WebStorm, il est possible de créer une configuration d'exécution à l'aide de la liste déroulante à côté du bouton d'exécution «&nbsp;Run&nbsp;». Pour ce projet, il est nécessaire de créer une configuration de type «&nbsp;npm&nbsp;» et de lui associer la commande «&nbsp;run&nbsp;» ainsi que le script «&nbsp;start&nbsp;» ou «&nbsp;start:watch&nbsp;».
+
+Le lien suivant présente les subtilités de cette configuration avec plus de détails : <https://www.jetbrains.com/help/webstorm/run-debug-configuration-npm.html>
+
+Les configurations ainsi créées peuvent ensuite être lancées en mode débogage en cliquant sur le bouton «&nbsp;Debug&nbsp;» à droite du bouton «&nbsp;Start&nbsp;».
+
+Sinon, il est possible d'attacher le débogueur de WebStorm à une nouvelle exécution du projet sans avoir à créer une nouvelle configuration d'exécution. Il suffit de se rendre sur le fichier `package.json` et de cliquer sur le bouton en forme de triangle vert à côté des scripts «&nbsp;start&nbsp;» ou «&nbsp;start:watch&nbsp;» et de sélectionner l'option «&nbsp;Debug&nbsp;».
+
+Une fois le débogueur attaché par l'une ou l'autre des méthodes présentées ci-dessus, l'exécution du code cessera lors de la rencontre d'un point d'arrêt sur un fichier TypeScript et il sera possible d'inspecter la valeur des variables visibles.
+
+Pour plus d'informations au sujet de l'utilisation des breakpoints dans WebStorm, voir <https://www.jetbrains.com/help/webstorm/using-breakpoints.html>
 
   </p>
   </details>
@@ -149,12 +150,12 @@ Voici la même figure, mais sous forme de diagramme de séquence avec l'acteur. 
 1. Le Joueur demande à lancer les dés.
 1. Le Système affiche le nom du joueur et le résultat de la partie, ainsi que le nombre de parties et le nombre de fois que le Joueur a gagné. Pour un lancer, si le total est égal à sept, le Joueur a gagné. Dans tous les autres cas, il a perdu.
 
-*Le Joueur répète l’étape 3 jusqu’à ce qu’il ait fini.*
+*Le Joueur répète l'étape 3 jusqu'à ce qu'il ait fini.*
 
 4. Le Joueur demande à terminer le jeu.
 1. ~~Le Système affiche un tableau de bord avec les noms des joueurs et le ratio des parties gagnées (nombre de fois gagné / nombre de lancers).~~
 
-### Diagramme de cas d’utilisation
+### Diagramme de cas d'utilisation
 
 ![Diagramme de cas d'utilisation](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/modeles/dcu.puml)
 
@@ -197,9 +198,8 @@ Voici la même figure, mais sous forme de diagramme de séquence avec l'acteur. 
 
 **Postconditions**
 
-- L’instance j de Joueur a été supprimée sur une base de correspondance avec nom
+- L'instance j de Joueur a été supprimée sur une base de correspondance avec nom
 
 ![Diagramme de séquence, terminerJeu](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/modeles/rdcu-terminerJeu.puml)
 
-
-[README.md](./README.md)
+[README.md](../README.md)
