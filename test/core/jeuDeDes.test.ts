@@ -27,8 +27,8 @@ describe('JeuDeDesTest', () => {
       expect(resultats.has(i + 1)).toBeTrue();
     }
     // cas particuliers
-    expect(resultats.has(1)).toBeFalse();
-    expect(resultats.has(13)).toBeFalse();
+    expect(resultats.has(1)).toBeFalsy();
+    expect(resultats.has(13)).toBeFalsy();
   })
 
 });
