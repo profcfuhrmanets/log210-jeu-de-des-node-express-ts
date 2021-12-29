@@ -8,7 +8,7 @@ describe('De', () => {
   it('devrait toujours avoir une valeur entre 1 et 6 à l\'intialisation', async () => {
     for (let i = 0; i < 100; i++) {
       const de1 = new De();
-      expect(de1.valeur).toBeWithin(1, 7)
+      expect(de1.valeur).toBeWithin(1, 7);
     }
   });
 

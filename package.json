@@ -31,6 +31,7 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@types/chai": "^4.3.0",
         "@types/debug": "^4.1.6",
         "@types/express": "^4.17.13",
         "@types/express-session": "^1.17.4",
@@ -38,10 +39,13 @@
         "@types/morgan": "^1.9.3",
         "@types/node": "^16.11.7",
         "@types/supertest": "^2.0.11",
+        "chai": "^4.3.4",
+        "chai-http": "^4.3.0",
         "coveralls": "^3.1.1",
         "gitinspector": "^0.5.0-dev-2",
         "jest": "^27.3.1",
         "jest-extended": "^1.1.0",
+        "http-request-mock": "^1.5.7",
         "madge": "^5.0.1",
         "nodemon": "^2.0.15",
         "shx": "^0.3.3",
@@ -52,11 +56,13 @@
         "typescript": "^4.4.4"
     },
     "dependencies": {
+        "axios": "^0.24.0",
         "debug": "^4.3.2",
         "express": "^4.17.1",
         "express-flash-plus": "^0.0.7",
         "express-session": "^1.17.2",
         "jest-runner": "^27.3.1",
+        "md5": "^2.3.0",
         "morgan": "^1.10.0",
         "pug": "^3.0.2"
     }

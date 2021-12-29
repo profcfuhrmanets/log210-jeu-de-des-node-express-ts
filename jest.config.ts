@@ -9,6 +9,9 @@ const config: Config.InitialOptions = {
   testEnvironment: 'node',
   //  verbose: true,
   setupFilesAfterEnv: ["jest-extended/all"],
+  collectCoverageFrom: ["src/**/*.ts"],
+  coveragePathIgnorePatterns: ["index.ts","express-flash-plus.d.ts"],
+
   globals: {
     'ts-jest': {
       diagnostics: true,
