@@ -1,5 +1,6 @@
 html
   head
+    include navbar.pug
     title= title
     link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
     link(rel='stylesheet' href='/css/style.css')
@@ -11,6 +12,7 @@ html
 
     script(src="/lib/main.js" type="text/javascript")
   body
+    +navbar("Jeu de dés", user)
     //- les .container, .alert, .col-sm-4, etc. sont des directives de Bootstrap
     div.container
       h1 JeuDeDes-Node-Express-TS-TDD-LOG210

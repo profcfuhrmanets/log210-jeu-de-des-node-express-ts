@@ -38,7 +38,13 @@ class App {
   private routes(): void {
     let router = express.Router();
     router.get('/', (req, res, next) => {
-      res.render('index', { title: 'Jeu de dés', joueurs: JSON.parse(jeuRoutes.controleurJeu.joueurs) });
+      res.render('index', 
+        // passer objet au gabarit (template) Pug
+        {
+          title: 'Jeu de dés', 
+          user: { nom: 'Pierre', isAdmin: false },
+          joueurs: JSON.parse(jeuRoutes.controleurJeu.joueurs)
+        });
     });
 
     this.expressApp.use('/', router);  // routage de base
