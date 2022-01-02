@@ -20,7 +20,7 @@ html
                 td #{joueur.nom}
                 td(style="text-align: right") #{joueur.lancers}
                 td(style="text-align: right") #{joueur.lancersGagnes}
-                //- td(style="text-align: right") #{joueur.ratio}
+                //- td(style="text-align: right; font-family: monospace") #{joueur.ratio.toFixed(8)}
             else
               tr
                 td(colspan=4) Pas de joueurs encore.
