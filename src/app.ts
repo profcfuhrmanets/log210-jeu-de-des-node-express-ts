@@ -38,14 +38,14 @@ class App {
   private routes(): void {
     const titreBase = 'Jeu de dés';
     let router = express.Router();
-    // Le squelette ne traite pas les connexion d'utilisateur, mais le gabarits
-    // Pug (navbar) supportent l'affichage selon les informations dans l'objet
-    // user, qui peut avoir deux états (p.ex. admin ou normal)
+    // Le squelette ne traite pas la gestion des connexions d'utilisateur, mais
+    // les gabarits Pug (navbar) supportent l'affichage selon l'état de connexion 
+    // dans l'objet user, qui peut avoir deux valeurs (p.ex. admin ou normal)
     let user;
-    // Si l'utilisateur est connecté, le gabarit Pug affiche son nom et une option
-    // pour se déconnecter.
+    // Si l'utilisateur est connecté, le gabarit Pug peut afficher des options, 
+    // le nom de l'utilisateur et une option pour se déconnecter.
     user = { nom: 'Pierre Trudeau', hasPrivileges: true, isAnonymous: false };
-    // Sinon, le gabarit Pug affiche une option pour se connecter.
+    // Si user.isAnonymous est vrai, le gabarit Pug affiche une option pour se connecter.
     // user = { isAnonymous: true }; // utilisateur quand personne n'est connecté
 
     // Route pour jouer (index)
