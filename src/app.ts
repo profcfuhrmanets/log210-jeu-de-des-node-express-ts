@@ -50,10 +50,10 @@ class App {
 
     // Route pour jouer (index)
     router.get('/', (req, res, next) => {
-      res.render('index', 
+      res.render('index',
         // passer objet au gabarit (template) Pug
         {
-          title: `${titreBase}`, 
+          title: `${titreBase}`,
           user: user,
           joueurs: JSON.parse(jeuRoutes.controleurJeu.joueurs)
         });
@@ -61,32 +61,32 @@ class App {
 
     // Route pour classement (stats)
     router.get('/stats', (req, res, next) => {
-      res.render('stats', 
+      res.render('stats',
         // passer objet au gabarit (template) Pug
         {
-          title: `${titreBase}`, 
+          title: `${titreBase}`,
           user: user,
-          // créer tableau qui est trié par ratio
+          // créer nouveau tableau de joueurs qui est trié par ratio
           joueurs: JSON.parse(jeuRoutes.controleurJeu.joueurs)
         });
     });
 
     // Route to login
-    router.get('/signin', async function(req, res){
+    router.get('/signin', async function (req, res) {
       if (user.isAnonymous) {
         // simuler un login
         res.render('signin', {
           title: `${titreBase}`
-          })
+        })
       } else {
         return res.redirect('/');
       }
     });
 
     // Route to login
-    router.get('/signout', async function(req, res){
+    router.get('/signout', async function (req, res) {
       // simuler une déconnexion
-      user = {isAnonymous: true};
+      user = { isAnonymous: true };
       return res.redirect('/');
     });
 
