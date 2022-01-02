@@ -1,0 +1,61 @@
+//- Permet de passer des objets pour personnaliser
+mixin navbar(titre, user)
+  - var isLoggedIn = !user.isAnonymous
+  - var isAdmin = (user.hasPrivileges)
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    .container
+      a.navbar-brand(href="#") #{titre}
+      button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      .collapse.navbar-collapse#navbarSupportedContent
+        //- Afficher les options seulement si l'utilisateur est connecté
+        if isLoggedIn
+          ul.navbar-nav.mr-auto
+            li.nav-item.active
+              a.nav-link(href="/") Accueil
+                span.sr-only (current)
+            //- Afficher les options pour le type Admin
+            if isAdmin
+              li.nav-item
+                a.nav-link(href="/stats") Classement
+              li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Menu déroulant Admin
+                .dropdown-menu(aria-labelledby="navbarDropdown")
+                  a.dropdown-item(href="#") Action
+                  a.dropdown-item(href="#") Autre action
+                  .dropdown-divider(href="#")
+                  a.dropdown-item(href="#") Encore une autre action
+              li.nav-item
+                a.nav-link.disabled(href="#") Désactivé Admin
+            //- Sinon, afficher les options pour le type normal
+            else
+              li.nav-item
+                a.nav-link(href="#") Lien 1
+              li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Menu déroulant
+                .dropdown-menu(aria-labelledby="navbarDropdown")
+                  a.dropdown-item(href="#") Action
+                  a.dropdown-item(href="#") Autre action
+                  .dropdown-divider(href="#")
+                  a.dropdown-item(href="#") Encore une autre action
+              li.nav-item
+                a.nav-link.disabled(href="#") Désactivé
+
+          form.form-inline.my-2.my-lg-0
+            input.form-control.mr-sm-2(type="search" placeholder="Rechercher" aria-label="Search")
+            button.btn.btn-outline-info.my-2.my-sm-0(type="submit")
+              //- https://icons.getbootstrap.com/icons/search/ (converti à Pug)
+              svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16")
+                path(d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z")
+
+
+      //- Version Pug de https://www.codehim.com/bootstrap/bootstrap-navbar-with-login-and-signup/
+      ul.navbar-nav.float-right
+        li.nav-item.dropdown
+          //- deux sortes d'affichage selon l'état de connexion
+          if isLoggedIn
+            a.nav-link.dropdown-toggle(href="#" id="navbarDropdownAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") #{user.nom}
+            div.dropdown-menu(aria-labelledby="navbarDropdownAccount" role="menu")
+              a.dropdown-item(href='/signout') Se déconnecter
+          else
+            a.nav-link(href="/signin" id="navbarDropdownAccount") Se connecter
