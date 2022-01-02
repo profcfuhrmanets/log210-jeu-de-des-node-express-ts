@@ -5,20 +5,22 @@ html
     //- les .container, .alert, .col-sm-4, etc. sont des directives de Bootstrap
     if !user.isAnonymous
       div.container
-        h1 #{title} : Classement des joueurs
+        h1 Classement des joueurs
 
-        table(style='width:100%')
-          tr
-            th Joueur 
-            th Lancés
-            th Lancés gagnés
-            th Ratio
-          each joueur in joueurs
-            tr.joueur
-              td #{joueur.nom}
-              td #{joueur.lancers}
-              td #{joueur.lancersGagnes}
-              //- td #{joueur.ratio}
-          else
+        table.table.table-striped.table-hover(style='width:100%')
+          thead
             tr
-              td(colspan=4) Pas de joueurs encore.
+              th Joueur 
+              th(scope="col" style="text-align: right") Lancés
+              th(scope="col" style="text-align: right") Lancés gagnés
+              th(scope="col" style="text-align: right") Ratio
+          tbody
+            each joueur in joueurs
+              tr
+                td #{joueur.nom}
+                td(style="text-align: right") #{joueur.lancers}
+                td(style="text-align: right") #{joueur.lancersGagnes}
+                //- td(style="text-align: right") #{joueur.ratio}
+            else
+              tr
+                td(colspan=4) Pas de joueurs encore.
