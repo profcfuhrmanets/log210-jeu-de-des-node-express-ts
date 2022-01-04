@@ -38,7 +38,7 @@ L'éditeur [Visual Studio Code](https://code.visualstudio.com/) est très utile,
 
      <p>
 
-     ![GIF animé de la fonctionnalité de l'application Jeu de Dés](https://user-images.githubusercontent.com/7606540/64476621-da3be480-d15e-11e9-8063-f34552e4d91e.gif)
+     ![GIF animé de la fonctionnalité de l'application Jeu de Dés](https://user-images.githubusercontent.com/7606540/148088563-e4f7d26a-033b-4a77-8a9a-e56758dad1ee.gif)
 
     </p>
    </details>
