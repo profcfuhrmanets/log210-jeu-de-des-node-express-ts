@@ -16,6 +16,6 @@ C'est un processus simple, mais qui vous aidera grandement si vous n'êtes pas f
 
 Chaque fichier contient un exemple de code de test.
 
-Il y a un répertoire Cypress dans le répertoire principal.
+Vous pouvez utiliser [Cypress](https://www.cypress.io/) si vous voulez.
 Celui-ci permet d'ajouter des tests d'interfaces utilisateur (aussi nommés tests de bout en bout ou «end-to-end tests»).
 Ce type de test est facultatif, mais très utile.
