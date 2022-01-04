@@ -10,6 +10,7 @@ Ce squelette est proposé pour commencer les projets en LOG210. Il possède les 
 - il est orienté objet (avec TypeScript)
 - il contient des tests pour l'API (avec Jest et Supertest)
 - il fait une séparation entre les couches présentation et domaine, selon la méthodologie de conception du cours LOG210 (Larman)
+- il fournit une structure (en Bootstrap et Pug) permettant de gérer les connexions d'utilisateur et les vues selon le type d'utilisateur
 - il fonctionne sur Windows 10 (et probablement d'autres systèmes d'exploitation avec Node)
 
 ## D'où vient l'idée de base pour ce squelette?
