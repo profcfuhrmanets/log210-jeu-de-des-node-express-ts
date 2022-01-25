@@ -1,0 +1,26 @@
+html
+  include includes/head.pug
+  body
+    +navbar("Jeu de dés", user)
+    //- les .container, .alert, .col-sm-4, etc. sont des directives de Bootstrap
+    if !user.isAnonymous
+      div.container
+        h1 Classement des joueurs
+
+        table.table.table-striped.table-hover(style='width:100%')
+          thead
+            tr
+              th Joueur 
+              th(scope="col" style="text-align: right") Lancés
+              th(scope="col" style="text-align: right") Lancés gagnés
+              th(scope="col" style="text-align: right") Ratio
+          tbody
+            each joueur in joueurs
+              tr
+                td #{joueur.nom}
+                td(style="text-align: right") #{joueur.lancers}
+                td(style="text-align: right") #{joueur.lancersGagnes}
+                //- td(style="text-align: right; font-family: monospace") #{joueur.ratio.toFixed(8)}
+            else
+              tr
+                td(colspan=4) Pas de joueurs encore.

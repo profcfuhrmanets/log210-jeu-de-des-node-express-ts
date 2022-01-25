@@ -10,6 +10,7 @@ Ce squelette est proposé pour commencer les projets en LOG210. Il possède les 
 - il est orienté objet (avec TypeScript)
 - il contient des tests pour l'API (avec Jest et Supertest)
 - il fait une séparation entre les couches présentation et domaine, selon la méthodologie de conception du cours LOG210 (Larman)
+- il fournit une structure (en Bootstrap et Pug) permettant de gérer les connexions d'utilisateur et les vues selon le type d'utilisateur
 - il fonctionne sur Windows 10 (et probablement d'autres systèmes d'exploitation avec Node)
 
 ## D'où vient l'idée de base pour ce squelette?
@@ -37,7 +38,7 @@ L'éditeur [Visual Studio Code](https://code.visualstudio.com/) est très utile,
 
      <p>
 
-     ![GIF animé de la fonctionnalité de l'application Jeu de Dés](https://user-images.githubusercontent.com/7606540/64476621-da3be480-d15e-11e9-8063-f34552e4d91e.gif)
+     ![GIF animé de la fonctionnalité de l'application Jeu de Dés](https://user-images.githubusercontent.com/7606540/148088563-e4f7d26a-033b-4a77-8a9a-e56758dad1ee.gif)
 
     </p>
    </details>
