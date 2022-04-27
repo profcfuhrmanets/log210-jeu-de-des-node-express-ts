@@ -73,7 +73,7 @@ mocker.mock({
   header: {
     'content-type': 'application/json'
   },
-  body:  require('./data/schedule.json')
+  body:  require('./data/Schedule.json')
 });
 
 mocker.mock({
