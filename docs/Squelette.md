@@ -4,6 +4,7 @@
 
 Ce squelette est proposé pour commencer les projets en LOG210. Il possède les qualités suivantes:
 
+<!-- markdown-link-check-disable -->
 - il est simple pour les débutants en LOG210
   - il n'y a pas de framework pour le front-end ni pour la persistance, mais ça n'empêche pas d'ajouter ces dimensions.
   - il est seulement [REST niveau 1](https://restfulapi.net/richardson-maturity-model/#level-two), mais ça n'empêche pas de modifier l'API pour qu'il soit [REST niveau 3](https://restfulapi.net/richardson-maturity-model/#level-three).
@@ -12,6 +13,7 @@ Ce squelette est proposé pour commencer les projets en LOG210. Il possède les 
 - il fait une séparation entre les couches présentation et domaine, selon la méthodologie de conception du cours LOG210 (Larman)
 - il fournit une structure (en Bootstrap et Pug) permettant de gérer les connexions d'utilisateur et les vues selon le type d'utilisateur
 - il fonctionne sur Windows 10 (et probablement d'autres systèmes d'exploitation avec Node)
+<!-- markdown-link-check-enable -->
 
 ## D'où vient l'idée de base pour ce squelette?
 
