@@ -1,0 +1,49 @@
+name: Build and Tests
+
+# Controls when the workflow will run
+on:
+  # Don't do it on pull requests, because students will clone this and use up all the time
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  Linux:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '17.x'
+          cache: 'npm'
+      - run: npm install
+      - run: npm run build --if-present
+      - run: npm test
+
+  Windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '17.x'
+          cache: 'npm'
+      - run: npm install
+      - run: npm run build --if-present
+      - run: npm test
+
+  macOS:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '17.x'
+          cache: 'npm'
+      - run: npm install
+      - run: npm run build --if-present
+      - run: npm test
