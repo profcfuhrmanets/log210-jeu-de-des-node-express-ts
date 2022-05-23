@@ -17,11 +17,11 @@ Ce squelette est proposé pour commencer les projets en LOG210. Il possède les 
 
 Le code d'origine a été expliqué dans ce [texte de blogue](http://mherman.org/blog/2016/11/05/developing-a-restful-api-with-node-and-typescript/#.WB3zyeErJE4).
 
-Dans le cadre du cours [LOG210 de l'ÉTS](https://www.etsmtl.ca/Programmes-Etudes/1er-cycle/Fiche-de-cours?Sigle=log210), nous utilisons la méthodologie documentée par [Craig Larman dans son livre *Applying UML and Patterns*](http://www.craiglarman.com/wiki/index.php?title=Book_Applying_UML_and_Patterns). Ce livre documente beaucoup de principes avec des exemples en Java, qui n'est plus à la mode comme à l'époque où le livre a été écrit.
+Dans le cadre du cours [LOG210 de l'ÉTS](https://www.etsmtl.ca/Programmes-Etudes/1er-cycle/Fiche-de-cours?Sigle=log210), nous utilisons la méthodologie documentée par [Craig Larman dans son livre _Applying UML and Patterns_](http://www.craiglarman.com/wiki/index.php?title=Book_Applying_UML_and_Patterns). Ce livre documente beaucoup de principes avec des exemples en Java, qui n'est plus à la mode comme à l'époque où le livre a été écrit.
 
 Pourtant, il est encore possible de suivre cette méthodologie avec des technologies modernes comme JavaScript, Node.js, surtout en utilisant TypeScript. Cependant, il n'est pas évident de trouver des exemples de ces technologies qui respectent les éléments clés de la méthodologie de Larman: la séparation des couches (présentation, domaine) avec les opérations système et les classes du domaine.
 
-Ce squelette montre ces aspects importants, dans le contexte du *Jeu de dés*, qui est l'exemple utilisé dans le chapitre 1 du livre du cours. Nous avons modifié l'exemple pour le rendre un peu plus complexe (plusieurs opérations système). Les diagrammes (faits avec [PlantUML](https://stackoverflow.com/questions/32203610/how-to-integrate-uml-diagrams-into-gitlab-or-github)) sont présentés plus bas dans la partie Artefacts.
+Ce squelette montre ces aspects importants, dans le contexte du _Jeu de dés_, qui est l'exemple utilisé dans le chapitre 1 du livre du cours. Nous avons modifié l'exemple pour le rendre un peu plus complexe (plusieurs opérations système). Les diagrammes (faits avec [PlantUML](https://stackoverflow.com/questions/32203610/how-to-integrate-uml-diagrams-into-gitlab-or-github)) sont présentés plus bas dans la partie Artefacts.
 
 L'éditeur [Visual Studio Code](https://code.visualstudio.com/) est très utile, mais n'est pas nécessaire avec ce squelette.
 
@@ -32,16 +32,17 @@ L'éditeur [Visual Studio Code](https://code.visualstudio.com/) est très utile,
 1. Installer les dépendances node - `npm install`
 1. Compiler - `npm run build`
 1. Lancer serveur de développement - `npm start`
-1. Accéder à la page template de l'application - `http://localhost:3000`
+1. Accéder à la page template de l'application - [http://localhost:3000](http://localhost:3000)
    <details>
      <summary>Regarder exemple de la fonctionnalité</summary>
 
      <p>
 
-     ![GIF animé de la fonctionnalité de l'application Jeu de Dés](https://user-images.githubusercontent.com/7606540/148088563-e4f7d26a-033b-4a77-8a9a-e56758dad1ee.gif)
+   ![GIF animé de la fonctionnalité de l'application Jeu de Dés](https://user-images.githubusercontent.com/7606540/148088563-e4f7d26a-033b-4a77-8a9a-e56758dad1ee.gif)
 
     </p>
    </details>
+
 1. Lancer les tests (pas besoin de lancer le serveur d'abord) - `npm test`
 
 ## Développement piloté par les tests (TDD)
@@ -82,21 +83,21 @@ On peut utiliser ce fichier afin de créer des configurations d'exécution de d�
 
 ```json
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "command": "npm start",
-            "name": "Debug",
-            "request": "launch",
-            "type": "node-terminal"
-        },
-        {
-            "command": "npm run start:watch",
-            "name": "Debug:Watch",
-            "request": "launch",
-            "type": "node-terminal"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "command": "npm start",
+      "name": "Debug",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
+      "command": "npm run start:watch",
+      "name": "Debug:Watch",
+      "request": "launch",
+      "type": "node-terminal"
+    }
+  ]
 }
 ```
 
@@ -151,7 +152,7 @@ Voici la même figure, mais sous forme de diagramme de séquence avec l'acteur. 
 1. Le Joueur demande à lancer les dés.
 1. Le Système affiche le nom du joueur et le résultat de la partie, ainsi que le nombre de parties et le nombre de fois que le Joueur a gagné. Pour un lancer, si le total est égal à sept, le Joueur a gagné. Dans tous les autres cas, il a perdu.
 
-*Le Joueur répète l'étape 3 jusqu'à ce qu'il ait fini.*
+_Le Joueur répète l'étape 3 jusqu'à ce qu'il ait fini._
 
 4. Le Joueur demande à terminer le jeu.
 1. ~~Le Système affiche un tableau de bord avec les noms des joueurs et le ratio des parties gagnées (nombre de fois gagné / nombre de lancers).~~
