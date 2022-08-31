@@ -32,7 +32,7 @@ L'éditeur [Visual Studio Code](https://code.visualstudio.com/) est très utile,
 1. Installer les dépendances node - `npm install`
 1. Compiler - `npm run build`
 1. Lancer serveur de développement - `npm start`
-1. Accéder à la page template de l'application - `http://localhost:3000`
+1. Accéder à la page template de l'application - <http://localhost:3000>
    <details>
      <summary>Regarder exemple de la fonctionnalité</summary>
 

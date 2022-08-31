@@ -8,5 +8,12 @@
                 "Accept-Encoding": "zstd, br, gzip, deflate"
             }
         }
+    ],
+
+    "ignorePatterns": [
+        {
+            "pattern": "^http://localhost",
+            "comment": "Ignore local links"
+        }
     ]
 } 
