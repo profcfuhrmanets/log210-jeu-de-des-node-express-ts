@@ -6,7 +6,7 @@ import type { Config } from '@jest/types';
 // Sync object
 const config: Config.InitialOptions = {
   preset: 'ts-jest',
-  testEnvironment: 'node',
+  testEnvironment: "jest-environment-node",
   //  verbose: true,
   setupFilesAfterEnv: ["jest-extended/all"],
   collectCoverageFrom: ["src/**/*.ts"],
@@ -15,6 +15,7 @@ const config: Config.InitialOptions = {
   globals: {
     'ts-jest': {
       diagnostics: true,
+      isolatedModules: true,
       tsconfig: './tsconfig.json'
     }
   }
