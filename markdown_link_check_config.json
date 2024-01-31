@@ -14,6 +14,10 @@
         {
             "pattern": "^http://localhost",
             "comment": "Ignore local links"
+        },
+        {
+            "pattern": "^https://plantuml.com",
+            "comment": "Ignore PlantUML diagrams (timeout can be long)"
         }
     ]
 } 
