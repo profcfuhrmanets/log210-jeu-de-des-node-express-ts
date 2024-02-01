@@ -16,7 +16,7 @@
             "comment": "Ignore local links"
         },
         {
-            "pattern": "^https://www.plantuml.com/.*",
+            "pattern": "^https?://www\.plantuml\.com/.*$",
             "comment": "Ignore PlantUML diagrams (timeout can be long)"
         }
     ]
