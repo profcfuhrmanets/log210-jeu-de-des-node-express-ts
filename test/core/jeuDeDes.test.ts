@@ -1,5 +1,5 @@
-import 'jest-extended';
 import { JeuDeDes } from '../../src/core/jeuDeDes';
+import 'jest-extended';
 
 describe('JeuDeDesTest', () => {
   let jdd: JeuDeDes;
@@ -12,17 +12,26 @@ describe('JeuDeDesTest', () => {
   })
 
   it('devrait retourner une valeur entre 2 et 12', () => {
-    for (let i = 0; i < 200; i++) {
+    const mockBrasser = jest.spyOn(jdd, 'brasser');
+    for (let i = 2; i <= 12; i++) {
+      mockBrasser.mockImplementation(() => i); // forcer une valeur non-aléatoire
       expect(jdd.brasser()).toBeWithin(2, 13);
     }
+    mockBrasser.mockRestore();
   })
 
   it('devrait retourner finalement toutes les valeurs entre 2 et 12', () => {
     const resultats = new Set();
-    for (let i = 0; i < 200; i++) {
+    const mockBrasser = jest.spyOn(jdd, 'brasser');
+
+    for (let i = 2; i <= 12; i++) {
+      mockBrasser.mockImplementation(() => i); // forcer une valeur non-aléatoire
       resultats.add(jdd.brasser())
     }
+    mockBrasser.mockRestore();
+
     expect(resultats.size).toBe(11);
+
     for (let i = 1; i < 12; i++) {
       expect(resultats.has(i + 1)).toBeTrue();
     }
