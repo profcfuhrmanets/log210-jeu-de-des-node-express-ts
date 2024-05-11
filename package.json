@@ -6,6 +6,7 @@
     "scripts": {
         "build": "tsc -b --verbose && shx --verbose cp -ru public dist/",
         "start": "node dist/index.js",
+        "start:watch": "nodemon",
         "watch": "jest --watch --coverage test",
         "test": "jest --env=node --colors --coverage test",
         "uml-classes-puml": "tplant -i src/app.ts -A -o docs/modeles/App.puml",
@@ -47,6 +48,7 @@
         "jest-extended": "^4.0.2",
         "madge": "^7.0.0",
         "nodemon": "^3.1.0",
+        "open-cli": "^8.0.0",
         "shx": "^0.3.4",
         "supertest": "^6.3.4",
         "tplant": "^3.1.3",
@@ -61,7 +63,6 @@
         "express-session": "^1.18.0",
         "md5": "^2.3.0",
         "morgan": "^1.10.0",
-        "open-cli": "^8.0.0",
         "pug": "^3.0.2"
     }
 }
