@@ -1,4 +1,4 @@
-@startuml
+@startuml figureF16.24-web
 skinparam style strictuml
 skinparam defaultFontName Helvetica,Arial,sans-serif
 skinparam backgroundcolor transparent
