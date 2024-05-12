@@ -1,26 +1,41 @@
-@startuml figureF16.24-web
-skinparam style strictuml
-skinparam defaultFontName Helvetica,Arial,sans-serif
-skinparam backgroundcolor transparent
-scale 1
-skinparam sequenceMessageAlign center
-skinparam participantPadding 10
-skinparam sequenceBoxBorderColor transparent
-actor ":Joueur" as j
-box "Couche présentation" #ddffdd
-participant ":Button" as b << NavigateurWeb >> 
-participant ":Routeur" as r << NodeExpress >>
-end box
-box "Couche domaine" #ddddff
-participant ":JeuRisk" as c << ContrôleurGRASP >>
-participant "..." as s
-end box
-j -> b : cliquer
-b ->> r : HTTP GET\n/api/v1/demarrerJeu/Toto...
-note over r : Router handler (Express)
-r ->> r : démarrerJeu
-note over r, c: Opération système définie dans DSS
-r -> c : **<size:18>   démarrerJeu(...)   **
-c -> s : ...
-note over c, s : selon la RDCU
-@enduml
+@startdot figureF16.24-web
+digraph G {
+	graph [labelloc=top,label="Séparation des couches\n(selon la Figure A17.24/F16.24 de Larman)",fontname="Arial",fontsize=12];
+	edge [fontname="Arial",fontsize=9,labelfontname="SansSerif",labelfontsize=9];
+	node [fontname="Arial",fontsize=9, shape=box, style=filled, fillcolor="white"];
+
+   	utilisateur [label=<<TABLE BORDER="0" ALIGN="LEFT"><TR><TD><FONT POINT-SIZE="20">웃</FONT></TD></TR><TR><TD><B>:Joueur</B></TD></TR></TABLE>>, fontname="Helvetica-Bold" shape=plaintext]
+    subgraph cluster_0 {
+        style=filled;
+		label = "Couche présentation"; labeljust=l; fontname="Helvetica-Oblique";fontsize=9;
+        color = "#ddffdd";
+        c10 [label="  ", shape=none, fillcolor=invis]
+	    pageWeb [label="Page web\n(navigateur)", shape=note]
+        c10 -> pageWeb [color=invis]
+    	pageWeb -> routeur [label="  HTTP GET\l  /api/v1/demarrerJeu/Toto", fontname="Courier-Bold"];
+        c11 [label="                " , shape=none, fillcolor=invis]
+	    routeur [label=<<TABLE BORDER="0" ALIGN="LEFT"><TR><TD><B>:Router</B></TD></TR></TABLE>>, style=filled, fillcolor=lightyellow]
+	    routeurNote [label="Routeur Express\n(Node)", shape=note, fontname="Helvetica-Oblique" fontsize=9 fillcolor=yellow]
+        c11 -> routeur [color=invis]
+        routeur -> routeurNote [arrowhead=none; arrowtail=odot style=dashed]
+        {rank=same; c11; routeur; routeurNote}
+        {rank=same; c10; pageWeb}
+	}
+    subgraph cluster_1 {
+        style=filled; color = "#ddddff";
+		label = "Couche domaine"; labeljust=l; fontname="Helvetica-Oblique";fontsize=9;
+	    domain [label="", shape=point, fillcolor=invis, color=invis]
+	    controleurNote [label="contrôleur", shape=note, fontname="Helvetica-Oblique" fontsize=9 fillcolor=yellow]
+    	controleur [label=<<TABLE BORDER="0" ALIGN="LEFT"><TR><TD><b>:JeuDeDes</b></TD></TR></TABLE>>, style=filled, fillcolor=lightyellow]
+	    filler6 [label="", shape=none, fillcolor=invis]
+        filler6 -> controleur [color=invis]
+        controleur -> controleurNote [arrowhead=none; arrowtail=odot style=dashed]
+        {rank=same; filler6; controleur; controleurNote}
+    }
+    routeur -> controleur [label="\n\n", taillabel=<<TABLE BORDER="0" ALIGN="LEFT"><TR><TD VALIGN="MIDDLE" BGCOLOR="yellow"><FONT FACE="Helvetica-Oblique">Opération système (du DSS)</FONT></TD><TD><FONT FACE="Courier-Bold" POINT-SIZE="10"><B>demarrerJeu(nom)</B></FONT></TD></TR></TABLE>>,
+	         labeldistance = 2.5, labelangle=0]
+
+	utilisateur -> pageWeb [label="  appuie sur le bouton", style=dashed, labeljust=r];
+    controleur -> domain [label=" ... (selon la logique\ndu domaine)"]
+}
+@enddot
