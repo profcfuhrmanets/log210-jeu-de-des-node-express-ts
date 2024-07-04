@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { NextFunction } from 'express';
 import ExpressSession from 'express-session';
 import logger from 'morgan';
 import flash from 'express-flash-plus';
@@ -16,6 +16,7 @@ class App {
     this.expressApp = express();
     this.middleware();
     this.routes();
+    this.expressApp.use(this.handleErrors);
     this.expressApp.set('view engine', 'pug');
     this.expressApp.use(express.static(__dirname + '/public') as express.RequestHandler); // https://expressjs.com/en/starter/static-files.html
   }
@@ -96,6 +97,10 @@ class App {
     this.expressApp.use('/api/v1/jeu', jeuRoutes.router);  // tous les URI pour le scénario jeu (DSS) commencent ainsi
   }
 
+  private handleErrors(error: any, req: any, res: any, next: NextFunction) {
+    req.flash('error', error.message);
+    res.status(error.code).json({ error: error.toString() });
+  }
 }
 
 export default new App().expressApp;
